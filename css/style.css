@@ -1,0 +1,433 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap);
+@import url(../node_modules/bootstrap-icons/font/bootstrap-icons.min.css);
+@import url(https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap);
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import "./fonts/icomoon/style.css";
+@import "./fonts/poppins.css";
+@font-face {
+	font-family: "icomoon";
+	src: url("fonts/icomoon.eot?10si43");
+	src: url("fonts/icomoon.eot?10si43#iefix") format("embedded-opentype"),
+		url("fonts/icomoon.ttf?10si43") format("truetype"),
+		url("fonts/icomoon.woff?10si43") format("woff"),
+		url("fonts/icomoon.svg?10si43#icomoon") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+html,
+body,
+.card {
+	font-family: "Nunito", sans-serif;
+	/*font-family: "Roboto", sans-serif;*/
+	font-weight: 400;
+	font-style: normal;
+	color: rgba(69, 69, 69, 1) !important;
+	text-align: justify;
+}
+
+.text-white {
+	color: rgba(255, 255, 255, 1);
+	text-shadow: 0 3.5px 3.5px rgb(0, 0, 0, 0.2), 0 4px 3.5px rgb(0, 0, 0, 0.3),
+		0 7px 5px rgba(0, 0, 0, 0.2);
+	font-size: 22px;
+	margin-top: 5px;
+	text-align: center;
+}
+
+.card-logo {
+	height: 155px;
+	width: 220px;
+	background: linear-gradient(
+		rgb(255, 255, 255) 0%,
+		rgba(114, 114, 114, 0.6) 75%,
+		rgba(173, 173, 175, 1) 100%
+	);
+	box-shadow: 0 3px 5px rgba(170, 112, 199, 0.7);
+	padding: 20px !important;
+	border: 1px solid rgba(43, 44, 43, 0.4);
+	border-radius: 30px !important;
+	font-size: 20px;
+	font-weight: 400;
+	font-style: italic;
+	word-spacing: 5px;
+	color: #ffffff;
+	text-shadow: 0 3.5px 3.5px rgb(0, 0, 0, 0.3), 0 4px 3.5px rgb(0, 0, 0, 0.4),
+		0 7px 5px rgba(0, 0, 0, 0.3);
+}
+.card-logo:hover {
+	background: linear-gradient(
+		rgb(255, 255, 255) 0%,
+		rgba(143, 142, 142, 0.6) 75%,
+		rgb(149, 149, 151) 100%
+	);
+	transition: 200ms;
+}
+
+.header {
+	height: 400px;
+	background-size: cover;
+	background-position: bottom;
+	background-repeat: no-repeat;
+	background-image: linear-gradient(
+			180deg,
+			rgba(213, 212, 212, 0.7) 0%,
+			rgb(252, 252, 255) 100%
+		),
+		url("../img/people-looking-picture-album_2.png");
+}
+
+.title-site {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: "Nunito", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	word-spacing: 10px;
+	letter-spacing: 3px;
+	font-size: 50px;
+	color: white;
+	text-shadow: 0 3.5px 3.5px rgba(0, 0, 0, 0.8), 0 4px 3.5px rgba(0, 0, 0, 0.8),
+		0 7px 5px rgba(255, 255, 255, 0.5);
+	img {
+		margin-right: 15px !important;
+		margin-bottom: 6px !important;
+	}
+}
+.slogan-title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0, 0, 0, 0.25);
+	box-shadow: 0 3px 5px rgb(118, 199, 112, 0.7);
+	padding: 20px;
+	border: 0.5px solid rgba(51, 204, 102, 0.4);
+	border-radius: 30px 0 30px 0;
+	font-size: 20px;
+	font-weight: 400;
+	font-style: italic;
+	word-spacing: 5px;
+	color: #ffffff;
+	text-shadow: 0 3.5px 3.5px rgb(0, 0, 0, 0.2), 0 4px 3.5px rgb(0, 0, 0, 0.3),
+		0 7px 5px rgba(0, 0, 0, 0.2);
+}
+
+/**nav*/
+.nav-item.active .nav-link {
+	color: #32c061 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #80604a;
+}
+.green {
+	color: #33cc66;
+}
+
+.green-dark {
+	color: #32c061;
+}
+.brun {
+	color: #80604a !important;
+}
+
+.btn-contact {
+	position: fixed;
+	bottom: 1%;
+	right: 1%;
+	transform: translateY(-50%);
+	padding: 20px !important;
+	background: #76c770;
+	box-shadow: 0 3px 5px rgba(41, 48, 43, 0.5) !important;
+	border-radius: 40px 0 40px 0 !important;
+	padding: 20px;
+	border: 0.5px solid rgba(11, 11, 11, 0.4) !important;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	z-index: 1000;
+}
+.btn-contact:hover {
+	background: #67af62;
+	box-shadow: 0 3px 5px rgba(41, 48, 43, 0.7) !important;
+}
+
+.fs-1,
+.fs-2,
+.fs-3,
+.fs-4,
+.fs-5,
+.fs--6 {
+	color: rgba(69, 69, 69, 0.7) !important;
+}
+
+.t-dark {
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+	font-weight: 500;
+	line-height: 1.2;
+	color: #80604a !important;
+}
+/*card*/
+.card {
+	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+	color: rgb(54, 54, 54) !important;
+	border-radius: 30px !important;
+}
+
+/*bg*/
+
+.bg-secondary {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
+	border-top: 1px solid rgba(0, 0, 0, 0.2) !important;
+	background: rgba(0, 0, 0, 0.01) !important;
+}
+
+/*nav*/
+nav {
+	border-bottom: 1px solid rgba(69, 69, 69, 0.7) !important;
+}
+
+/*Icons*/
+.icon-twitter-square:before {
+	content: "\f081";
+	color: #00acee !important;
+}
+.icon-facebook-square:before {
+	content: "\f082";
+	color: #3b5998 !important;
+}
+.icon-instagram-square:before {
+	content: "\f16d";
+	color: #c32aa3 !important;
+}
+
+/*img*/
+img.photoAnneSo {
+	width: auto;
+	height: 40vh;
+	box-shadow: 0 3px 3px rgba(165, 163, 163, 0.3), 0 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+.img-block {
+	width: 40px;
+	height: auto;
+}
+.img-block2 {
+	width: 250px;
+	height: auto;
+}
+
+/*shadow */
+
+.shadow-5 {
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+.genealogie-bg {
+	height: 400px;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: bottom;
+	background-repeat: no-repeat;
+	background-image: linear-gradient(
+			90deg,
+			rgb(255, 255, 255) 0%,
+			rgba(114, 114, 114, 0.6) 75%,
+			rgba(173, 173, 175, 1) 100%
+		),
+		url("../img/people-looking-picture-album_2.png");
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
+	border-top: 1px solid rgba(0, 0, 0, 0.2) !important;
+}
+.psychogenealogie1 {
+	display: flex !important;
+	width: 15vw;
+	border-radius: 50%;
+	justify-content: center;
+	align-self: center;
+	margin-bottom: 5px;
+}
+
+.pychogenealogie2 {
+	display: flex !important;
+	width: 30vw;
+	border-radius: 50%;
+	justify-content: center;
+	align-self: center;
+	margin-bottom: 5px;
+}
+.psychogenealogie-bg {
+	height: 400px;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: top;
+	background-repeat: no-repeat;
+	background-image: linear-gradient(
+			90deg,
+			rgba(255, 255, 255, 0.9) 0%,
+			rgba(156, 186, 193, 0.3) 75%,
+			rgba(120, 205, 209, 0.7) 100%
+		),
+		url("../img/psychogenealogie2.png");
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
+	border-top: 1px solid rgba(0, 0, 0, 0.2) !important;
+}
+
+.medico-social-bg {
+	height: 400px;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: top;
+	background-repeat: no-repeat;
+	background-image: linear-gradient(
+			90deg,
+			rgba(255, 255, 255, 0.9) 0%,
+			rgba(156, 186, 193, 0.3) 75%,
+			rgba(120, 205, 209, 0.7) 100%
+		),
+		url("../img/medico-social.png");
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
+	border-top: 1px solid rgba(0, 0, 0, 0.2) !important;
+}
+
+.nourice-agree-bg {
+	height: 400px;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: top;
+	background-repeat: no-repeat;
+	background-image: linear-gradient(
+			90deg,
+			rgba(255, 255, 255, 0.9) 0%,
+			rgba(156, 186, 193, 0.3) 75%,
+			rgba(120, 205, 209, 0.7) 100%
+		),
+		url("../img/nourice-agree.png");
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
+	border-top: 1px solid rgba(0, 0, 0, 0.2) !important;
+}
+
+.medium-bg {
+	height: 400px;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: top;
+	background-repeat: no-repeat;
+	background-image: linear-gradient(
+			90deg,
+			rgba(255, 255, 255, 0.9) 0%,
+			rgba(156, 186, 193, 0.3) 75%,
+			rgba(120, 205, 209, 0.7) 100%
+		),
+		url("../img/medium3.jpg");
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
+	border-top: 1px solid rgba(0, 0, 0, 0.2) !important;
+}
+
+.psychogenealogie3-bg {
+	height: 400px;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: top;
+	background-repeat: no-repeat;
+	background-image: linear-gradient(
+			90deg,
+			rgba(255, 255, 255, 0.9) 0%,
+			rgba(156, 186, 193, 0.3) 75%,
+			rgba(120, 205, 209, 0.7) 100%
+		),
+		url("../img/psychogenealogie3.png");
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
+	border-top: 1px solid rgba(0, 0, 0, 0.2) !important;
+}
+
+.approche-holistique-bg {
+	height: 400px;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: middle;
+	background-repeat: no-repeat;
+	background-image: linear-gradient(
+			90deg,
+			rgba(255, 255, 255, 0.9) 0%,
+			rgba(156, 186, 193, 0.3) 75%,
+			rgba(120, 205, 209, 0.7) 100%
+		),
+		url("../img/approche_holistique.jpg");
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
+	border-top: 1px solid rgba(0, 0, 0, 0.2) !important;
+}
+.analyse_transactionnelle {
+	height: 400px;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: middle;
+	background-repeat: no-repeat;
+	background-image: linear-gradient(
+			90deg,
+			rgba(255, 255, 255, 0.9) 0%,
+			rgba(156, 186, 193, 0.3) 75%,
+			rgba(120, 205, 209, 0.7) 100%
+		),
+		url("../img/analyse_transactionnelle.jpg");
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
+	border-top: 1px solid rgba(0, 0, 0, 0.2) !important;
+}
+
+.inconscient-parental-bg {
+	height: 400px;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: middle;
+	background-repeat: no-repeat;
+	background-image: linear-gradient(
+			90deg,
+			rgba(255, 255, 255, 0.9) 0%,
+			rgba(156, 186, 193, 0.3) 75%,
+			rgba(120, 205, 209, 0.7) 100%
+		),
+		url("../img/inconscient-parental2.png");
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
+	border-top: 1px solid rgba(0, 0, 0, 0.2) !important;
+}
+.hypnose-bg {
+	height: 400px;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: middle;
+	background-repeat: no-repeat;
+	background-image: linear-gradient(
+			90deg,
+			rgba(255, 255, 255, 0.9) 0%,
+			rgba(156, 186, 193, 0.3) 75%,
+			rgba(120, 205, 209, 0.7) 100%
+		),
+		url("../img/hypnose2.jpg");
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
+	border-top: 1px solid rgba(0, 0, 0, 0.2) !important;
+}
+.resume-bg {
+	height: 400px;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: middle;
+	background-repeat: no-repeat;
+	background-image: linear-gradient(
+			90deg,
+			rgba(255, 255, 255, 0.9) 0%,
+			rgba(156, 186, 193, 0.3) 75%,
+			rgba(120, 205, 209, 0.7) 100%
+		),
+		url("../img/Illuminez_votre_histoire_familiale_pour_reveler_la_lumière_cachee_dans_vos_racines.webp");
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
+	border-top: 1px solid rgba(0, 0, 0, 0.2) !important;
+}
