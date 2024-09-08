@@ -525,3 +525,14 @@ footer a {
 		height: 23vw;
 	}
 }
+
+/* Positionnement absolu du slogan pour qu'il ne déplace pas les autres éléments */
+.subtitle-nav {
+  position: absolute;
+  top: 68%;
+  right: 28%;
+  /* margin-top: 5px; */
+  color: #6c757d;
+  width: 100%;
+  text-align: center;
+}
