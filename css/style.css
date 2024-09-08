@@ -16,6 +16,11 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
+@font-face {
+	font-family: "Tempting";
+	src: local("Tempting"), url("Tempting.otf") format("opentype");
+}
 html,
 body,
 .card {
@@ -40,9 +45,10 @@ body,
 	height: 155px;
 	width: 220px;
 	background: linear-gradient(
-		rgb(255, 255, 255) 0%,
-		rgba(114, 114, 114, 0.6) 75%,
-		rgba(173, 173, 175, 1) 100%
+		180deg,
+		rgba(118, 199, 112, 0.5) 0%,
+		rgba(118, 199, 112, 0.8) 55%,
+		rgba(115, 222, 107, 1) 100%
 	);
 	box-shadow: 0 3px 5px rgba(170, 112, 199, 0.7);
 	padding: 20px !important;
@@ -58,45 +64,57 @@ body,
 }
 .card-logo:hover {
 	background: linear-gradient(
-		rgb(255, 255, 255) 0%,
-		rgba(143, 142, 142, 0.6) 75%,
-		rgb(149, 149, 151) 100%
+		180deg,
+		rgba(118, 199, 112, 0.3) 0%,
+		rgba(118, 199, 112, 0.5971638655462185) 55%,
+		rgba(115, 222, 107, 1) 100%
 	);
 	transition: 200ms;
 }
-
-.header {
+header {
+	min-height: 400px !important;
+	background-size: cover;
+	background-position: bottom;
+	background-repeat: no-repeat;
+	background-image: linear-gradient(
+			90deg,
+			rgba(255, 255, 255, 1) 0%,
+			rgba(255, 255, 255, 0.7) 27%,
+			rgba(96, 96, 96, 0.8) 60%,
+			rgb(96, 96, 96) 100%
+		),
+		url(../img/people-looking-picture-album_2.png);
+}
+.logo {
+	max-width: auto;
+	max-height: 24vw;
+}
+.logo-2 {
+	max-width: auto;
+	max-height: 12vw;
+}
+.title-site {
+	font-family: "Tempting";
+	font-weight: 600;
+	letter-spacing: 3px;
+	font-size: 6vw;
+	text-shadow: 0 3.5px 3.5px rgba(0, 0, 0, 0.6), 0 4px 3.5px rgba(0, 0, 0, 0.6),
+		0 7px 5px rgba(255, 255, 255, 0.5);
+	color: white;
+}
+.footer {
 	height: 400px;
 	background-size: cover;
 	background-position: bottom;
 	background-repeat: no-repeat;
 	background-image: linear-gradient(
 			180deg,
-			rgba(213, 212, 212, 0.7) 0%,
+			rgba(255, 255, 255, 1) 0%,
 			rgb(252, 252, 255) 100%
 		),
 		url("../img/people-looking-picture-album_2.png");
 }
 
-.title-site {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-family: "Nunito", sans-serif;
-	font-optical-sizing: auto;
-	font-weight: 400;
-	font-style: normal;
-	word-spacing: 10px;
-	letter-spacing: 3px;
-	font-size: 50px;
-	color: white;
-	text-shadow: 0 3.5px 3.5px rgba(0, 0, 0, 0.8), 0 4px 3.5px rgba(0, 0, 0, 0.8),
-		0 7px 5px rgba(255, 255, 255, 0.5);
-	img {
-		margin-right: 15px !important;
-		margin-bottom: 6px !important;
-	}
-}
 .slogan-title {
 	display: flex;
 	align-items: center;
@@ -129,11 +147,15 @@ h6 {
 	color: #80604a;
 }
 .green {
-	color: #33cc66;
+	color: #33cc66 !important;
+}
+
+.nounou {
+	width: 40px;
 }
 
 .green-dark {
-	color: #32c061;
+	color: #32c061 !important;
 }
 .brun {
 	color: #80604a !important;
@@ -167,7 +189,7 @@ h6 {
 .fs-4,
 .fs-5,
 .fs--6 {
-	color: rgba(69, 69, 69, 0.7) !important;
+	color: rgba(69, 69, 69, 0.7);
 }
 
 .t-dark {
@@ -194,27 +216,54 @@ h6 {
 
 /*nav*/
 nav {
+	border-top: 1px solid rgba(69, 69, 69, 0.7) !important;
 	border-bottom: 1px solid rgba(69, 69, 69, 0.7) !important;
 }
 
+.title:hover,
+.nav-link:hover {
+	color: #32c061 !important;
+}
+
 /*Icons*/
+i.bi.bi-layers-fill {
+	margin-bottom: 3px;
+}
 .icon-twitter-square:before {
 	content: "\f081";
+	color: #00acee !important;
+}
+
+.bi-twitter {
 	color: #00acee !important;
 }
 .icon-facebook-square:before {
 	content: "\f082";
 	color: #3b5998 !important;
 }
+.bi-facebook {
+	color: #3b5998 !important;
+}
+
 .icon-instagram-square:before {
 	content: "\f16d";
 	color: #c32aa3 !important;
+}
+.bi-instagram {
+	color: #c32aa3 !important;
+}
+.bi-whatsapp {
+	color: #40c351;
+}
+
+.bi-linkedin {
+	color: #0e76a8;
 }
 
 /*img*/
 img.photoAnneSo {
 	width: auto;
-	height: 40vh;
+	height: 23vw;
 	box-shadow: 0 3px 3px rgba(165, 163, 163, 0.3), 0 3px 5px rgba(0, 0, 0, 0.4);
 }
 
@@ -354,7 +403,7 @@ img.photoAnneSo {
 	height: 400px;
 	background-attachment: fixed;
 	background-size: cover;
-	background-position: middle;
+	background-position: center;
 	background-repeat: no-repeat;
 	background-image: linear-gradient(
 			90deg,
@@ -370,7 +419,7 @@ img.photoAnneSo {
 	height: 400px;
 	background-attachment: fixed;
 	background-size: cover;
-	background-position: middle;
+	background-position: center;
 	background-repeat: no-repeat;
 	background-image: linear-gradient(
 			90deg,
@@ -387,7 +436,7 @@ img.photoAnneSo {
 	height: 400px;
 	background-attachment: fixed;
 	background-size: cover;
-	background-position: middle;
+	background-position: center;
 	background-repeat: no-repeat;
 	background-image: linear-gradient(
 			90deg,
@@ -403,7 +452,7 @@ img.photoAnneSo {
 	height: 400px;
 	background-attachment: fixed;
 	background-size: cover;
-	background-position: middle;
+	background-position: center;
 	background-repeat: no-repeat;
 	background-image: linear-gradient(
 			90deg,
@@ -415,11 +464,12 @@ img.photoAnneSo {
 	border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
 	border-top: 1px solid rgba(0, 0, 0, 0.2) !important;
 }
+
 .resume-bg {
 	height: 400px;
 	background-attachment: fixed;
 	background-size: cover;
-	background-position: middle;
+	background-position: center;
 	background-repeat: no-repeat;
 	background-image: linear-gradient(
 			90deg,
@@ -427,7 +477,51 @@ img.photoAnneSo {
 			rgba(156, 186, 193, 0.3) 75%,
 			rgba(120, 205, 209, 0.7) 100%
 		),
-		url("../img/Illuminez_votre_histoire_familiale_pour_reveler_la_lumière_cachee_dans_vos_racines.webp");
+		url("../img/Illuminez_votrehistoire_familiale_pour_reveler_la_lumière_cachee_dans_vos_racines.webp");
 	border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
 	border-top: 1px solid rgba(0, 0, 0, 0.2) !important;
+}
+
+/*footer*/
+footer .contact {
+	border-right: 1px solid rgba(0, 0, 0, 0.3);
+}
+footer a {
+	text-decoration: none;
+	color: rgba(69, 69, 69, 1) !important;
+}
+
+/* media query*/
+/* sm */
+@media (min-width: 576px) {
+	.container,
+	.container-sm {
+		max-width: 540px;
+	}
+}
+/* md */
+@media (min-width: 768px) {
+	img.photoAnneSo {
+		width: auto;
+		height: 38vw;
+	}
+} /* lg */
+@media (min-width: 992px) {
+	img.photoAnneSo {
+		width: auto;
+		height: 30vw;
+	}
+} /* xl */
+@media (min-width: 1200px) {
+	img.photoAnneSo {
+		width: auto;
+		height: 26vw;
+	}
+}
+/* xxl */
+@media (min-width: 1400px) {
+	img.photoAnneSo {
+		width: auto;
+		height: 23vw;
+	}
 }

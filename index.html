@@ -3,8 +3,14 @@
 	<head>
 		<meta charset="utf-8" />
 		<!-- CDN bootstrap@5.3.2 css -->
-		<link href="./css/boostrap_5.32.css" rel="stylesheet" />
-
+		<link
+			href="././node_modules/bootstrap/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="././node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
+		/>
 		<!-- CDN scrollrevealjs -->
 		<script src="./js/scrollreveal.js"></script>
 		<!-- CDN Jquery -->
@@ -14,19 +20,33 @@
 	</head>
 	<!-- body -->
 	<body>
-		<header class="container-fluid mx-0 px-0">
-			<div class="row mx-0 px-0 header">
-				<div class="flex title-site">
+		<div class="container-fluid mx-0 px-0">
+			<header class="row mx-0 px-0 header">
+				<div class="d-block d-md-none text-center">
 					<img
+						loading="eager"
 						src="./img/arbre_de_lumiere.svg"
 						alt="Logo"
-						width="200px!important"
-						height="auto"
-						class="d-inline-block align-text-top me-2 rounded-circle"
+						class="img-fluid align-text-top me-2 right"
 					/>
-					<h1 class="title-site">L'ARBRE DE LUMIÉRE</h1>
+					<h1 class="d-block title-site left py-3">L'arbre de lumière</h1>
 				</div>
-			</div>
+
+				<div class="d-none d-md-flex flex-row align-items-center">
+					<div class="col-md-3">
+						<img
+							loading="eager"
+							src="./img/arbre_de_lumiere.svg"
+							alt="Logo"
+							class="img-fluid align-text-top me-2 right"
+						/>
+					</div>
+					<div class="col-md-9">
+						<h1 class="title-site left">L'arbre de lumière</h1>
+					</div>
+				</div>
+			</header>
+			<!--btn contact-->
 			<boutton class="btn btn-primary btn-contact"
 				>Contactez moi des maintenant !</boutton
 			>
@@ -38,13 +58,14 @@
 				<div class="container-fluid">
 					<a class="navbar-brand d-flex align-items-center" href="#">
 						<img
+							loading="eager"
 							src="./img/Arbre de Lumiere72WEB.png"
 							alt="Logo"
 							width="50"
 							height="auto"
-							class="d-inline-block align-text-top me-2 rounded-circle"
+							class="d-inline-block align-text-top mb-2 me-2"
 						/>
-						<span class="brun ms-1">L'ARBRE DE LUMIÉRE</span>
+						<span class="brun mt-0 ms-1 left1 title">L'ARBRE DE LUMIÉRE</span>
 					</a>
 					<button
 						class="navbar-toggler"
@@ -60,24 +81,51 @@
 					<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 						<ul class="navbar-nav ms-xxl-3">
 							<li class="nav-item active">
-								<a class="nav-link" aria-current="page" href="#">ACCEUIL</a>
+								<a class="nav-link left3" aria-current="page" href="#"
+									>Acceuil</a
+								>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">PSYCHOGÉNÉALOGIE</a>
+								<a class="nav-link left3" href="#">Psychogénéalogie</a>
 							</li>
-							<li class="nav-item"><a class="nav-link" href="#">TARIFS</a></li>
-							<li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+							<li class="nav-item">
+								<a class="nav-link left3" href="#">Analyse transactionnelle</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link left3" href="#">L’inconscient parental</a>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link left3" href="#">Numérologie</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link left3" href="#">Tarifs</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link left3" href="#">Contact</a>
+							</li>
 						</ul>
-						<div class="navbar-nav ms-auto me-xxl-3">
-							<a class="nav-link" href="#"
-								><span class="icon-twitter-square fs-3"></span
+						<div class="navbar-nav ms-auto">
+							<a class="nav-link top3" href="#"
+								><span class="bi bi-facebook fs-3"></span
 							></a>
-							<a class="nav-link" href="#"
-								><span class="icon-facebook-square fs-3"></span
+							<a class="nav-link top3" href="#"
+								><span class="bi bi-instagram fs-3"></span
 							></a>
-							<a class="nav-link" href="#"
-								><span class="icon-instagram-square fs-3"></span
+
+							<a class="nav-link top3" href="#"
+								><span class="bi bi-twitter fs-3"></span
 							></a>
+							<div class="navbar-nav ms-auto me-xxl-3">
+								<a class="nav-link top3" href="#"
+									><span class="bi bi-linkedin fs-3"></span
+								></a>
+								<div class="navbar-nav ms-auto me-xxl-3">
+									<a class="nav-link top3" href="#"
+										><span class="bi bi-whatsapp fs-3"></span
+									></a>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -85,7 +133,10 @@
 			<!--presentation-->
 			<div class="right row px-3 mx-0">
 				<div class="col-12 p-3 my-3">
-					<p class="fs-1 brun mb-3">Présentation</p>
+					<div class="d-flex align-items-center">
+						<i class="bi bi-person-fill fs-2 me-2 green-dark"></i>
+						<div class="fs-2">Présentation</div>
+					</div>
 					<hr />
 					<p>Bienvenue sur mon site !</p>
 
@@ -95,6 +146,7 @@
 						<div class="col-xxl-2 me-2 justify-content-center">
 							<div class="text-center">
 								<img
+									loading="eager"
 									class="rounded-circle photoAnneSo mb-3"
 									src="./img/anne_sophie_favre_novel.webp"
 									alt="photoAnneSo"
@@ -127,6 +179,7 @@
 					<div class="card-logo text-center p-3 my-3 my-xxl-0">
 						<a class="text-center" href="#genealogie">
 							<img
+								loading="eager"
 								src="./img/genealogie.png"
 								alt="Généalogie"
 								class="text-center img-block mt-4"
@@ -141,6 +194,7 @@
 					<div class="card-logo text-center p-3 my-3 my-xxl-0">
 						<a class="text-center" href="#psychogenealogie">
 							<img
+								loading="eager"
 								src="./img//psychogenealogie-logo.png"
 								alt="Psychogénéalogie"
 								class="img-block mt-4"
@@ -156,6 +210,7 @@
 					<div class="card-logo text-center p-3 my-3 my-xxl-0">
 						<a class="text-center" href="#medico-psychologique">
 							<img
+								loading="eager"
 								src="./img/aide-psychologique.png"
 								alt="Aide Médico-Psychologique"
 								class="img-block mt-4"
@@ -170,9 +225,10 @@
 					<div class="card-logo text-center p-3 my-3 my-xxl-0">
 						<a class="text-center" href="#approche_holistique">
 							<img
-								src="./img/approche-holistique.png"
+								loading="eager"
+								src="./img/approche-holistique_blanc.png"
 								alt="Une Approche Holistique"
-								class="img-block mt-4"
+								class="img-block"
 							/>
 						</a>
 						<h2 class="text-white">Une Approche Holistique</h2>
@@ -184,11 +240,12 @@
 				<div class="col-12 px-3 pt-3 pb-5">
 					<div class="d-flex align-items-center">
 						<img
+							loading="eager"
 							src="./img/genealogie.png"
 							alt="Généalogie"
 							class="img-block fs-3 mt-2 me-2"
 						/>
-						<h2 class="mt-3 mb-2 green-dark">Passion pour la Généalogie</h2>
+						<h2 class="mt-3 mb-2">Passion pour la Généalogie</h2>
 					</div>
 
 					<hr class="green" />
@@ -196,6 +253,7 @@
 						<div class="col-12 col-xxl-3">
 							<div class="text-center">
 								<img
+									loading="eager"
 									src="./img/people-looking-picture-album__1_-removebg-preview.png"
 									alt="Passion pour la Généalogie"
 									width="auto"
@@ -237,13 +295,12 @@
 				<div class="col-12 mb-3 px-3 pt-3 pb-5">
 					<div class="d-flex align-items-center">
 						<img
+							loading="eager"
 							src="./img/psychogenealogie-logo.png"
 							alt="Psychogénéalogie"
 							class="img-block fs-3 me-2"
 						/>
-						<h2 class="mt-3 mb-2 green-dark green-dark--shadow">
-							Formation en Psychogénéalogie
-						</h2>
+						<h2 class="mt-3 mb-2">Formation en Psychogénéalogie</h2>
 					</div>
 					<hr class="green" />
 					<div class="d-xxl-flex align-items-center justify-content-around">
@@ -266,6 +323,7 @@
 						<div class="col-12 col-xxl-3">
 							<div class="text-center">
 								<img
+									loading="eager"
 									src="./img/Psychogenealogie.png"
 									alt="Psychogénéalogie"
 									class="psychogenealogie1 mx-auto"
@@ -280,28 +338,24 @@
 					class="d-flex col-12 justify-content-center align-items-center h-100 my-auto"
 				>
 					<h2 class="slogan-title w-75">
-						La psychogénéalogie mets en lumière les schémas
-						répétitifs ,les secrets de famille qui impacte votre
-						bien-être.
+						La psychogénéalogie mets en lumière les schémas répétitifs ,les
+						secrets de famille qui impacte votre bien-être.
 					</h2>
 				</div>
 				<div class="row justify-content-center align-items-center"></div>
 			</div>
 			<!--Aide Médico-Psychologique-->
-			<div
-				id="medico-psychologique"
-				class="left1 row mb-3 px-3 bg-secondary mx-0"
-			>
+			<div id="medico-psychologique" class="left1 row px-3 bg-secondary mx-0">
 				<div class="col-12 mb-3 px-3 pt-3 pb-5">
 					<div class="d-flex align-items-center">
 						<img
-							src="./img/aide-psychologique.png"
+							loading="eager"
+							src="../img/psychologue.png
+        "
 							alt="Aide Médico-Psychologique"
 							class="img-block fs-3 me-2"
 						/>
-						<h2 class="mt-3 mb-2 green-dark">
-							Expérience en Aide Médico-Psychologique
-						</h2>
+						<h2 class="mt-3 mb-2">Expérience en Aide Médico-Psychologique</h2>
 					</div>
 
 					<hr class="green" />
@@ -309,6 +363,7 @@
 						<div class="col-12 col-xxl-3">
 							<div class="text-center">
 								<img
+									loading="eager"
 									src="./img/senior-woman-her-daughter-talking-holding-hands-removebg-preview.png"
 									alt="Aide Médico-Psychologique"
 									width="auto"
@@ -349,7 +404,15 @@
 			<!--Assistante Maternelle Agréée-->
 			<div class="row right1 mb-3 px-3 mx-0">
 				<div class="col-12 px-3 pt-3 pb-5">
-					<h2 class="mt-3 mb-2 green-dark">Assistante Maternelle Agréée</h2>
+					<div class="d-flex align-items-center">
+						<img
+							loading="eager"
+							src="./img/nounou.png"
+							class="me-2 nounou"
+							alt="Assistante Maternelle Agréée"
+						/>
+						<h2 class="mt-3 mb-2">Assistante Maternelle Agrée</h2>
+					</div>
 					<hr class="green" />
 					<div class="d-xxl-flex align-items-center justify-content-around">
 						<div class="col-12 col-xxl-6 p-3">
@@ -370,6 +433,7 @@
 						<div class="col-12 col-xxl-3">
 							<div class="text-center">
 								<img
+									loading="eager"
 									src="./img/medium-shot-teacher-kid-painting-removebg-preview.png"
 									alt="assistante maternelle agréée"
 									width="auto"
@@ -392,21 +456,23 @@
 				</div>
 			</div>
 			<!--Approche Holistique-->
-			<div class="right1 row mb-3 px-3 bg-secondary mx-0">
+			<div class="right1 row px-3 bg-secondary mx-0">
 				<div id="approche_holistique" class="col-12 px-3 pt-3 pb-5">
 					<div class="d-flex align-items-center">
 						<img
+							loading="eager"
 							src="./img/approche-holistique.png"
 							alt="Une Approche Holistique"
-							class="img-block fs-3 me-2"
+							class="img-block fs-2 mt-1 me-2"
 						/>
-						<h2 class="mt-3 mb-2 green-dark">Une Approche Holistique</h2>
+						<h2 class="mt-3 mb-2">Une Approche Holistique</h2>
 					</div>
 					<hr class="green" />
 					<div class="d-xxl-flex align-items-center justify-content-around">
 						<div class="col-12 col-xxl-3">
 							<div class="text-center">
 								<img
+									loading="eager"
 									src="./img/nurse-holding-senior-man-s-hands-sympathy-removebg-preview.png"
 									alt="Une Approche Holistique"
 									width="auto"
@@ -440,13 +506,27 @@
 					</h2>
 				</div>
 			</div>
-			<p class="top1 fs-3 ms-3 brun fw-bolder my-3">
-				Voici un aperçu de mes spécialités :
-			</p>
+
+			<div class="d-flex align-items-center">
+				<img
+					loading="eager"
+					class="img-block fs-2 mt-1 me-2"
+					src="../img/specialites.png"
+					alt="spécialités"
+				/>
+				<div class="top1 fs-3 brun fw-bolder my-3">
+					Voici un aperçu de mes spécialités :
+				</div>
+			</div>
+
 			<!--Formation en Psychogénéalogie-->
 			<div class="left row mb-3 px-3 mx-0">
 				<div class="col-12 px-3 pt-3 pb-5">
-					<h2 class="mt-3 mb-2 green-dark">Formation en Psychogénéalogie</h2>
+					<div class="d-flex align-items-center mt-3 mb-2">
+						<i class="bi bi-layers-fill me-2 fs-2 green-dark"></i>
+						<h2>Formation en Psychogénéalogie</h2>
+					</div>
+
 					<hr class="green" />
 					<div class="d-xxl-flex align-items-center justify-content-around">
 						<div class="col-12 col-xxl-6 p-3">
@@ -467,6 +547,7 @@
 						<div class="col-12 col-xxl-3">
 							<div class="text-center">
 								<img
+									loading="eager"
 									src="./img/mental-health-care-sketch-diagram-removebg-preview.png"
 									alt="Formation en Psychogénéalogie"
 									width="auto"
@@ -490,20 +571,25 @@
 				</div>
 			</div>
 			<!--Formation à l’Analyse Transactionnelle-->
-			<div class="left row mb-3 px-3 bg-secondary mx-0">
+			<div class="left row px-3 bg-secondary mx-0">
 				<div class="col-12 px-3 pt-3 pb-5">
-					<h2 class="mt-3 mb-2 green-dark">
-						Formation à l’Analyse Transactionnelle appliquée à la
-						Psychogénéalogie
-					</h2>
+					<div class="d-flex align-items-center mt-3 mb-2">
+						<i class="bi bi-layers-fill me-2 fs-2 green-dark"></i>
+						<h2>
+							Formation à l’Analyse Transactionnelle appliquée à la
+							Psychogénéalogie
+						</h2>
+					</div>
+
 					<hr class="green" />
 					<div class="d-xxl-flex align-items-center justify-content-around">
 						<div class="col-12 col-xxl-3">
 							<div class="text-center">
 								<img
+									loading="eager"
 									src="./img/Analyse-transactionnelle-Freepik-1500x904.jpg-removebg-preview.png"
 									alt="Formation à l’Analyse Transactionnelle appliquée à la
-    Psychogénéalogie"
+Psychogénéalogie"
 									width="auto"
 									height="300px"
 									class="rounded rounded-circle fs-3 me-2"
@@ -539,18 +625,20 @@
 			<div class="row analyse_transactionnelle mx-0">
 				<div class="d-flex justify-content-center align-items-center h-100">
 					<h2 class="slogan-title w-75">
-						Identifier les scripts de vie et les jeux psychologiques
-						hérités de notre lignée familiale pour comprendre et améliorer
-						vos dynamiques relationnelles et familiales.
+						Identifier les scripts de vie et les jeux psychologiques hérités de
+						notre lignée familiale pour comprendre et améliorer vos dynamiques
+						relationnelles et familiales.
 					</h2>
 				</div>
 			</div>
 			<!--Formation à l’Hypnose appliquée à la Psychogénéalogie-->
 			<div class="left row mx-0">
 				<div class="col-12 px-3 pt-3 pb-5">
-					<h2 class="mt-3 mb-2 green-dark">
-						Formation à l’Hypnose appliquée à la Psychogénéalogie
-					</h2>
+					<div class="d-flex align-items-center mt-3 mb-2">
+						<i class="bi bi-layers-fill me-2 fs-2 green-dark"></i>
+						<h2>Formation à l’Hypnose appliquée à la Psychogénéalogie</h2>
+					</div>
+
 					<hr />
 					<div class="d-xxl-flex align-items-center justify-content-around">
 						<div class="col-12 col-xxl-6 p-3">
@@ -565,6 +653,7 @@
 						<div class="col-12 col-xxl-3">
 							<div class="text-center">
 								<img
+									loading="eager"
 									src="./img/hypnose.jpg"
 									alt="Formation à l’Hypnose appliquée à la Psychogénéalogie"
 									width="300px"
@@ -587,14 +676,24 @@
 				</div>
 			</div>
 			<!--Inconscient Parental-->
-			<div class="left row mb-3 px-3 bg-secondary mx-0">
-				<div class="col-12 px-3 pt-3 pb-5">
-					<h2 class="mt-3 mb-2 green-dark">Inconscient Parental</h2>
+			<div class="left row px-3 bg-secondary mx-0">
+				<div class="col-12 py-3 px-0 pb-5">
+					<div class="d-flex align-items-center">
+						<img
+							loading="eager"
+							class="img-block fs-2 mt-1 me-2"
+							src="../img/Inconscient_Parental.png"
+							alt="Inconscient Parental"
+						/>
+						<h2 class="mt-3 mb-2">Inconscient Parental</h2>
+					</div>
+
 					<hr class="green" />
 					<div class="d-xxl-flex align-items-center justify-content-around">
 						<div class="col-12 col-xxl-4">
 							<div class="text-center">
 								<img
+									loading="eager"
 									src="./img/inconcient-parental.jpg"
 									alt="Inconscient Parental"
 									width="350px"
@@ -625,7 +724,16 @@
 			<!--Médium et Guidance-->
 			<div class="row mx-0">
 				<div class="col-12 px-3 pt-3 pb-5">
-					<h2 class="mt-3 mb-2 green-dark">Médium et Guidance</h2>
+					<div class="d-flex align-items-center">
+						<img
+							loading="eager"
+							class="img-block fs-2 mt-1 me-2"
+							src="../img/medium.png"
+							alt="Médium et Guidance"
+						/>
+						<h2 class="mt-3 mb-2">Médium et Guidance</h2>
+					</div>
+
 					<hr class="green" />
 					<div class="d-xxl-flex align-items-center justify-content-around">
 						<div class="col-12 col-xxl-6 p-3">
@@ -640,6 +748,7 @@
 						</div>
 						<div class="col-12 col-xxl-4 text-center">
 							<img
+								loading="eager"
 								src="./img/medium.jpg"
 								alt="Médium et Guidance"
 								width="auto"
@@ -661,12 +770,13 @@
 				</div>
 			</div>
 			<!--resumé-->
-			<div class="row mb-3 px-3 bg-secondary mx-0">
+			<div class="row bg-secondary mx-0">
 				<div class="col-12 px-3 pt-3 pb-5">
 					<div class="row align-items-center justify-content-around">
 						<div class="col-12 my-3">
 							<div class="text-center col-4 mx-auto">
 								<img
+									loading="eager"
 									src="./img/pexels-fauxels-3184465-1-768x512-removebg-preview.png"
 									alt="Inconscient Parental"
 									width="auto"
@@ -677,38 +787,63 @@
 						</div>
 						<div class="col-12 col-xxl-8 p-3">
 							<p class="mb-0">
-								En explorant ces dynamiques, <span class="fw-bolder">je vous aide à identifier et
-								transformer les influences invisibles qui façonnent votre vie</span>.
+								En explorant ces dynamiques,
+								<span class="fw-bolder"
+									>je vous aide à identifier et transformer les influences
+									invisibles qui façonnent votre vie</span
+								>.
 							</p>
 							<p class="mb-0">
-								Je vous invite à découvrir <span class="fw-bolder">comment la psychogénéalogie peut vous
-								aider à libérer les entraves du passé et à révéler vos
-								potentiels cachés.</span>
+								Je vous invite à découvrir
+								<span class="fw-bolder"
+									>comment la psychogénéalogie peut vous aider à libérer les
+									entraves du passé et à révéler vos potentiels cachés.</span
+								>
 							</p>
 							<p class="mt-2">
-								<span class="fw-bolder">Chaque histoire familiale est unique et mérite d'être explorée
-								avec soin et compassion.</span> En travaillant ensemble, nous pourrons
-								identifier et transformer les influences transgénérationnelles
-								pour vous permettre de vivre une vie plus consciente, épanouie
-								et authentique.
+								<span class="fw-bolder"
+									>Chaque histoire familiale est unique et mérite d'être
+									explorée avec soin et compassion.</span
+								>
+								En travaillant ensemble, nous pourrons identifier et transformer
+								les influences transgénérationnelles pour vous permettre de
+								vivre une vie plus consciente, épanouie et authentique.
 							</p>
 							<p class="mt-3 mb-0">
-								<span class="fw-bolder">N'hésitez pas à me contacter pour plus d'informations ou pour
-								planifier une consultation.</span>
+								<span class="fw-bolder"
+									>N'hésitez pas à me contacter pour plus d'informations ou pour
+									planifier une consultation.</span
+								>
 							</p>
-							<p class="mt-3 mb-0">
-								<span class="fw-bolder">Je suis là pour vous accompagner sur ce chemin de découverte et
-								de guérison.</span>
+							<p class="my-3 mb-0">
+								<span class="fw-bolder"
+									>Je suis là pour vous accompagner sur ce chemin de découverte
+									et de guérison.</span
+								>
 							</p>
-							<p class="fw-bolder">Anne-Sophie FAVRE-NOVEL</p>
-							<p class="fw-bolder">Larbredelumiere@gmail.fr</p>
-							<p class="fw-bolder">06 18 23 42 08</p>
+							<div class="d-flex align-items-center mt-4">
+								<p class="fw-bolder mb-1">
+									<i class="green-dark bi bi-person-circle me-2"></i>Anne-Sophie
+									FAVRE-NOVEL
+								</p>
+							</div>
+							<div class="d-flex align-items-center">
+								<p class="fw-bolder mb-1">
+									<i class="green-dark bi bi-envelope-plus me-2"></i
+									>Larbredelumiere@gmail.fr
+								</p>
+							</div>
+							<div class="d-flex align-items-center mb-4">
+								<p class="fw-bolder mb-2">
+									<i class="green-dark bi bi-telephone me-2"></i> 06 18 23 42 08
+								</p>
+							</div>
 							<p>
 								Je suis impatiente de vous rencontrer et de vous accompagner
 								dans votre voyage intérieur.
 							</p>
 							<p>Merci pour votre confiance.</p>
-							<p>Anne-Sophie</p>
+							<p class="fw-bolder">Anne-Sophie</p>
 						</div>
 					</div>
 				</div>
@@ -723,6 +858,117 @@
 					</div>
 				</div>
 			</div>
+
+			<!--footer-->
+			<footer class="row mx-0 p-3">
+				<div class="col-12 col-md-3 p-3">
+					<img
+						loading="eager"
+						src="./img/arbre_de_lumiere.svg"
+						alt="Logo"
+						class="d-inline-block align-text-top me-2 rounded-circle logo-2"
+					/>
+					<div class="p-3">
+						<div class="d-flex align-items-center">
+							<p class="fw-bolder mb-2">
+								<i class="green-dark bi bi-person-circle me-2"></i>Anne-Sophie
+								FAVRE-NOVEL
+							</p>
+						</div>
+						<div class="d-flex align-items-center">
+							<p class="fw-bolder mb-2">
+								<i class="green-dark bi bi-envelope-plus me-2"></i
+								>Larbredelumiere@gmail.fr
+							</p>
+						</div>
+						<div class="d-flex align-items-center">
+							<p class="fw-bolder mb-2">
+								<i class="green-dark bi bi-telephone me-2"></i> 06 18 23 42 08
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-6 p-3 mx-auto">
+					<div class="col-12 col-md-8 mx-auto">
+						<div class="d-flex align-items-center">
+							<i class="green-dark bi bi-globe me-2 mb-1 fs-4"></i>
+							<h4 class="text-uppercase">Site web</h4>
+						</div>
+						<hr />
+						<div class="d-flex align-items-center mb-3">
+							<i class="green-dark bi bi-house-check me-2"></i>
+							<a class="my-auto">Acceuil</a>
+						</div>
+						<div class="d-flex align-items-center mb-3">
+							<i class="green-dark bi bi-arrow-right-circle me-2"></i>
+							<a class="my-auto">Psychogénéalogie</a>
+						</div>
+						<div class="d-flex align-items-center mb-3">
+							<i class="green-dark bi bi-arrow-right-circle me-2"></i>
+							<a class="my-auto">Analyse transactionnelle</a>
+						</div>
+						<div class="d-flex align-items-center mb-3">
+							<i class="green-dark bi bi-arrow-right-circle me-2"></i>
+							<a class="my-auto">L’inconscient parental</a>
+						</div>
+						<div class="d-flex align-items-center mb-3">
+							<i class="green-dark bi bi-arrow-right-circle me-2"></i>
+							<a class="my-auto">Numérologie</a>
+						</div>
+						<div class="d-flex align-items-center mb-3">
+							<i class="green-dark bi bi-currency-exchange me-2"></i>
+							<a class="my-auto">Tarifs</a>
+						</div>
+						<div class="d-flex align-items-center mb-3">
+							<i class="green-dark bi bi-envelope-plus me-2"></i>
+							<a class="my-auto">Contact</a>
+						</div>
+						<div class="d-flex align-items-center mb-3">
+							<i class="green-dark bi bi-arrow-right-circle me-2"></i>
+							<a class="my-auto">Mentions-légales</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-3 p-3 mx-auto">
+					<div class="d-flex align-items-center">
+						<i class="green-dark bi bi-chat me-2 mb-1 fs-4"></i>
+						<h4 class="text-uppercase">Réseau sociaux</h4>
+					</div>
+
+					<hr />
+					<div class="d-flex align-items-center mb-3">
+						<i class="bi bi-facebook me-2"></i>
+						<a class="my-auto">Facebook</a>
+					</div>
+					<div class="d-flex align-items-center mb-3">
+						<i class="bi bi-instagram me-2"></i>
+						<a class="my-auto">Instagram</a>
+					</div>
+					<div class="d-flex align-items-center mb-3">
+						<i class="bi bi-twitter me-2"></i>
+						<a class="my-auto">Twitter</a>
+					</div>
+					<div class="d-flex align-items-center mb-3">
+						<i class="bi bi-linkedin me-2"></i>
+						<a class="my-auto">Linkedin</a>
+					</div>
+					<div class="d-flex align-items-center mb-3">
+						<i class="bi bi-whatsapp me-2"></i>
+						<a class="my-auto">Whatsapp</a>
+					</div>
+				</div>
+				<div
+					class="d-block d-md-flex col-12 justify-content-center text-center mt-2"
+				>
+					<p class="mx-2">Mentions légales</p>
+					<p class="d-none d-md-flex mx-md-2">-</p>
+					<p class="mx-2">Partenaires</p>
+					<p class="d-none d-md-flex mx-md-2">-</p>
+					<p class="mx-2">
+						Copyright @ 2024 L'arbre de lumière Tous droits réservés
+					</p>
+				</div>
+			</footer>
 		</div>
 		<!-- js -->
 		<script type="text/javascript " src="./js/style.js"></script>
