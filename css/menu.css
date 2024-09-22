@@ -264,7 +264,8 @@ a {
 }
 
 /* Title Styling */
-.title-nav {margin-left: 10px;
+.title-nav {
+	margin-left: 10px;
 	font-size: 1.5rem;
 	font-weight: bold;
 	color: #80604a;
