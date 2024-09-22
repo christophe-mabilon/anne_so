@@ -171,6 +171,9 @@ h6 {
 .brun {
 	color: #80604a !important;
 }
+.active {
+color: #32c061 !important;
+}
 
 .btn-contact {
 	position: fixed;
