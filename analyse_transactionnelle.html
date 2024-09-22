@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<!-- CDN bootstrap@5.3.2 css -->
+		<link
+			href="././node_modules/bootstrap/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="././node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
+		/>
+		<!-- CDN scrollrevealjs -->
+		<script src="./js/scrollreveal.js"></script>
+		<!-- CDN Jquery -->
+		<script src="./js/jquery-3.7.1.min.js"></script>
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./css/menu.css" />
+	</head>
+	<!-- body -->
+	<body>
+		<div class="container-fluid mx-0 px-0">
+			<!--header-->
+			<header class="row mx-0 px-0 header">
+				<div class="d-block d-md-none text-center">
+					<img
+						loading="eager"
+						src="./img/arbre_de_lumiere.svg"
+						alt="Logo"
+						class="img-fluid align-text-top me-2 right"
+					/>
+					<h1 class="d-block title-site left py-3">L'arbre de Lumière</h1>
+				</div>
+
+				<div class="d-none d-md-flex flex-row align-items-center">
+					<div class="col-md-3">
+						<img
+							loading="eager"
+							src="./img/arbre_de_lumiere.svg"
+							alt="Logo"
+							class="img-fluid align-text-top me-2 right"
+						/>
+					</div>
+					<div class="col-md-9">
+						<h1 class="title-site left">L'arbre de Lumière</h1>
+					</div>
+				</div>
+			</header>
+			<!--btn contact-->
+			<a class="btn btn-primary btn-contact" href="contact.html" alt="Contact"
+				>Contactez moi des maintenant !</a
+			>
+			<!-- Navigation -->
+			<nav
+				id="nav-top"
+				class="navbar sticky-top navbar-expand-lg bg-body-tertiary p-0 m-0"
+			>
+				<div
+					class="navbar d-flex justify-content-between align-items-center w-100"
+				>
+					<!-- Desktop Menu -->
+					<div
+						class="d-flex justify-content-start align-items-center h-100 position-relative"
+					>
+						<img
+							loading="eager"
+							width="50px"
+							height="auto"
+							src="./img/arbre_de_lumiere.svg"
+							alt="L'arbre de lumiere"
+							title="L'arbre de lumiere"
+							class="log-nav py-1 me-2 img-responsive"
+						/>
+						<a href="index.html" class="brun">
+							<span class="fw-bolder d-none d-xl-inline-flex"
+								>L'arbre de Lumiére</span
+							>
+							<span class="d-inline-flex d-xl-none">L'arbre de Lumiére</span>
+						</a>
+					</div>
+					<span
+						class="fw-lighter brun fs-6 subtitle-nav d-none d-xl-inline-block"
+					>
+						“Illuminez votre histoire familiale pour révéler la lumière cachée
+						dans vos racines”
+					</span>
+					<!-- Desktop Links -->
+					<ul class="d-none d-xl-inline-flex mt-2">
+						<li class="close-link-menu mx-2 mt-3">
+							<a class="brun" href="index.html" alt="Accueil">Accueil</a>
+						</li>
+						<li class="close-link-menu mx-2 mt-3">
+							<a
+								class="brun"
+								href="psychogenealogie.html"
+								alt="Psychogénéalogie"
+								>Psychogénéalogie</a
+							>
+						</li>
+						<li class="close-link-menu mx-2 mt-3">
+							<a
+								class="brun"
+								href="analyse_transactionnelle.html"
+								alt="Analyse transactionnelle"
+								>Analyse transactionnelle</a
+							>
+						</li>
+						<li class="close-link-menu mx-2 mt-3">
+							<a class="brun" href="numerologie.html" alt="Numérologie"
+								>Numérologie</a
+							>
+						</li>
+						<li class="close-link-menu mx-2 mt-3">
+							<a class="brun" href="hypnose.html" alt="Hypnose">Hypnose</a>
+						</li>
+						<li class="close-link-menu mx-2 mt-3">
+							<a
+								class="brun"
+								href="inconscient_parental.html"
+								alt="inconscient parental"
+								>Inconscient parental</a
+							>
+						</li>
+
+						<li class="close-link-menu mx-2 mt-3">
+							<a class="brun" href="tarifs.html" alt="Tarifs">Tarifs</a>
+						</li>
+						<li class="close-link-menu mx-2 mt-3">
+							<a class="brun" href="contact.html" alt="Contact">Contact</a>
+						</li>
+						<!-- Social Media Icons -->
+						<li class="close-link-menu mx-2 mt-2">
+							<a
+								class="brun"
+								target="_blank"
+								href="https://www.facebook.com/profile.php?id=61564220849532"
+								alt="Page Facebook"
+								><span class="bi bi-facebook fs-3"></span
+							></a>
+						</li>
+						<li class="close-link-menu mx-2 mt-2">
+							<a class="brun" href="#"
+								><span class="bi bi-instagram fs-3"></span
+							></a>
+						</li>
+						<li class="close-link-menu mx-2 mt-2">
+							<a class="brun" href="#"
+								><span class="bi bi-twitter fs-3"></span
+							></a>
+						</li>
+						<li class="close-link-menu mx-2 mt-2">
+							<a class="brun" href="#"
+								><span class="bi bi-linkedin fs-3"></span
+							></a>
+						</li>
+						<li class="close-link-menu mx-2 mt-2">
+							<a class="brun" href="#"
+								><span class="bi bi-whatsapp fs-3"></span
+							></a>
+						</li>
+					</ul>
+
+					<!-- Mobile Menu (Hamburger) -->
+					<div class="menu-wrap d-xl-none">
+						<label for="toggler" class="d-hidden"></label>
+						<input
+							type="checkbox"
+							id="toggler"
+							name="toggler"
+							class="toggler"
+						/>
+						<div class="hamburger">
+							<div></div>
+						</div>
+						<div class="menu">
+							<div>
+								<!-- Close Icon -->
+								<div class="menu-close"></div>
+								<div class="row">
+									<div class="col-12 d-flex align-items-center">
+										<img
+											src="./img/arbre_de_lumiere.svg"
+											width="100px"
+											alt="L'arbre de lumiere"
+											title="L'arbre de lumiere"
+											class="logo2 py-1 me-2 img-responsive"
+										/>
+										<a href="index.html" alt="Accueil" class="text-white"
+											>L'ARBRE DE LUMIÉRE</a
+										>
+									</div>
+									<ul class="col-12 text-start ms-5">
+										<li class="mb-2">
+											<a href="index.html" alt="Accueil">Accueil</a>
+										</li>
+										<li class="mb-2">
+											<a href="psychogenealogie.html" alt="Psychogénéalogie"
+												>Psychogénéalogie</a
+											>
+										</li>
+										<li class="mb-2">
+											<a
+												href="analyse_transactionnelle.html"
+												alt="Analyse transactionnelle"
+												>Analyse transactionnelle</a
+											>
+										</li>
+										<li class="mb-2">
+											<a href="numerologie.html" alt="Numérologie"
+												>Numérologie</a
+											>
+										</li>
+										<li class="mb-2">
+											<a href="hypnose.html" alt="Hypnose">Hypnose</a>
+										</li>
+										<li class="mb-2">
+											<a
+												href="inconscient_parental.html"
+												alt="inconscient parental"
+												>Inconscient parental</a
+											>
+										</li>
+
+										<li class="mb-2">
+											<a href="tarifs.html" alt="Tarifs">Tarifs</a>
+										</li>
+										<li class="mb-2">
+											<a href="contact.html" href="Contact">Contact</a>
+										</li>
+									</ul>
+									<!-- Social Media Icons -->
+									<div class="col-12 d-flex align-items-center my-3 ms-4">
+										<div class="mb-2 mx-2">
+											<a
+												class="d-flex align-items-center"
+												target="_blank"
+												href="https://www.facebook.com/profile.php?id=61564220849532"
+												alt="Page Facebook"
+												><span class="bi bi-facebook fs-3 me-2"></span
+												>facebook</a
+											>
+										</div>
+										<div class="mb-2 mx-2">
+											<a class="d-flex align-items-center" href="#"
+												><span class="bi bi-instagram fs-3 me-2"></span
+												>instagram</a
+											>
+										</div>
+										<div class="mb-2 mx-2">
+											<a class="d-flex align-items-center" href="#"
+												><span class="bi bi-twitter fs-3 me-2"></span>twitter</a
+											>
+										</div>
+										<div class="mb-2 mx-2">
+											<a class="d-flex align-items-center" href="#"
+												><span class="bi bi-linkedin fs-3 me-2"></span
+												>linkedin</a
+											>
+										</div>
+										<div class="mb-2 mx-2">
+											<a class="d-flex align-items-center" href="#"
+												><span class="bi bi-whatsapp fs-3 me-2"></span
+												>whatsapp</a
+											>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+			<!--presentation-->
+			<div class="row px-3 mx-0">
+				<div class="col-12 mb-3 px-3 pt-3">
+					<div class="d-flex align-items-center">
+						<img
+							loading="eager"
+							src="./img/Analyse-transactionnelle-Freepik-1500x904.jpg-removebg-preview.png"
+							alt="Analyse-transactionnelle"
+							class="img-block3 fs-3 me-2 rounded-circle mt-2"
+						/>
+						<h2 class="mt-3 mb-2">
+							Pourquoi Choisir l'Analyse Transactionnelle appliquée à la
+							Psychogénéalogie ?
+						</h2>
+					</div>
+
+					<hr />
+				</div>
+			</div>
+			<!--content-->
+			<div class="row px-3 mx-0">
+				<h3 class="fs-5 mb-0">
+					L'analyse transactionnelle appliquée à la psychogénéalogie combine
+					deux approches puissantes pour une compréhension profonde et une
+					transformation efficace de votre histoire familiale.
+				</h3>
+				<div class="col-12 mb-3 px-3 pt-3">
+					<div class="row analyse_transactionnelle mx-0 mb-3">
+						<div
+							class="d-flex col-12 justify-content-center align-items-center h-100 my-auto"
+						>
+							<h2 class="slogan-title w-75 left">
+								Voici pourquoi vous pourriez envisager cette méthode :
+							</h2>
+						</div>
+					</div>
+					<div id="psychogenealogie" class="mb-3">
+						<ol class="list-group list-group-numbered rounded-4">
+							<li class="list-group-item py-3 top">
+								<span class="green-dark fw-bolder top2"
+									>Compréhension des Interactions Familiales</span
+								>
+								<div class="w-75">
+									<p class="ms-3 mt-1 mb-0 left1">
+										L'analyse transactionnelle (AT) explore les interactions et
+										transactions entre les individus, en identifiant les rôles
+										joués et les jeux psychologiques présents dans les
+										relations.
+									</p>
+									<p class="ms-3 mb-2 mt-0 left2">
+										Appliquée à la psychogénéalogie, elle permet de décoder les
+										dynamiques familiales complexes et de comprendre comment
+										elles influencent votre comportement actuel.
+									</p>
+								</div>
+							</li>
+							<li class="list-group-item py-3 top">
+								<span class="green-dark fw-bolder top2"
+									>Identification des Scripts de Vie</span
+								>
+								<p class="ms-3 mt-1 mb-0 left1">
+									Les scripts de vie sont des plans inconscients que nous
+									suivons, souvent influencés par notre histoire familiale.
+									Grâce à l'AT, vous pouvez identifier ces scripts et comprendre
+									comment ils se sont formés à partir des expériences
+									transgénérationnelles.
+								</p>
+								<p class="ms-3 mb-2 mt-0 left2">
+									Cela vous permet de réécrire votre propre script pour vivre
+									une vie plus libre et authentique.
+								</p>
+							</li>
+							<li class="list-group-item py-3 top">
+								<span class="green-dark fw-bolder top2"
+									>Reconnaissance des Jeux Psychologiques</span
+								>
+
+								<p class="ms-3 mb-2 mt-0 left1">
+									Les jeux psychologiques sont des schémas répétitifs de
+									comportement que nous jouons avec les autres.
+								</p>
+								<p class="ms-3 mb-2 mt-0 left2">
+									En utilisant l'AT, vous pouvez reconnaître ces jeux dans le
+									contexte de votre famille et comprendre leur origine
+									transgénérationnelle. Cela vous aide à sortir de ces jeux et à
+									adopter des comportements plus sains et constructifs.
+								</p>
+							</li>
+							<li class="list-group-item py-3 top">
+								<span class="green-dark fw-bolder top2"
+									>Transformation des États du Moi
+								</span>
+								<p class="ms-3 mb-2 mt-0 left1">
+									L'AT divise la personnalité en trois états du moi : Parent,
+									Adulte, et Enfant.
+								</p>
+								<p class="ms-3 mb-2 mt-0 left2">
+									En appliquant cette théorie à la psychogénéalogie, vous pouvez
+									explorer comment ces états se sont développés à partir de vos
+									relations familiales et les influences de vos ancêtres.
+								</p>
+								<p class="ms-3 mb-2 mt-0 left2">
+									Cette prise de conscience permet de rééquilibrer ces états
+									pour mieux gérer vos émotions et vos réactions.
+								</p>
+							</li>
+							<li class="list-group-item py-3 top">
+								<span class="green-dark fw-bolder top2">
+									Amélioration des Relations Familiales</span
+								>
+								<p class="ms-3 mb-2 mt-0 left1">
+									En comprenant les transactions et les scripts au sein de votre
+									famille, vous pouvez améliorer vos relations avec vos proches.
+								</p>
+								<p class="ms-3 mb-2 mt-0 left2">
+									L'AT offre des outils pour communiquer de manière plus
+									efficace et empathique, réduisant les conflits et favorisant
+									des interactions plus positives et authentiques.
+								</p>
+							</li>
+							<li class="list-group-item py-3 top">
+								<span class="green-dark fw-bolder top2"
+									>Libération des Loyautés Invisibles
+								</span>
+								<p class="ms-3 mb-2 mt-0 left1">
+									Les loyautés invisibles sont des engagements inconscients que
+									nous prenons envers notre famille, souvent au détriment de
+									notre propre bien-être.
+								</p>
+								<p class="ms-3 mb-2 mt-0 left2">
+									L'AT appliquée à la psychogénéalogie permet d'identifier ces
+									loyautés et de les transformer, vous libérant ainsi pour vivre
+									selon vos propres valeurs et aspirations.
+								</p>
+							</li>
+							<li class="list-group-item py-3 top">
+								<span class="green-dark fw-bolder top2"
+									>Croissance Personnelle et Épanouissement
+								</span>
+								<p class="ms-3 mb-2 mt-0 left1">
+									Cette approche combinée favorise une croissance personnelle
+									profonde en vous aidant à comprendre et à transformer les
+									influences familiales inconscientes.
+								</p>
+								<p class="ms-3 mb-2 mt-0 left2">
+									Vous gagnez en clarté et en autonomie, ce qui vous permet de
+									vous épanouir pleinement dans tous les aspects de votre vie.
+								</p>
+							</li>
+							<li class="list-group-item py-3 top">
+								<span class="green-dark fw-bolder top2"
+									>Prévention des Schémas Transgénérationnels
+								</span>
+								<p class="ms-3 mb-2 mt-0 left1">
+									Pour ceux qui souhaitent éviter de transmettre des schémas
+									nuisibles à leurs enfants, cette méthode offre une opportunité
+									précieuse.
+								</p>
+								<p class="ms-3 mb-2 mt-0 left2">
+									En comprenant et en modifiant vos propres scripts et jeux,
+									vous pouvez créer un environnement familial plus sain pour les
+									générations futures.
+								</p>
+							</li>
+						</ol>
+						<div class="my-3">
+							<p class="fw-bolder ms-3 mb-2 mt-0 left1">
+								En choisissant l'analyse transactionnelle appliquée à la
+								psychogénéalogie, vous optez pour une démarche complète et
+								intégrative qui vous permet de mieux comprendre et transformer
+								votre histoire familiale.
+							</p>
+							<p class="fw-bolder ms-3 mb-2 mt-0 left2">
+								Cette approche vous offre les outils nécessaires pour vivre une
+								vie plus consciente, épanouie et en accord avec votre véritable
+								identité.
+							</p>
+						</div>
+					</div>
+					<div
+						class="d-flex col-12 col-md-8 col-xxl-6 p-3 justify-content-center mx-auto"
+					>
+						<img
+							class="right2 rounded-circle"
+							src="../img/Analyse-transactionnelle-Freepik-1500x904.jpg-removebg-preview.png"
+							alt="Analyse-transactionnelle"
+						/>
+					</div>
+				</div>
+			</div>
+			<!--footer-->
+			<footer class="row mx-0 p-3">
+				<div class="col-12 col-md-3 p-3">
+					<img
+						loading="eager"
+						src="./img/arbre_de_lumiere.svg"
+						alt="Logo"
+						class="d-inline-block align-text-top me-2 rounded-circle logo-2"
+					/>
+					<div class="p-3">
+						<div class="d-flex align-items-center">
+							<p class="fw-bolder mb-2">
+								<i class="green-dark bi bi-person-circle me-2"></i>Anne-Sophie
+								FAVRE-NOVEL
+							</p>
+						</div>
+						<div class="d-flex align-items-center">
+							<p class="fw-bolder mb-2">
+								<i class="green-dark bi bi-envelope-plus me-2"></i
+								>Larbredelumiere@gmail.fr
+							</p>
+						</div>
+						<div class="d-flex align-items-center">
+							<p class="fw-bolder mb-2">
+								<i class="green-dark bi bi-telephone me-2"></i> 06 18 23 42 08
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-6 p-3 mx-auto">
+					<div class="col-12 col-md-8 mx-auto">
+						<div class="d-flex align-items-center">
+							<i class="green-dark bi bi-globe me-2 mb-1 fs-4"></i>
+							<h4 class="text-uppercase">Site web</h4>
+						</div>
+						<hr />
+						<div class="d-flex align-items-center mb-3">
+							<i class="green-dark bi bi-house-check me-2"></i>
+							<a class="my-auto">Acceuil</a>
+						</div>
+						<div class="d-flex align-items-center mb-3">
+							<i class="green-dark bi bi-arrow-right-circle me-2"></i>
+							<a
+								class="my-auto"
+								href="psychogenealogie.html"
+								alt="Psychogénéalogie"
+								>Psychogénéalogie</a
+							>
+						</div>
+						<div class="d-flex align-items-center mb-3">
+							<i class="green-dark bi bi-arrow-right-circle me-2"></i>
+							<a
+								class="my-auto"
+								href="analyse_transactionnelle.html"
+								alt="Analyse transactionnelle"
+								>Analyse transactionnelle</a
+							>
+						</div>
+						<div class="d-flex align-items-center mb-3">
+							<i class="green-dark bi bi-arrow-right-circle me-2"></i>
+							<a
+								class="my-auto"
+								href="inconscient_parental.html"
+								alt="inconscient parental"
+								>L’inconscient parental</a
+							>
+						</div>
+						<div class="d-flex align-items-center mb-3">
+							<i class="green-dark bi bi-arrow-right-circle me-2"></i>
+							<a class="my-auto" href="numerologie.html" alt="Numérologie"
+								>Numérologie</a
+							>
+						</div>
+						<div class="d-flex align-items-center mb-3">
+							<i class="green-dark bi bi-currency-exchange me-2"></i>
+							<a class="my-auto" href="tarifs.html" alt="Tarifs">Tarifs</a>
+						</div>
+						<div class="d-flex align-items-center mb-3">
+							<i class="green-dark bi bi-envelope-plus me-2"></i>
+							<a class="my-auto" href="contact.html" alt="Contact">Contact</a>
+						</div>
+						<div class="d-flex align-items-center mb-3">
+							<i class="green-dark bi bi-arrow-right-circle me-2"></i>
+							<a
+								class="my-auto"
+								href="mentions-legales.html"
+								alt="Mentions-légales"
+								>Mentions-légales</a
+							>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-3 p-3 mx-auto">
+					<div class="d-flex align-items-center">
+						<i class="green-dark bi bi-chat me-2 mb-1 fs-4"></i>
+						<h4 class="text-uppercase">Réseau sociaux</h4>
+					</div>
+
+					<hr />
+					<div class="d-flex align-items-center mb-3">
+						<i class="bi bi-facebook me-2"></i>
+						<a
+							class="my-auto"
+							target="_blank"
+							href="https://www.facebook.com/profile.php?id=61564220849532"
+							alt="Page Facebook"
+							>Facebook</a
+						>
+					</div>
+					<div class="d-flex align-items-center mb-3">
+						<i class="bi bi-instagram me-2"></i>
+						<a class="my-auto">Instagram</a>
+					</div>
+					<div class="d-flex align-items-center mb-3">
+						<i class="bi bi-twitter me-2"></i>
+						<a class="my-auto">Twitter</a>
+					</div>
+					<div class="d-flex align-items-center mb-3">
+						<i class="bi bi-linkedin me-2"></i>
+						<a class="my-auto">Linkedin</a>
+					</div>
+					<div class="d-flex align-items-center mb-3">
+						<i class="bi bi-whatsapp me-2"></i>
+						<a class="my-auto">Whatsapp</a>
+					</div>
+				</div>
+				<div
+					class="d-block d-md-flex col-12 justify-content-center text-center mt-2"
+				>
+					<a class="mx-2" href="mentions-legales.html" alt="Mentions légales"
+						>Mentions légales</a
+					>
+					<p class="d-none d-md-flex mx-md-2">-</p>
+					<a class="mx-2" href="partenaires.html" alt="Partenaires"
+						>Partenaires</a
+					>
+					<p class="d-none d-md-flex mx-md-2">-</p>
+					<p class="mx-2">
+						Copyright @ 2024 L'arbre de lumière Tous droits réservés
+					</p>
+				</div>
+			</footer>
+		</div>
+		<!-- js -->
+		<script type="text/javascript " src="./js/style.js"></script>
+		<script type="text/javascript " src="./js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>

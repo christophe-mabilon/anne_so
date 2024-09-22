@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<!-- CDN bootstrap@5.3.2 css -->
+		<link
+			href="././node_modules/bootstrap/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="././node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
+		/>
+		<!-- CDN scrollrevealjs -->
+		<script src="./js/scrollreveal.js"></script>
+		<!-- CDN Jquery -->
+		<script src="./js/jquery-3.7.1.min.js"></script>
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./css/menu.css" />
+	</head>
+	<!-- body -->
+	<body>
+		<div class="container-fluid mx-0 px-0">
+			<!--header-->
+			<header class="row mx-0 px-0 header">
+				<div class="d-block d-md-none text-center">
+					<img
+						loading="eager"
+						src="./img/arbre_de_lumiere.svg"
+						alt="Logo"
+						class="img-fluid align-text-top me-2 right"
+					/>
+					<h1 class="d-block title-site left py-3">L'arbre de Lumière</h1>
+				</div>
+
+				<div class="d-none d-md-flex flex-row align-items-center">
+					<div class="col-md-3">
+						<img
+							loading="eager"
+							src="./img/arbre_de_lumiere.svg"
+							alt="Logo"
+							class="img-fluid align-text-top me-2 right"
+						/>
+					</div>
+					<div class="col-md-9">
+						<h1 class="title-site left">L'arbre de Lumière</h1>
+					</div>
+				</div>
+			</header>
+			<!--btn contact-->
+			<a class="btn btn-primary btn-contact" href="contact.html" alt="Contact"
+				>Contactez moi des maintenant !</a
+			>
+			<!-- Navigation -->
+			<nav
+				id="nav-top"
+				class="navbar sticky-top navbar-expand-lg bg-body-tertiary p-0 m-0"
+			>
+				<div
+					class="navbar d-flex justify-content-between align-items-center w-100"
+				>
+					<!-- Desktop Menu -->
+					<div
+						class="d-flex justify-content-start align-items-center h-100 position-relative"
+					>
+						<img
+							loading="eager"
+							width="50px"
+							height="auto"
+							src="./img/arbre_de_lumiere.svg"
+							alt="L'arbre de lumiere"
+							title="L'arbre de lumiere"
+							class="log-nav py-1 me-2 img-responsive"
+						/>
+						<a href="index.html" class="brun">
+							<span class="fw-bolder d-none d-xl-inline-flex"
+								>L'arbre de Lumiére</span
+							>
+							<span class="d-inline-flex d-xl-none">L'arbre de Lumiére</span>
+						</a>
+					</div>
+					<span
+						class="fw-lighter brun fs-6 subtitle-nav d-none d-xl-inline-block"
+					>
+						“Illuminez votre histoire familiale pour révéler la lumière cachée
+						dans vos racines”
+					</span>
+					<!-- Desktop Links -->
+					<ul class="d-none d-xl-inline-flex mt-2">
+						<li class="close-link-menu mx-2 mt-3">
+							<a class="brun" href="index.html" alt="Accueil">Accueil</a>
+						</li>
+						<li class="close-link-menu mx-2 mt-3">
+							<a
+								class="brun"
+								href="psychogenealogie.html"
+								alt="Psychogénéalogie"
+								>Psychogénéalogie</a
+							>
+						</li>
+						<li class="close-link-menu mx-2 mt-3">
+							<a
+								class="brun"
+								href="analyse_transactionnelle.html"
+								alt="Analyse transactionnelle"
+								>Analyse transactionnelle</a
+							>
+						</li>
+						<li class="close-link-menu mx-2 mt-3">
+							<a class="brun" href="numerologie.html" alt="Numérologie"
+								>Numérologie</a
+							>
+						</li>
+						<li class="close-link-menu mx-2 mt-3">
+							<a class="brun" href="hypnose.html" alt="Hypnose">Hypnose</a>
+						</li>
+						<li class="close-link-menu mx-2 mt-3">
+							<a
+								class="brun"
+								href="inconscient_parental.html"
+								alt="inconscient parental"
+								>Inconscient parental</a
+							>
+						</li>
+
+						<li class="close-link-menu mx-2 mt-3">
+							<a class="brun" href="tarifs.html" alt="Tarifs">Tarifs</a>
+						</li>
+						<li class="close-link-menu mx-2 mt-3">
+							<a class="brun" href="contact.html" alt="Contact">Contact</a>
+						</li>
+						<!-- Social Media Icons -->
+						<li class="close-link-menu mx-2 mt-2">
+							<a
+								class="brun"
+								target="_blank"
+								href="https://www.facebook.com/profile.php?id=61564220849532"
+								alt="Page Facebook"
+								><span class="bi bi-facebook fs-3"></span
+							></a>
+						</li>
+						<li class="close-link-menu mx-2 mt-2">
+							<a class="brun" href="#"
+								><span class="bi bi-instagram fs-3"></span
+							></a>
+						</li>
+						<li class="close-link-menu mx-2 mt-2">
+							<a class="brun" href="#"
+								><span class="bi bi-twitter fs-3"></span
+							></a>
+						</li>
+						<li class="close-link-menu mx-2 mt-2">
+							<a class="brun" href="#"
+								><span class="bi bi-linkedin fs-3"></span
+							></a>
+						</li>
+						<li class="close-link-menu mx-2 mt-2">
+							<a class="brun" href="#"
+								><span class="bi bi-whatsapp fs-3"></span
+							></a>
+						</li>
+					</ul>
+
+					<!-- Mobile Menu (Hamburger) -->
+					<div class="menu-wrap d-xl-none">
+						<label for="toggler" class="d-hidden"></label>
+						<input
+							type="checkbox"
+							id="toggler"
+							name="toggler"
+							class="toggler"
+						/>
+						<div class="hamburger">
+							<div></div>
+						</div>
+						<div class="menu">
+							<div>
+								<!-- Close Icon -->
+								<div class="menu-close"></div>
+								<div class="row">
+									<div class="col-12 d-flex align-items-center">
+										<img
+											src="./img/arbre_de_lumiere.svg"
+											width="100px"
+											alt="L'arbre de lumiere"
+											title="L'arbre de lumiere"
+											class="logo2 py-1 me-2 img-responsive"
+										/>
+										<a href="index.html" alt="Accueil" class="text-white"
+											>L'ARBRE DE LUMIÉRE</a
+										>
+									</div>
+									<ul class="col-12 text-start ms-5">
+										<li class="mb-2">
+											<a href="index.html" alt="Accueil">Accueil</a>
+										</li>
+										<li class="mb-2">
+											<a href="psychogenealogie.html" alt="Psychogénéalogie"
+												>Psychogénéalogie</a
+											>
+										</li>
+										<li class="mb-2">
+											<a
+												href="analyse_transactionnelle.html"
+												alt="Analyse transactionnelle"
+												>Analyse transactionnelle</a
+											>
+										</li>
+										<li class="mb-2">
+											<a href="numerologie.html" alt="Numérologie"
+												>Numérologie</a
+											>
+										</li>
+										<li class="mb-2">
+											<a href="hypnose.html" alt="Hypnose">Hypnose</a>
+										</li>
+										<li class="mb-2">
+											<a
+												href="inconscient_parental.html"
+												alt="inconscient parental"
+												>Inconscient parental</a
+											>
+										</li>
+
+										<li class="mb-2">
+											<a href="tarifs.html" alt="Tarifs">Tarifs</a>
+										</li>
+										<li class="mb-2">
+											<a href="contact.html" href="Contact">Contact</a>
+										</li>
+									</ul>
+									<!-- Social Media Icons -->
+									<div class="col-12 d-flex align-items-center my-3 ms-4">
+										<div class="mb-2 mx-2">
+											<a
+												class="d-flex align-items-center"
+												target="_blank"
+												href="https://www.facebook.com/profile.php?id=61564220849532"
+												alt="Page Facebook"
+												><span class="bi bi-facebook fs-3 me-2"></span
+												>facebook</a
+											>
+										</div>
+										<div class="mb-2 mx-2">
+											<a class="d-flex align-items-center" href="#"
+												><span class="bi bi-instagram fs-3 me-2"></span
+												>instagram</a
+											>
+										</div>
+										<div class="mb-2 mx-2">
+											<a class="d-flex align-items-center" href="#"
+												><span class="bi bi-twitter fs-3 me-2"></span>twitter</a
+											>
+										</div>
+										<div class="mb-2 mx-2">
+											<a class="d-flex align-items-center" href="#"
+												><span class="bi bi-linkedin fs-3 me-2"></span
+												>linkedin</a
+											>
+										</div>
+										<div class="mb-2 mx-2">
+											<a class="d-flex align-items-center" href="#"
+												><span class="bi bi-whatsapp fs-3 me-2"></span
+												>whatsapp</a
+											>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+			<!--presentation-->
+			<div class="row px-3 mx-0">
+				<div class="col-12 mb-3 px-3 pt-3">
+					<div class="d-flex align-items-center">
+						<img
+							loading="eager"
+							src="./img/Analyse-transactionnelle-Freepik-1500x904.jpg-removebg-preview.png"
+							alt="Analyse-transactionnelle"
+							class="img-block3 fs-3 me-2 rounded-circle mt-2"
+						/>
+						<h2 class="mt-3 mb-2">
+							Pourquoi choisir la numérologie appliquée à la psychogénéalogie ?
+						</h2>
+					</div>
+
+					<hr />
+				</div>
+			</div>
+			<!--content-->
+			<div class="row px-3 mx-0">
+				<div class="col-12 mb-3 px-3 pt-3">
+					<h3 class="fs-5 mb-0">
+						La numérologie appliquée à la psychogénéalogie est une approche
+						fascinante qui combine l'analyse des chiffres avec la compréhension
+						des dynamiques familiales.
+					</h3>
+					<p class="fw-bolder my-3 brun">
+						Voici pourquoi vous pourriez envisager cette méthode pour explorer
+						votre histoire personnelle et familiale :
+					</p>
+					<div class="row numerologie-bg mx-0">
+						<div
+							class="d-flex col-12 justify-content-center align-items-center h-100 my-auto"
+						>
+							<h2 class="slogan-title w-75 left">
+								Voici pourquoi vous pourriez envisager cette méthode pour
+								explorer votre histoire personnelle et familiale :
+							</h2>
+						</div>
+						<div class="row justify-content-center align-items-center"></div>
+					</div>
+					<div id="psychogenealogie" class="mb-3">
+						<ol class="list-group list-group-numbered rounded-4">
+							<li class="list-group-item py-3 top">
+								<span class="green-dark fw-bolder top2"
+									>Décryptage des Messages Cachés</span
+								>
+
+								<p class="ms-3 mb-2 left1">
+									Les chiffres jouent un rôle symbolique et énergétique dans nos
+									vies. En intégrant la numérologie dans la psychogénéalogie,
+									vous pouvez révéler des messages cachés et des patterns
+									sous-jacents qui influencent votre histoire familiale et
+									personnelle. Cela permet de découvrir des informations
+									cruciales sur les dynamiques transgénérationnelles qui ne sont
+									pas toujours évidentes à première vue.
+								</p>
+							</li>
+							<li class="list-group-item py-3 top">
+								<span class="green-dark fw-bolder top2"
+									>Identification des Cycles et des Influences</span
+								>
+								<p class="ms-3 mb-2 left1">
+									La numérologie permet d’analyser les cycles de vie et les
+									influences associées à des dates importantes, telles que les
+									anniversaires et les événements familiaux majeurs. En
+									appliquant cette méthode à la psychogénéalogie, vous pouvez
+									identifier les cycles récurrents dans votre famille et
+									comprendre comment ils influencent votre comportement et vos
+									expériences actuelles.
+								</p>
+							</li>
+							<li class="list-group-item py-3 top">
+								<span class="green-dark fw-bolder top2"
+									>Analyse des Nombres de Vie</span
+								>
+
+								<p class="ms-3 mb-2 left1">
+									Chaque individu a un « nombre de vie » qui révèle des aspects
+									essentiels de sa personnalité, ses talents et ses défis. En
+									explorant ce nombre dans le contexte de votre histoire
+									familiale, vous pouvez mieux comprendre comment les
+									caractéristiques et les défis familiaux se manifestent dans
+									votre propre vie.
+								</p>
+							</li>
+
+							<li class="list-group-item py-3 top">
+								<span class="green-dark fw-bolder top2"
+									>Révélation des Influences Ancestrales</span
+								>
+								<p class="ms-3 mb-2 left1">
+									Les chiffres peuvent également représenter les influences
+									spécifiques de vos ancêtres. En utilisant la numérologie pour
+									examiner les noms, dates de naissance et autres éléments
+									numériques associés à votre famille, vous pouvez dévoiler des
+									influences transgénérationnelles et des héritages qui
+									impactent votre vie aujourd’hui.
+								</p>
+							</li>
+							<li class="list-group-item py-3 top">
+								<span class="green-dark fw-bolder top2"
+									>Éclaircissement des Relations Familiales</span
+								>
+								<p class="ms-3 mb-2 left1">
+									La numérologie appliquée à la psychogénéalogie permet de mieux
+									comprendre les relations entre les membres de la famille. En
+									examinant les compatibilités et les défis numérologiques entre
+									les individus, vous pouvez gagner des insights précieux sur la
+									dynamique familiale et les tensions sous-jacentes.
+								</p>
+							</li>
+							<li class="list-group-item py-3 top">
+								<span class="green-dark fw-bolder top2"
+									>Réévaluation des Schémas Familiaux</span
+								>
+								<p class="ms-3 mb-2 left1">
+									La numérologie peut révéler des schémas récurrents qui se
+									transmettent de génération en génération. Cette prise de
+									conscience permet de réévaluer et de transformer ces schémas
+									pour éviter de les perpétuer dans votre propre vie et celle de
+									vos descendants.
+								</p>
+							</li>
+							<li class="list-group-item py-3 top">
+								<span class="green-dark fw-bolder top2"
+									>Support à la Croissance Personnelle</span
+								>
+								<p class="ms-3 mb-2 left1">
+									En intégrant les enseignements de la numérologie à la
+									psychogénéalogie, vous bénéficiez d’une approche enrichissante
+									pour votre développement personnel. Vous pouvez utiliser les
+									connaissances obtenues pour aligner vos choix de vie,
+									maximiser vos forces et aborder vos défis de manière plus
+									éclairée.
+								</p>
+							</li>
+							<li class="list-group-item py-3 top">
+								<span class="green-dark fw-bolder top2"
+									>Équilibrage des Énergies Personnelles</span
+								>
+								<p class="ms-3 mb-2 left1">
+									Chaque nombre a une vibration spécifique qui influence nos
+									énergies personnelles. En comprenant comment ces énergies
+									interagissent avec votre histoire familiale, vous pouvez
+									travailler à équilibrer et harmoniser ces influences pour
+									améliorer votre bien-être global.
+								</p>
+							</li>
+						</ol>
+					</div>
+					<div class="d-flex align-items-center col-12 col-xxl-8 mx-auto">
+						<div class="col-12 col-md-4 col-xxl-3 justify-content-between left1">
+							<img
+								class="img-fluid rounded-circle"
+								src="../img/numerologie2.jpg"
+								alt="Numérologie"
+							/>
+						</div>
+						<div
+							class="col-12 col-md-8 col-xxl-9 p-3 justify-content-center right1"
+						>
+							<div class="w-100">
+								<p class="my-3 brun">
+									En choisissant la
+									<span class="fw-bolder">numérologie</span> appliquée à la
+									<span class="fw-bolder">psychogénéalogie</span>, vous optez
+									pour une
+									<span class="fw-bolder">approche approfondie</span> qui
+									combine des perspectives numériques et familiales pour offrir
+									une
+									<span class="fw-bolder"
+										>compréhension plus complète de votre histoire</span
+									>
+									et de votre développement personnel.
+								</p>
+								<p class="my-3 brun">
+									Cette méthode enrichit l'exploration de votre héritage
+									familial et vous aide à naviguer dans votre propre chemin de
+									vie avec une plus grande clarté et conscience.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div
+						class="d-flex col-12 col-md-8 col-xxl-6 p-3 justify-content-center mx-auto"
+					></div>
+				</div>
+			</div>
+			<!--footer-->
+			<footer class="row mx-0 p-3">
+				<div class="col-12 col-md-3 p-3">
+					<img
+						loading="eager"
+						src="./img/arbre_de_lumiere.svg"
+						alt="Logo"
+						class="d-inline-block align-text-top me-2 rounded-circle logo-2"
+					/>
+					<div class="p-3">
+						<div class="d-flex align-items-center">
+							<p class="fw-bolder mb-2">
+								<i class="green-dark bi bi-person-circle me-2"></i>Anne-Sophie
+								FAVRE-NOVEL
+							</p>
+						</div>
+						<div class="d-flex align-items-center">
+							<p class="fw-bolder mb-2">
+								<i class="green-dark bi bi-envelope-plus me-2"></i
+								>Larbredelumiere@gmail.fr
+							</p>
+						</div>
+						<div class="d-flex align-items-center">
+							<p class="fw-bolder mb-2">
+								<i class="green-dark bi bi-telephone me-2"></i> 06 18 23 42 08
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-6 p-3 mx-auto">
+					<div class="col-12 col-md-8 mx-auto">
+						<div class="d-flex align-items-center">
+							<i class="green-dark bi bi-globe me-2 mb-1 fs-4"></i>
+							<h4 class="text-uppercase">Site web</h4>
+						</div>
+						<hr />
+						<div class="d-flex align-items-center mb-3">
+							<i class="green-dark bi bi-house-check me-2"></i>
+							<a class="my-auto">Acceuil</a>
+						</div>
+						<div class="d-flex align-items-center mb-3">
+							<i class="green-dark bi bi-arrow-right-circle me-2"></i>
+							<a
+								class="my-auto"
+								href="psychogenealogie.html"
+								alt="Psychogénéalogie"
+								>Psychogénéalogie</a
+							>
+						</div>
+						<div class="d-flex align-items-center mb-3">
+							<i class="green-dark bi bi-arrow-right-circle me-2"></i>
+							<a
+								class="my-auto"
+								href="analyse_transactionnelle.html"
+								alt="Analyse transactionnelle"
+								>Analyse transactionnelle</a
+							>
+						</div>
+						<div class="d-flex align-items-center mb-3">
+							<i class="green-dark bi bi-arrow-right-circle me-2"></i>
+							<a
+								class="my-auto"
+								href="inconscient_parental.html"
+								alt="inconscient parental"
+								>L’inconscient parental</a
+							>
+						</div>
+						<div class="d-flex align-items-center mb-3">
+							<i class="green-dark bi bi-arrow-right-circle me-2"></i>
+							<a class="my-auto" href="numerologie.html" alt="Numérologie"
+								>Numérologie</a
+							>
+						</div>
+						<div class="d-flex align-items-center mb-3">
+							<i class="green-dark bi bi-currency-exchange me-2"></i>
+							<a class="my-auto" href="tarifs.html" alt="Tarifs">Tarifs</a>
+						</div>
+						<div class="d-flex align-items-center mb-3">
+							<i class="green-dark bi bi-envelope-plus me-2"></i>
+							<a class="my-auto" href="contact.html" alt="Contact">Contact</a>
+						</div>
+						<div class="d-flex align-items-center mb-3">
+							<i class="green-dark bi bi-arrow-right-circle me-2"></i>
+							<a
+								class="my-auto"
+								href="mentions-legales.html"
+								alt="Mentions-légales"
+								>Mentions-légales</a
+							>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-3 p-3 mx-auto">
+					<div class="d-flex align-items-center">
+						<i class="green-dark bi bi-chat me-2 mb-1 fs-4"></i>
+						<h4 class="text-uppercase">Réseau sociaux</h4>
+					</div>
+
+					<hr />
+					<div class="d-flex align-items-center mb-3">
+						<i class="bi bi-facebook me-2"></i>
+						<a
+							class="my-auto"
+							target="_blank"
+							href="https://www.facebook.com/profile.php?id=61564220849532"
+							alt="Page Facebook"
+							>Facebook</a
+						>
+					</div>
+					<div class="d-flex align-items-center mb-3">
+						<i class="bi bi-instagram me-2"></i>
+						<a class="my-auto">Instagram</a>
+					</div>
+					<div class="d-flex align-items-center mb-3">
+						<i class="bi bi-twitter me-2"></i>
+						<a class="my-auto">Twitter</a>
+					</div>
+					<div class="d-flex align-items-center mb-3">
+						<i class="bi bi-linkedin me-2"></i>
+						<a class="my-auto">Linkedin</a>
+					</div>
+					<div class="d-flex align-items-center mb-3">
+						<i class="bi bi-whatsapp me-2"></i>
+						<a class="my-auto">Whatsapp</a>
+					</div>
+				</div>
+				<div
+					class="d-block d-md-flex col-12 justify-content-center text-center mt-2"
+				>
+					<a class="mx-2" href="mentions-legales.html" alt="Mentions légales"
+						>Mentions légales</a
+					>
+					<p class="d-none d-md-flex mx-md-2">-</p>
+					<a class="mx-2" href="partenaires.html" alt="Partenaires"
+						>Partenaires</a
+					>
+					<p class="d-none d-md-flex mx-md-2">-</p>
+					<p class="mx-2">
+						Copyright @ 2024 L'arbre de lumière Tous droits réservés
+					</p>
+				</div>
+			</footer>
+		</div>
+		<!-- js -->
+		<script type="text/javascript " src="./js/style.js"></script>
+		<script type="text/javascript " src="./js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>
