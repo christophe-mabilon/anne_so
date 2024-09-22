@@ -72,7 +72,7 @@ body,
 	transition: 200ms;
 }
 header {
-	min-height: 400px !important;
+	height: 80vh !important;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -85,6 +85,7 @@ header {
 		),
 		url(../img/genealogie2.jpg);
 }
+
 .logo {
 	max-width: auto;
 	max-height: 24vw;
@@ -93,6 +94,12 @@ header {
 	max-width: auto;
 	max-height: 12vw;
 }
+
+.logo2-small {
+	width: auto;
+	height: 75vw;
+}
+
 .title-site {
 	font-family: "Tempting";
 	font-weight: 600;
@@ -572,7 +579,7 @@ footer a {
 .subtitle-nav {
 	position: absolute;
 	top: 68%;
-	right: 28%;
+	right: 21.5%;
 	/* margin-top: 5px; */
 	color: #32c061 !important;
 	width: 100%;
