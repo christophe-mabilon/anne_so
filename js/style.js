@@ -118,37 +118,4 @@ $(".Effect-effectFadeIn").click(function () {
 		duration: 400,
 		viewFactor: 0.8,
 	});
-let data = [
-	{ type: "Autre (Merci de pr\xe9ciser)" },
-	{ itype: "Abri de jardin" },
-	{ type: "Abri de piscine" },
-	{ type: "Chape" },
-	{ type: "Cl\xf4ture" },
-	{ type: "Construction garage" },
-	{ type: "Construction maison" },
-	{ type: "Dallage" },
-	{ type: "D\xe9molition (b\xe2timent, murs...)" },
-	{ type: "Escaliers" },
-	{ type: "Extension maison" },
-	{ type: "Fondation" },
-	{ type: "Gros oeuvre" },
-	{ type: "Piscine" },
-	{ type: "Petits travaux de ma\xe7onnerie" },
-	{ type: "Cr\xe9ation d'ouverture" },
-	{ type: "Sol b\xe9ton" },
-	{ type: "Sur\xe9l\xe9vation" },
-	{ type: "Terrasse" },
-	{ type: "Carrelage" },
-	{ type: "Petite charpente" },
-];
-if (
-	((jobType = document.getElementById("jobType")),
-	(data = data.filter((e) => e.type)).sort((e, t) =>
-		e.type.localeCompare(t.type)
-	),
-	jobType)
-)
-	for (let i = 0; i < data.length; i++) {
-		let e = document.createElement("option");
-		(e.value = data[i].type), (e.text = data[i].type), jobType.add(e);
-	}
+
