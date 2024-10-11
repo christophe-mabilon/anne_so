@@ -270,7 +270,11 @@ textarea.form-control:focus {
 .bg-secondary {
 	border-top: none !important;
 }
+/* modal */
+.modal-md {
+	max-width: 80%;
 
+}
 .modal-body {
 	border-radius: 5px;
 	background-color: rgba(0, 0, 0, 0.01);

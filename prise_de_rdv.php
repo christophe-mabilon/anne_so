@@ -2,28 +2,49 @@
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Prise de rendez-vous</title>
 
-  <!-- Bootstrap CSS local -->
-  <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Analyse Transactionnelle - Comprendre Votre Histoire Familiale
+    </title>
+    <meta name="title" content="Analyse Transactionnelle comprendre Votre Histoire Familiale" />
+    <meta name="description"
+      content="Découvrez comment l'analyse transactionnelle et à la psychogénéalogie peuvent transformer votre compréhension des dynamiques familiales et favoriser votre épanouissement personnel." />
+    <meta name="keywords"
+      content="analyse transactionnelle, psychogénéalogie, développement personnel, relations familiales, croissance personnelle" />
+    <meta name="robots" content="index, follow" />
+    <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" />
+    <link rel="canonical" href="https://www.larbredelumiere.fr/analyse-transactionnelle" />
+    <link rel="alternate" hreflang="x-default" href="https://www.larbredelumiere.fr/analyse-transactionnelle" />
+    <meta name="author" content="l'arbre de lumiere" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta name="theme-color" content="#FFFFFF" />
+    <link rel="apple-touch-icon" sizes="192x192" href="./android-chrome-192x192.webp" />
+    <link rel="apple-touch-icon" sizes="512x512" href="./android-chrome-512x512.webp" />
+    <link rel="icon" sizes="16x16 32x32" href="./favicon.ico" type="image/x-icon" />
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Analyse Transactionnelle - Comprendre Votre Histoire Familiale" />
+    <meta property="og:description"
+      content="Transformez votre compréhension des dynamiques familiales grâce à l'analyse transactionnelle et à la psychogénéalogie." />
+    <meta property="og:image" content="https://www.larbredelumiere.fr/images/og-image.webp" />
+    <meta property="og:url" content="https://www.larbredelumiere.fr/analyse-transactionnelle" />
+    <!-- CDN bootstrap@5.3.2 css -->
+    <link href="././node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="././node_modules/bootstrap-icons/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/menu.css" />
+    <meta property="og:type" content="website" />
+    <!-- CDN scrollrevealjs -->
+    <script src="./js/scrollreveal.js" defer></script>
+    <!-- CDN Jquery -->
+    <script src="./js/jquery-3.7.1.min.js" defer></script>
+  </head>
 
-  <!-- Flatpickr CSS local -->
-  <link rel="stylesheet" href="./node_modules/flatpickr/dist/flatpickr.min.css" />
-
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./css/menu.css" />
-
-  <style>
-  /* Custom width for the modal */
-  .modal-md {
-    max-width: 80%;
-    /* Adjust the max-width as needed */
-  }
-  </style>
-</head>
 
 <body>
   <!-- Button to trigger the modal -->
