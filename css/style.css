@@ -8,6 +8,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import "./fonts/icomoon/style.css";
 @import "./fonts/poppins.css";
+
+/*text*/
+h4.fs-6 brun strong,
+h3.fs-6 brun strong ,h4 .fw-bolder,h3.fw-bolder{
+	font-size: 15.5px;color: #80604a !important;
+}
 @font-face {
 	font-family: "icomoon";
 	src: url("fonts/icomoon.eot?10si43");
@@ -250,6 +256,9 @@ h6 {
 .nav-link:hover {
 	color: #32c061 !important;
 }
+a.brun:hover {
+	color: #32c061 !important;
+}
 
 /*input*/
 /* Changer la couleur de fond des champs de saisie */
@@ -273,7 +282,6 @@ textarea.form-control:focus {
 /* modal */
 .modal-md {
 	max-width: 80%;
-
 }
 .modal-body {
 	border-radius: 5px;
@@ -316,7 +324,25 @@ i.bi.bi-layers-fill {
 }
 
 /*img*/
+.genealogie-img,
+.aide-Medico-psychologique,
+.formation-en-psychogenealogie,
+.assistante-maternelle,
+.approche-holistique,
+.formation-analyse-transactionnelle,
+.medium {
+	width: auto;
+	height: 300px;
+}
 
+.hypnose {
+	width: 300px;
+	height: 300px;
+}
+.inconscient-parental {
+	width: 350px;
+	height: 300px;
+}
 img.tree {
 	width: 20vw;
 }

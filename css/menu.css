@@ -1,3 +1,6 @@
+:root {
+	--menu-speed: 0.75s;
+}
 .menu-wrap {
 	position: fixed;
 	right: 20px;
@@ -16,7 +19,7 @@
 .menu-wrap .hamburger {
 	position: absolute;
 	top: 0;
-	right: 0;
+	right: 10px;
 	z-index: 1;
 	width: 60px;
 	height: 60px;
@@ -24,6 +27,8 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	scale: 1.5 !important;
+	right: 15px;
 }
 .menu-wrap .hamburger > div {
 	position: relative;
@@ -68,6 +73,7 @@
 	height: 120%;
 	transition-duration: var(--menu-speed);
 }
+
 .menu-wrap .toggler:checked ~ .menu > div > div {
 	opacity: 1;
 	transition: opacity 0.4s 0.4s;
@@ -77,7 +83,7 @@
 	top: 0;
 	right: 0;
 	width: 100%;
-	height: 100vh;
+	height: 107vh;
 	visibility: hidden;
 	overflow: hidden;
 	display: flex;
@@ -86,9 +92,10 @@
 }
 .menu-wrap .menu > div {
 	background: linear-gradient(
-		rgba(127, 127, 127, 0.99),
-		rgba(127, 127, 127, 0.99)
+		rgba(251, 251, 251, 1)45%,
+		rgba(127, 127, 127, 0.99)100%
 	);
+	color: black;
 	border-radius: 50%;
 	width: 200vw;
 	height: 200vw;
@@ -112,19 +119,20 @@
 	font-size: 1.5rem;
 	padding: 0.8rem;
 }
-.menu-wrap .menu > div > div > ul > li > a {
-	color: inherit;
+
+.menu-wrap .menu > div > div > ul > li > a,
+a.social-link {
+	color: black !important;
 	text-decoration: none;
 	transition: color 0.4s;
+	font-size: 30px !important;
 }
 .menu-wrap .menu > div > div > ul > li > a:hover {
 	color: var(--primary-color);
 }
-
 .logo-nav {
 	width: 150px;
 }
-
 .logo-2 {
 	width: 100px;
 }
@@ -142,16 +150,40 @@ a {
 	text-decoration: none;
 	transition: color 0.6s ease-out;
 }
+.menu-wrap .hamburger > div {
+	background: #80604a;
+	transition: 0.4s, transform 0.4s;
+}
+.menu-wrap .hamburger > div::before,
+.menu-wrap .hamburger > div::after {
+	background: #80604a;
+	transition: 0.4s, transform 0.4s;
+}
+
+li {
+	list-style: none;
+}
+.close-link-menu a:hover,
+.title-nav:hover,
+.menu a:hover {
+	color: #32c061 !important;
+}
+
+a {
+	color: #ffffff !important;
+	text-decoration: none;
+	transition: color 0.6s ease-out;
+}
 /* Avant l'ouverture, couleur normale */
 .menu-wrap .hamburger > div {
 	background: #80604a;
-	transition: background 0.4s, transform 0.4s;
+	transition: 0.4s, transform 0.4s;
 }
 
 .menu-wrap .hamburger > div::before,
 .menu-wrap .hamburger > div::after {
 	background: #80604a;
-	transition: background 0.4s, transform 0.4s;
+	transition: 0.4s, transform 0.4s;
 }
 
 /* Quand le menu est ouvert */
@@ -255,12 +287,16 @@ a {
 /* Style for when the menu is open */
 .menu-wrap .toggler:checked + .hamburger > div {
 	transform: rotate(135deg);
+	background: #80604a;
+	box-shadow: 0 2px 3px rgb(128, 96, 74, 0.2);
 }
 
 .menu-wrap .toggler:checked + .hamburger > div::before,
 .menu-wrap .toggler:checked + .hamburger > div::after {
 	top: 0;
 	transform: rotate(90deg);
+	background: #80604a;
+	box-shadow: 0 2px 3px rgb(128, 96, 74, 0.2);
 }
 
 /* Title Styling */

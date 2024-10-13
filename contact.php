@@ -18,48 +18,58 @@
 
 <body>
   <div class="container-fluid mx-0 px-0">
+    <!-- Navigation -->
     <nav id="nav-top" class="navbar sticky-top navbar-expand-lg bg-body-tertiary p-0 m-0">
       <div class="navbar d-flex justify-content-between align-items-center w-100">
         <!-- Desktop Menu -->
         <div class="d-flex justify-content-start align-items-center h-100 position-relative">
-          <img loading="eager" src="./img/arbre_de_lumiere.svg" alt="L'arbre de lumiere" title="L'arbre de lumiere"
-            class="logo-nav py-1 me-2" />
-          <a href="index.html" class="brun">
-            <span class="fw-bolder d-none d-xl-inline-flex">L'arbre de Lumière</span>
-            <span class="d-inline-flex d-xl-none">L'arbre de Lumière</span>
+          <img width="auto" height="auto" loading="eager" src="./img/arbre_de_lumiere.svg" alt="L'arbre de lumiere"
+            title="L'arbre de lumiere" class="logo-nav py-1 me-2" />
+          <a rel="noopener noreferrer" title="L'arbre de lumiere" alt="L'arbre de lumiere" class="brun">
+            <span class="fw-bolder d-none d-xl-inline-flex">L'arbre de Lumiére</span>
+            <span class="d-inline-flex d-xl-none">L'arbre de Lumiére</span>
           </a>
         </div>
         <span class="fw-lighter brun fs-6 subtitle-nav d-none d-xl-inline-block">
-          Illuminez votre histoire familiale en révèlant la lumière cachée
+          “Illuminez votre histoire familiale pour révéler la lumière cachée
           dans vos racines”
         </span>
         <!-- Desktop Links -->
         <ul class="d-none d-xl-inline-flex mt-2">
           <li class="close-link-menu mx-2 mt-3">
-            <a class="brun" href="index.html" alt="Accueil">Accueil</a>
+            <a href="index.html" class="brun active" rel="noopener noreferrer" title="L'arbre de lumiere"
+              alt="L'arbre de lumiere">Accueil</a>
           </li>
           <li class="close-link-menu mx-2 mt-3">
-            <a class="brun" href="psychogenealogie.html" alt="Psychogénéalogie">Psychogénéalogie</a>
+            <a class="brun" rel="noopener noreferrer" alt="En savoir plus sur nos services de psychogénéalogie"
+              aria-label="En savoir plus sur l'analyse transactionnelle"
+              title="En savoir plus sur nos services de psychogénéalogie"
+              href="psychogenealogie.html">Psychogénéalogie</a>
           </li>
           <li class="close-link-menu mx-2 mt-3">
-            <a class="brun" href="analyse_transactionnelle.html" alt="Analyse transactionnelle">Analyse
-              transactionnelle</a>
+            <a class="brun" href="analyse_transactionnelle.html" rel="noopener noreferrer"
+              alt="Analyse transactionnelle" title="Analyse transactionnelle">Analyse transactionnelle</a>
           </li>
           <li class="close-link-menu mx-2 mt-3">
-            <a class="brun" href="numerologie.html" alt="Numérologie">Numérologie</a>
+            <a class="brun" href="numerologie.html" rel="noopener noreferrer" alt="Numérologie"
+              title="Numérologie">Numérologie</a>
           </li>
           <li class="close-link-menu mx-2 mt-3">
-            <a class="brun" href="hypnose.html" alt="Hypnose">Hypnose</a>
+            <a class="brun" href="hypnose.html" rel="noopener noreferrer" alt="Hypnose"
+              title="Seance d'hypnose">Hypnose</a>
           </li>
           <li class="close-link-menu mx-2 mt-3">
-            <a class="brun" href="inconscient_parental.html" alt="inconscient parental">Inconscient parental</a>
+            <a class="brun" href="inconscient_parental.html" alt="inconscient parental" title="inconscient parental"
+              rel="noopener noreferrer">Inconscient parental</a>
           </li>
 
           <li class="close-link-menu mx-2 mt-3">
-            <a class="brun" href="tarifs.html" alt="Tarifs">Tarifs</a>
+            <a class="brun" href="tarifs.html" rel="noopener noreferrer" alt="Tarifs"
+              title="Tarifs préstations">Tarifs</a>
           </li>
           <li class="close-link-menu mx-2 mt-3">
-            <a class="brun active" href="contact.php" alt="Contact">Contact</a>
+            <a class="brun active" href="contact.php" rel="noopener noreferrer" href="Contact"
+              title="devis préstation">Contact</a>
           </li>
           <!-- Social Media Icons -->
           <li class="close-link-menu mx-2 mt-2">
@@ -67,16 +77,16 @@
               alt="Page Facebook"><span class="bi bi-facebook fs-3"></span></a>
           </li>
           <li class="close-link-menu mx-2 mt-2">
-            <a class="brun" href="#"><span class="bi bi-instagram fs-3"></span></a>
+            <a class="brun" rel="noopener noreferrer" href="#"><span class="bi bi-instagram fs-3"></span></a>
           </li>
           <li class="close-link-menu mx-2 mt-2">
-            <a class="brun" href="#"><span class="bi bi-twitter fs-3"></span></a>
+            <a class="brun" rel="noopener noreferrer" href="#"><span class="bi bi-twitter fs-3"></span></a>
           </li>
           <li class="close-link-menu mx-2 mt-2">
-            <a class="brun" href="#"><span class="bi bi-linkedin fs-3"></span></a>
+            <a class="brun" rel="noopener noreferrer" href="#"><span class="bi bi-linkedin fs-3"></span></a>
           </li>
           <li class="close-link-menu mx-2 mt-2">
-            <a class="brun" href="#"><span class="bi bi-whatsapp fs-3"></span></a>
+            <a class="brun" rel="noopener noreferrer" href="#"><span class="bi bi-whatsapp fs-3"></span></a>
           </li>
         </ul>
 
@@ -89,62 +99,67 @@
           </div>
           <div class="menu">
             <div>
-              <!-- Close Icon -->
-              <div class="menu-close"></div>
               <div class="row">
                 <div class="col-12 d-flex align-items-center">
-                  <img src="./img/arbre_de_lumiere.svg" alt="L'arbre de lumiere" title="L'arbre de lumiere"
-                    class="img-responsive logo2-small py-1 me-2" />
+                  <img width="auto" height="auto" loading="eager" src="./img/arbre_de_lumiere.svg"
+                    alt="L'arbre de lumiere" title="L'arbre de lumiere" class="img-responsive logo2-small py-1 me-2" />
                 </div>
                 <ul class="col-12 text-start ms-5">
                   <li class="mb-2">
-                    <a href="index.html" alt="Accueil">Accueil</a>
+                    <a href="index.html" rel="noopener noreferrer" title="L'arbre de lumiere" alt="L'arbre de lumiere"
+                      onclick="closeMenu()">Accueil</a>
                   </li>
                   <li class="mb-2">
-                    <a href="psychogenealogie.html" alt="Psychogénéalogie">Psychogénéalogie</a>
+                    <a href="psychogenealogie.html" rel="noopener noreferrer" onclick="closeMenu()"
+                      alt="Psychogénéalogie" title="Psychogénéalogie">Psychogénéalogie</a>
                   </li>
                   <li class="mb-2">
-                    <a href="analyse_transactionnelle.html" alt="Analyse transactionnelle">Analyse transactionnelle</a>
+                    <a href="analyse_transactionnelle.html" rel="noopener noreferrer" alt="Analyse transactionnelle"
+                      title="Analyse transactionnelle" onclick="closeMenu()">Analyse transactionnelle</a>
                   </li>
                   <li class="mb-2">
-                    <a href="numerologie.html" alt="Numérologie">Numérologie</a>
+                    <a href="numerologie.html" rel="noopener noreferrer" alt="Numérologie" title="Numérologie"
+                      onclick="closeMenu()">Numérologie</a>
                   </li>
                   <li class="mb-2">
-                    <a href="hypnose.html" alt="Hypnose">Hypnose</a>
+                    <a href="hypnose.html" rel="noopener noreferrer" alt="Hypnose" title="Seance d'hypnose"
+                      onclick="closeMenu()">Hypnose</a>
                   </li>
                   <li class="mb-2">
-                    <a href="inconscient_parental.html" alt="inconscient parental">Inconscient parental</a>
+                    <a onclick="closeMenu()" href="inconscient_parental.html" rel="noopener noreferrer"
+                      title="inconscient parental" alt="inconscient parental">Inconscient parental</a>
                   </li>
 
-                  <li class="mb-2">
-                    <a href="tarifs.html" alt="Tarifs">Tarifs</a>
+                  <li class="mb-2" onclick="closeMenu()">
+                    <a rel="noopener noreferrer" href="tarifs.html" rel="noopener noreferrer" alt="Tarifs"
+                      title="Tarifs préstations">Tarifs</a>
                   </li>
-                  <li class="mb-2">
-                    <a href="contact.php" href="Contact">Contact</a>
+                  <li class="mb-2" onclick="closeMenu()">
+                    <a href="contact.php" rel="noopener noreferrer" href="Contact" title="devis préstation">Contact</a>
                   </li>
                 </ul>
                 <!-- Social Media Icons -->
-                <div class="col-12 d-flex align-items-center my-3 ms-4">
+                <div class="col-12 d-flex align-items-center my-3 ms-4 social">
                   <div class="mb-2 mx-2">
-                    <a class="d-flex align-items-center" target="_blank"
-                      href="https://www.facebook.com/profile.php?id=61564220849532" alt="Page Facebook"><span
-                        class="bi bi-facebook fs-3 me-2"></span>facebook</a>
+                    <a class="d-flex align-items-center social-link" onclick="closeMenu()" target="_blank"
+                      href="https://www.facebook.com/profile.php?id=61564220849532" alt="Page Facebook" title="Facebook"
+                      rel="noopener noreferrer"><span class="bi bi-facebook fs-3 me-2"></span>Facebook</a>
                   </div>
                   <div class="mb-2 mx-2">
-                    <a class="d-flex align-items-center" href="#"><span
-                        class="bi bi-instagram fs-3 me-2"></span>instagram</a>
+                    <a class="d-flex align-items-center social-link" alt="Page Instagram" title="Instagram"
+                      onclick="closeMenu()" href="#"><span class="bi bi-instagram fs-3 me-2"></span>Instagram</a>
                   </div>
                   <div class="mb-2 mx-2">
-                    <a class="d-flex align-items-center" href="#"><span
-                        class="bi bi-twitter fs-3 me-2"></span>twitter</a>
+                    <a class="d-flex align-items-center social-link" alt="Page Twitter" title="Twitter"
+                      onclick="closeMenu()" href="#"><span class="bi bi-twitter fs-3 me-2"></span>Twitter</a>
                   </div>
                   <div class="mb-2 mx-2">
-                    <a class="d-flex align-items-center" href="#"><span
-                        class="bi bi-linkedin fs-3 me-2"></span>linkedin</a>
+                    <a class="d-flex align-items-center social-link" alt="Page Linkedin" title="Linkedin"
+                      onclick="closeMenu()" href="#"><span class="bi bi-linkedin fs-3 me-2"></span>Linkedin</a>
                   </div>
                   <div class="mb-2 mx-2">
-                    <a class="d-flex align-items-center" href="#"><span
-                        class="bi bi-whatsapp fs-3 me-2"></span>whatsapp</a>
+                    <a class="d-flex align-items-center social-link" alt="Page Whatsapp" title="Whatsapp"
+                      onclick="closeMenu()" href="#"><span class="bi bi-whatsapp fs-3 me-2"></span>Whatsapp</a>
                   </div>
                 </div>
               </div>
@@ -156,29 +171,33 @@
     <!--header-->
     <header class="row mx-0 px-0 header">
       <div class="d-block d-md-none text-center">
-        <img loading="eager" src="./img/arbre_de_lumiere.svg" alt="Logo" class="img-fluid align-text-top me-2 right" />
-        <h1 class="d-block title-site text-center left py-3">
-          L'arbre de lumière</h1>
+        <img loading="eager" width="auto" height="auto" src="./img/arbre_de_lumiere.svg" alt="Logo"
+          title="l'arbre de lumiere" class="img-fluid align-text-top me-2 right" />
+        <div class="fs-1 title-site text-center left py-3">
+          L'arbre de Lumiere
+        </div>
       </div>
 
       <div class="d-none d-md-flex flex-row align-items-center">
         <div class="col-md-3">
-          <img loading="eager" src="./img/arbre_de_lumiere.svg" alt="Logo"
-            class="img-fluid align-text-top me-2 right" />
+          <img loading="eager" width="auto" height="auto" src="./img/arbre_de_lumiere.svg" alt="Logo"
+            title="l'arbre de lumiere" class="img-fluid align-text-top me-2 right" />
         </div>
-        <div class="col-md-9">
-          <h1 class="title-site left">L'arbre de Lumière</h1>
+        <div class="col-md-9 pt-3">
+          <h1 class="title-site left mt-3">L'arbre de Lumiere</h1>
         </div>
       </div>
     </header>
     <!--btn contact-->
-    <a class="btn btn-primary btn-contact" href="contact.php" alt="Contact">Rendez vous en ligne</a>
+    <a class="btn btn-primary btn-contact" href="contact.php" rel="noopener noreferrer"
+      title="Contact L'arbre de Lumiere" alt="Contact">Rendez vous en ligne</a>
+
     <!--presentation-->
     <div class="row px-3 mx-0">
       <div class="col-12 mb-3 px-3 pt-3">
         <div class="d-flex align-items-center">
-          <i class="green-dark bi bi-envelope-plus fs-2 mt-2 me-2"></i>
-          <h2 class="mt-3 mb-2">Contact</h2>
+          <i class="green-dark bi bi-envelope-plus fs-3 mt-2 me-2"></i>
+          <h2 class="mt-3 brun fs-5 mb-2">Contact</h2>
         </div>
 
         <hr />
@@ -338,37 +357,41 @@
     <!--footer-->
     <footer class="row mx-0 p-3">
       <div class="col-12 col-md-3 p-3 brun">
-        <img loading="eager" src="./img/arbre_de_lumiere.svg" alt="Logo"
-          class="d-inline-block align-text-top me-2 rounded-circle logo-2" />
+        <img loading="eager" width="auto" height="auto" src="./img/arbre_de_lumiere.svg" title="L'arbre de lumiere"
+          alt="L'arbre de lumière" class="d-inline-block align-text-top me-2 rounded-circle logo-2" />
         <div class="p-3">
           <div class="d-flex align-items-center">
-            <p class="fw-bolder mb-2">
-              <i class="green-dark bi bi-person-circle me-2"></i>Anne-Sophie FAVRE-NOVEL
-            </p>
+            <h3 class="fw-bolder mb-2 fs-6">
+              <i class="green-dark bi bi-person-circle me-2"></i>Anne-Sophie
+              FAVRE-NOVEL
+            </h3>
           </div>
 
           <div class="d-flex align-items-center">
-            <p class="fw-bolder mb-0">
-              <i class="green-dark bi bi-house-add me-2"></i>800 chemin de la petite forêt
-            </p>
+            <h3 class="fw-bolder mb-0 fs-6">
+              <i class="green-dark bi bi-house-add me-2"></i>800 chemin de la
+              petite forêt
+            </h3>
           </div>
 
           <div class="d-flex align-items-center">
-            <p class="fw-bolder mb-2 ps-4"></i>
-              38440 ARTAS
-            </p>
+            <h4 class="fw-bolder mb-2 ps-4 fs-6">38440 ARTAS</h4>
           </div>
           <div class="d-flex align-items-center">
-            <p class="fw-bolder mb-2">
+            <h5 class="fw-bolder mb-2 fs-6">
               <i class="green-dark bi bi-envelope-plus me-2"></i>larbredelumiere38@gmail.com
-            </p>
+            </h5>
           </div>
           <div class="d-flex align-items-center">
-            <p class="fw-bolder mb-2">
+            <h5 class="fw-bolder mb-2 fs-6">
               <i class="green-dark bi bi-telephone me-2"></i> 06 18 23 42 08
-            </p>
+            </h5>
           </div>
         </div>
+        <iframe style="height: 50%; width: auto"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2794.7617122031193!2d5.176126175763821!3d45.53500052871276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478b2b338344d067%3A0xbdb32e3abfca25c!2s800%20Chem.%20de%20la%20Petite%20For%C3%AAt%2C%2038440%20Artas!5e0!3m2!1sfr!2sfr!4v1728226841331!5m2!1sfr!2sfr"
+          width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <div class="col-12 col-md-6 p-3 mx-auto">
         <div class="col-12 col-md-8 mx-auto">
@@ -379,36 +402,45 @@
           <hr />
           <div class="d-flex align-items-center mb-3">
             <i class="green-dark bi bi-house-check me-2"></i>
-            <a class="my-auto">Acceuil</a>
+            <a class="brun my-auto" rel="noopener noreferrer" alt="L'arbre de lumière"
+              title="L'arbre de lumière">Acceuil</a>
           </div>
           <div class="d-flex align-items-center mb-3">
             <i class="green-dark bi bi-arrow-right-circle me-2"></i>
-            <a class="my-auto" href="psychogenealogie.html" alt="Psychogénéalogie">Psychogénéalogie</a>
+            <a class="brun my-auto" href="psychogenealogie.html" rel="noopener noreferrer"
+              alt="En savoir plus sur nos services de psychogénéalogie"
+              aria-label="En savoir plus sur l'analyse transactionnelle"
+              title="En savoir plus sur nos services de psychogénéalogie">Psychogénéalogie</a>
           </div>
           <div class="d-flex align-items-center mb-3">
             <i class="green-dark bi bi-arrow-right-circle me-2"></i>
-            <a class="my-auto" href="analyse_transactionnelle.html" alt="Analyse transactionnelle">Analyse
-              transactionnelle</a>
+            <a class="brun my-auto" href="analyse_transactionnelle.html" rel="noopener noreferrer"
+              alt="Analyse transactionnelle" title="Analyse transactionnelle">Analyse transactionnelle</a>
           </div>
           <div class="d-flex align-items-center mb-3">
             <i class="green-dark bi bi-arrow-right-circle me-2"></i>
-            <a class="my-auto" href="inconscient_parental.html" alt="inconscient parental">L’inconscient parental</a>
+            <a class="brun my-auto" href="inconscient_parental.html" rel="noopener noreferrer"
+              alt="inconscient parental" title="inconscient parental">L’inconscient parental</a>
           </div>
           <div class="d-flex align-items-center mb-3">
             <i class="green-dark bi bi-arrow-right-circle me-2"></i>
-            <a class="my-auto" href="numerologie.html" alt="Numérologie">Numérologie</a>
+            <a class="brun my-auto" href="numerologie.html" rel="noopener noreferrer" alt="Numérologie"
+              title="Numérologie">Numérologie</a>
           </div>
           <div class="d-flex align-items-center mb-3">
             <i class="green-dark bi bi-currency-exchange me-2"></i>
-            <a class="my-auto" href="tarifs.html" alt="Tarifs">Tarifs</a>
+            <a class="brun my-auto" href="tarifs.html" rel="noopener noreferrer" alt="Tarifs"
+              title="Tarifs préstations">Tarifs</a>
           </div>
           <div class="d-flex align-items-center mb-3">
             <i class="green-dark bi bi-envelope-plus me-2"></i>
-            <a class="my-auto" href="contact.php" alt="Contact">Contact</a>
+            <a class="brun my-auto" href="contact.php" rel="noopener noreferrer" alt="Contact"
+              title="Contact et rendez vous">Contact</a>
           </div>
           <div class="d-flex align-items-center mb-3">
             <i class="green-dark bi bi-arrow-right-circle me-2"></i>
-            <a class="my-auto" href="mentions-legales.html" alt="Mentions-légales">Mentions-légales</a>
+            <a class="brun my-auto" href="mentions-legales.html" rel="noopener noreferrer" alt="Mentions-légales"
+              title="Mentions-légales">Mentions-légales</a>
           </div>
         </div>
       </div>
@@ -421,34 +453,36 @@
         <hr />
         <div class="d-flex align-items-center mb-3">
           <i class="bi bi-facebook me-2"></i>
-          <a class="my-auto" target="_blank" href="https://www.facebook.com/profile.php?id=61564220849532"
-            alt="Page Facebook">Facebook</a>
+          <a class="brun my-auto" target="_blank" href="https://www.facebook.com/profile.php?id=61564220849532"
+            alt="Page Facebook" title="Réseaux social Facebook" rel="noopener noreferrer">Facebook</a>
         </div>
         <div class="d-flex align-items-center mb-3">
           <i class="bi bi-instagram me-2"></i>
-          <a class="my-auto">Instagram</a>
+          <a class="brun my-auto" alt="Instagram" title="Instagram" rel="noopener noreferrer">Instagram</a>
         </div>
         <div class="d-flex align-items-center mb-3">
           <i class="bi bi-twitter me-2"></i>
-          <a class="my-auto">Twitter</a>
+          <a class="brun my-auto" alt="Twitter" title="Twitter" rel="noopener noreferrer">Twitter</a>
         </div>
         <div class="d-flex align-items-center mb-3">
           <i class="bi bi-linkedin me-2"></i>
-          <a class="my-auto">Linkedin</a>
+          <a class="brun my-auto" alt="Linkedin" title="Linkedin" rel="noopener noreferrer">Linkedin</a>
         </div>
         <div class="d-flex align-items-center mb-3">
           <i class="bi bi-whatsapp me-2"></i>
-          <a class="my-auto">Whatsapp</a>
+          <a class="brun my-auto" alt="Whatsapp" title="Whatsapp" rel="noopener noreferrer">Whatsapp</a>
         </div>
       </div>
       <div class="d-block d-md-flex col-12 justify-content-center text-center mt-2">
-        <a class="mx-2" href="mentions-legales.html" alt="Mentions légales">Mentions légales</a>
+        <a class="brun mx-2" href="mentions-legales.html" rel="noopener noreferrer" alt="Mentions-légales"
+          title="Mentions-légales">Mentions légales</a>
         <p class="d-none d-md-flex mx-md-2">-</p>
-        <a class="mx-2" href="partenaires.html" alt="Partenaires">Partenaires</a>
-        <p class="d-none d-md-flex mx-md-2">-</p>
-        <p class="mx-2">
-          Copyright @ 2024 larbredelumiere Tous droits réservés
-        </p>
+        <a class="mx-2 brun" rel="noopener noreferrer" href="partenaires.html" alt="Partenaires"
+          title="Partenaires">Partenaires</a>
+        <p class="brun d-none d-md-flex mx-md-2 fs-6">-</p>
+        <p class="brun mx-2 fs-6">Copyright @ 2024 larbredelumiere.fr</p>
+        <p class="brun d-none d-md-flex mx-md-2 fs-6">-</p>
+        <p class="brun fs-6">Tous droits réservés</p>
       </div>
     </footer>
   </div>
@@ -478,7 +512,7 @@
       'nom' => $_POST['lastName'],
       'prenom' => $_POST['firstName'],
       'telephone' => $_POST['phone'],
-      'email' => $_POST['email'],      
+      'email' => $_POST['email'],
       'message' => $_POST['message'],
     ];
     // Get the current hour in 24-hour format

@@ -88,6 +88,7 @@
 	<!-- body -->
 	<body>
 		<div class="container-fluid mx-0 px-0">
+			<!-- Navigation -->
 			<nav
 				id="nav-top"
 				class="navbar sticky-top navbar-expand-lg bg-body-tertiary p-0 m-0"
@@ -108,15 +109,15 @@
 						/>
 						<a href="index.html" class="brun">
 							<span class="fw-bolder d-none d-xl-inline-flex"
-								>L'arbre de Lumière</span
+								>L'arbre de Lumiére</span
 							>
-							<span class="d-inline-flex d-xl-none">L'arbre de Lumière</span>
+							<span class="d-inline-flex d-xl-none">L'arbre de Lumiére</span>
 						</a>
 					</div>
 					<span
 						class="fw-lighter brun fs-6 subtitle-nav d-none d-xl-inline-block"
 					>
-						Illuminez votre histoire familiale en révèlant la lumière cachée
+						“Illuminez votre histoire familiale pour révéler la lumière cachée
 						dans vos racines”
 					</span>
 					<!-- Desktop Links -->
@@ -209,8 +210,6 @@
 						</div>
 						<div class="menu">
 							<div>
-								<!-- Close Icon -->
-								<div class="menu-close"></div>
 								<div class="row">
 									<div class="col-12 d-flex align-items-center">
 										<img
@@ -222,10 +221,21 @@
 									</div>
 									<ul class="col-12 text-start ms-5">
 										<li class="mb-2">
-											<a href="index.html" alt="Accueil">Accueil</a>
+											<a
+												href="index.html"
+												alt="Accueil"
+												title="L'arbre de lumiere"
+												alt="L'arbre de lumiere"
+												onclick="closeMenu()"
+												>Accueil</a
+											>
 										</li>
 										<li class="mb-2">
-											<a href="psychogenealogie.html" alt="Psychogénéalogie"
+											<a
+												href="psychogenealogie.html"
+												onclick="closeMenu()"
+												alt="Psychogénéalogie"
+												title="Psychogénéalogie"
 												>Psychogénéalogie</a
 											>
 										</li>
@@ -233,65 +243,110 @@
 											<a
 												href="analyse_transactionnelle.html"
 												alt="Analyse transactionnelle"
+												title="Analyse transactionnelle"
+												onclick="closeMenu()"
 												>Analyse transactionnelle</a
 											>
 										</li>
 										<li class="mb-2">
-											<a href="numerologie.html" alt="Numérologie"
+											<a
+												href="numerologie.html"
+												alt="Numérologie"
+												title="Numérologie"
+												onclick="closeMenu()"
 												>Numérologie</a
 											>
 										</li>
 										<li class="mb-2">
-											<a href="hypnose.html" alt="Hypnose">Hypnose</a>
+											<a
+												href="hypnose.html"
+												alt="Hypnose"
+												title="Hypnose"
+												onclick="closeMenu()"
+												>Hypnose</a
+											>
 										</li>
 										<li class="mb-2">
 											<a
+												onclick="closeMenu()"
 												href="inconscient_parental.html"
+												title="inconscient parental"
 												alt="inconscient parental"
 												>Inconscient parental</a
 											>
 										</li>
 
-										<li class="mb-2">
-											<a href="tarifs.html" alt="Tarifs">Tarifs</a>
+										<li class="mb-2" onclick="closeMenu()">
+											<a href="tarifs.html" alt="Tarifs" title="Tarifs"
+												>Tarifs</a
+											>
 										</li>
-										<li class="mb-2">
-											<a href="contact.php" href="Contact">Contact</a>
+										<li class="mb-2" onclick="closeMenu()">
+											<a
+												href="contact.php"
+												href="Contact"
+												title="devis préstation"
+												>Contact</a
+											>
 										</li>
 									</ul>
 									<!-- Social Media Icons -->
-									<div class="col-12 d-flex align-items-center my-3 ms-4">
+									<div
+										class="col-12 d-flex align-items-center my-3 ms-4 social"
+									>
 										<div class="mb-2 mx-2">
 											<a
-												class="d-flex align-items-center"
+												class="d-flex align-items-center social-link"
+												onclick="closeMenu()"
 												target="_blank"
 												href="https://www.facebook.com/profile.php?id=61564220849532"
 												alt="Page Facebook"
+												title="Facebook"
 												><span class="bi bi-facebook fs-3 me-2"></span
-												>facebook</a
+												>Facebook</a
 											>
 										</div>
 										<div class="mb-2 mx-2">
-											<a class="d-flex align-items-center" href="#"
+											<a
+												class="d-flex align-items-center social-link"
+												alt="Page Instagram"
+												title="Instagram"
+												onclick="closeMenu()"
+												href="#"
 												><span class="bi bi-instagram fs-3 me-2"></span
-												>instagram</a
+												>Instagram</a
 											>
 										</div>
 										<div class="mb-2 mx-2">
-											<a class="d-flex align-items-center" href="#"
-												><span class="bi bi-twitter fs-3 me-2"></span>twitter</a
+											<a
+												class="d-flex align-items-center social-link"
+												alt="Page Twitter"
+												title="Twitter"
+												onclick="closeMenu()"
+												href="#"
+												><span class="bi bi-twitter fs-3 me-2"></span>Twitter</a
 											>
 										</div>
 										<div class="mb-2 mx-2">
-											<a class="d-flex align-items-center" href="#"
+											<a
+												class="d-flex align-items-center social-link"
+												alt="Page Linkedin"
+												title="Linkedin"
+												onclick="closeMenu()"
+												href="#"
 												><span class="bi bi-linkedin fs-3 me-2"></span
-												>linkedin</a
+												>Linkedin</a
 											>
 										</div>
 										<div class="mb-2 mx-2">
-											<a class="d-flex align-items-center" href="#"
+											<a
+												class="d-flex align-items-center social-link"
+												alt="Page Whatsapp"
+												title="Whatsapp"
+												onclick="closeMenu()"
+												href="#"
 												><span class="bi bi-whatsapp fs-3 me-2"></span
-												>whatsapp</a
+												>Whatsapp</a
 											>
 										</div>
 									</div>
@@ -306,21 +361,25 @@
 				<div class="d-block d-md-none text-center">
 					<img
 						loading="eager"
+						width="auto"
+						height="auto"
 						src="./img/arbre_de_lumiere.svg"
 						alt="Logo"
+						title="l'arbre de lumiere"
 						class="img-fluid align-text-top me-2 right"
 					/>
-					<h1 class="d-block title-site text-center left py-3">
-						larbredelumiere38@gmail.com
-					</h1>
+					<h1 class="title-site text-center left py-3">L'arbre de Lumiere</h1>
 				</div>
 
 				<div class="d-none d-md-flex flex-row align-items-center">
 					<div class="col-md-3">
 						<img
 							loading="eager"
+							width="auto"
+							height="auto"
 							src="./img/arbre_de_lumiere.svg"
 							alt="Logo"
+							title="l'arbre de lumiere"
 							class="img-fluid align-text-top me-2 right"
 						/>
 					</div>
@@ -330,7 +389,11 @@
 				</div>
 			</header>
 			<!--btn contact-->
-			<a class="btn btn-primary btn-contact" href="contact.php" alt="Contact"
+			<a
+				class="btn btn-primary btn-contact"
+				href="contact.php"
+				title="Contact L'arbre de Lumiere"
+				alt="Contact"
 				>Rendez vous en ligne</a
 			>
 
@@ -488,18 +551,27 @@
 						>Mentions légales</a
 					>
 					<p class="d-none d-md-flex mx-md-2">-</p>
-					<a class="mx-2" href="partenaires.html" alt="Partenaires"
+					<a class="mx-2 active" href="partenaires.html" alt="Partenaires"
 						>Partenaires</a
 					>
 					<p class="d-none d-md-flex mx-md-2">-</p>
-					<p class="mx-2">
-						Copyright @ 2024 larbredelumiere38@gmail.com Tous droits réservés
-					</p>
+					<p class="mx-2">Copyright @ 2024 larbredelumiere.fr</p>
+					<p class="d-none d-md-flex mx-md-2">-</p>
+					<p>Tous droits réservés</p>
 				</div>
 			</footer>
 		</div>
 		<!-- js -->
-		<script type="text/javascript " src="./js/style.js"></script>
-		<script type="text/javascript " src="./js/bootstrap.bundle.min.js"></script>
+		<script type="text/javascript " src="./js/style.js" defer></script>
+		<script
+			type="text/javascript "
+			src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+			defer
+		></script>
+		<script
+			type="text/javascript "
+			src="./node_modules/bootstrap/dist/js/bootstrap.min.js"
+			defer
+		></script>
 	</body>
 </html>
