@@ -3,16 +3,44 @@
 
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>
+    Analyse Transactionnelle - Comprendre Votre Histoire Familiale
+  </title>
+  <meta name="title" content="Analyse Transactionnelle comprendre Votre Histoire Familiale" />
+  <meta name="description"
+    content="Découvrez comment l'analyse transactionnelle et à la psychogénéalogie peuvent transformer votre compréhension des dynamiques familiales et favoriser votre épanouissement personnel." />
+  <meta name="keywords"
+    content="analyse transactionnelle, psychogénéalogie, développement personnel, relations familiales, croissance personnelle" />
+  <meta name="robots" content="index, follow" />
+  <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" />
+  <link rel="canonical" href="https://www.larbredelumiere.fr/analyse-transactionnelle" />
+  <link rel="alternate" hreflang="x-default" href="https://www.larbredelumiere.fr/analyse-transactionnelle" />
+  <meta name="author" content="l'arbre de lumiere" />
+  <link rel="icon" type="image/x-icon" rel="noopener noreferrer" href="./favicon.ico" />
+  <link rel="preconnect" rel="noopener noreferrer" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" rel="noopener noreferrer" href="https://fonts.gstatic.com" crossorigin />
+  <meta name="theme-color" content="#FFFFFF" />
+  <link rel="apple-touch-icon" sizes="192x192" href="./android-chrome-192x192.png" />
+  <link rel="apple-touch-icon" sizes="512x512" href="./android-chrome-512x512.png" />
+  <link rel="icon" sizes="16x16 32x32" href="./favicon.ico" type="image/x-icon" />
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Analyse Transactionnelle - Comprendre Votre Histoire Familiale" />
+  <meta property="og:description"
+    content="Transformez votre compréhension des dynamiques familiales grâce à l'analyse transactionnelle et à la psychogénéalogie." />
+  <meta property="og:image" content="https://www.larbredelumiere.fr/android-chrome-512x512.png" />
+  <meta property="og:url" content="https://www.larbredelumiere.fr" />
   <!-- CDN bootstrap@5.3.2 css -->
   <link href="././node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="././node_modules/bootstrap-icons/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" rel="noopener noreferrer" href="./css/style.css" />
+  <link rel="stylesheet" rel="noopener noreferrer" href="./css/menu.css" />
+  <meta property="og:type" content="website" />
   <!-- CDN scrollrevealjs -->
-  <script src="./js/scrollreveal.js"></script>
+  <script src="./js/scrollreveal.js" defer></script>
   <!-- CDN Jquery -->
-  <script src="./js/jquery-3.7.1.min.js"></script>
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./css/menu.css" />
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="./js/jquery-3.7.1.min.js" defer></script>
 </head>
 <!-- body -->
 
@@ -102,7 +130,7 @@
               <div class="row">
                 <div class="col-12 d-flex align-items-center">
                   <img width="auto" height="auto" loading="eager" src="./img/arbre_de_lumiere.svg"
-                    alt="L'arbre de lumiere" title="L'arbre de lumiere" class="img-responsive logo2-small py-1 me-2" />
+                    title="L'arbre de lumiere" alt="L'arbre de lumiere" class="img-responsive logo2-small py-1 me-2" />
                 </div>
                 <ul class="col-12 text-start ms-5">
                   <li class="mb-2">
@@ -171,7 +199,7 @@
     <!--header-->
     <header class="row mx-0 px-0 header">
       <div class="d-block d-md-none text-center">
-        <img loading="eager" width="auto" height="auto" src="./img/arbre_de_lumiere.svg" alt="Logo"
+        <img loading="eager" width="auto" height="auto" src="./img/arbre_de_lumiere.svg" alt="L'arbre de lumiere"
           title="l'arbre de lumiere" class="img-fluid align-text-top me-2 right" />
         <div class="fs-1 title-site text-center left py-3">
           L'arbre de Lumiere
@@ -180,7 +208,7 @@
 
       <div class="d-none d-md-flex flex-row align-items-center">
         <div class="col-md-3">
-          <img loading="eager" width="auto" height="auto" src="./img/arbre_de_lumiere.svg" alt="Logo"
+          <img loading="eager" width="auto" height="auto" src="./img/arbre_de_lumiere.svg" alt="L'arbre de lumiere"
             title="l'arbre de lumiere" class="img-fluid align-text-top me-2 right" />
         </div>
         <div class="col-md-9 pt-3">
@@ -207,8 +235,8 @@
 
       <div class="col-12 col-xl-4">
         <div class="col-8 p-3 mx-auto">
-          <img loading="eager" src="./img/arbre_de_lumiere.svg" alt="Logo" class="me-2 rounded-circle logo-2"
-            style="width:250px;height:auto" />
+          <img loading="eager" width="auto" height="auto" src="./img/arbre_de_lumiere.svg" alt="Logo"
+            class="me-2 rounded-circle logo-2" style="width:250px;height:auto" />
 
           <div class="d-flex align-items-center">
             <p class="fw-bolder mb-2">
