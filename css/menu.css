@@ -27,7 +27,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	scale: 1.5 !important;
+	scale: 1 !important;
 	right: 15px;
 }
 .menu-wrap .hamburger > div {
