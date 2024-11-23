@@ -1,5 +1,3 @@
-@import "../node_modules/primeng//resources/themes/lara-light-blue/theme.css";
-@import "../node_modules/primeng/resources/primeng.css";
 @import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap);
 @import url(../node_modules/bootstrap-icons/font/bootstrap-icons.min.css);
@@ -32,7 +30,7 @@ h3.fs-6 brun strong ,h4 .fw-bolder,h3.fw-bolder{
 html,
 body,
 .card {
-	font-family: "Nunito", sans-serif;
+	font-family: "Nunito", sans-serif!important;
 	font-weight: 400;
 	font-style: normal;
 	color: rgba(69, 69, 69, 1) !important;
@@ -698,3 +696,158 @@ iframe {
 	height: "450px";
 	border: 0;
 }
+
+.calendar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.month {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.weekdays,
+.days {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.weekdays div,
+.days div {
+	width: 14.28%; /* 100% divided by 7 days */
+	padding: 10px;
+	text-align: center;
+}
+
+.days div {
+	cursor: pointer;
+}
+
+/* Add styles for days */
+.days div.day {
+	background-color: #ffffff;
+	border: 1px solid #dcdcdc;
+	transition: 0.3s;
+	border-radius: 3px;
+}
+
+.days div.day:hover {
+	color: white !important;
+	background-color: rgba(50, 192, 97, 0.8);
+	border: 1px solid #949494;
+	border-radius: 3px;
+	transition: 0.3s;
+}
+
+/* Styles for weekends */
+.days div.weekend {
+	background-color: rgb(192, 192, 192);
+	cursor: default;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.days div.weekend:hover {
+	color: rgb(107, 0, 0) !important;
+	background-color: rgb(192, 192, 192);
+	cursor: default;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Additional styles */
+.add-event-wrapper {
+	display: none;
+	border: 1px solid #ccc;
+	padding: 20px;
+	margin-top: 20px;
+	background-color: #f9f9f9;
+}
+
+.add-event {
+	position: absolute;
+	bottom: 5px;
+	right: 2%;
+	cursor: pointer;
+	margin-top: 20px;
+}
+.weekdays div {
+	font-weight: bolder;
+	color: white;
+	background-color: #6c503e;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.3);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.weekdays div:nth-child(1) {
+	border-radius: 10px 0 0 0;
+}
+
+.weekdays div:nth-child(7) {
+	border-radius: 0 10px 0 0;
+}
+.btn-brun {
+	color: #fff;
+	background-color: #80604a;
+	transition: background-color 0.3s;
+}
+.btn-brun:hover {
+	color: #fff;
+	background-color: #5e4737;
+	transition: background-color 0.3s;
+}
+.brun {
+	color: #80604a;
+}
+.brun-light {
+	background-color: rgba(128, 96, 74, 0.3);
+}
+
+.green-dark {
+	color: #32c061 !important;
+}
+.btn .green-dark {
+	color: white;
+	background-color: #32c061 !important;
+	transition: background-color 0.3s;
+}
+.btn.green-dark:hover i {
+	color: #2ba554 !important;
+	transition: background-color 0.3s;
+}
+
+.btn-green-dark {
+	color: white;
+	background-color: #32c061 !important;
+	transition: background-color 0.3s;
+}
+.btn-green-dark:hover {
+	color: #ffffff !important;
+	background-color: #2ba554 !important;
+	transition: background-color 0.3s;
+}
+.modal-fullscreen .modal-dialog {
+	width: 100vw; /* Fixe la largeur de la modal à 100% de la fenêtre */
+	max-width: 100%; /* Assure que la largeur ne dépasse pas 100% */
+	padding: 3px; /* Enlève la marge par défaut */
+	height: 100vh; /* Facultatif : remplit toute la hauteur de l'écran */
+}
+.alert-success {
+	background-color: #28a745 !important; /* Votre couleur personnalisée */
+	color: #fff; /* Couleur du texte */
+}
+
+.alert-danger {
+	background-color: rgb(219, 21, 21) !important; /* Votre couleur personnalisée */
+	color: #fff; /* Couleur du texte */
+}
+
+
+.alert .btn-close .fas {
+	font-size: 1.5rem;
+	color: #fff !important; /* Ou une autre couleur selon vos préférences */
+}
+
+
