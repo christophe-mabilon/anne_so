@@ -274,96 +274,176 @@
           referrerpolicy="no-referrer-when-downgrade"></iframe></div>
 
     </div>
-    <!-- form -->
-    <form id="myForm" class="col-12 mb-4 mb-lg-0 p-4 justify-content-around mx-auto my-3 my-md-auto">
-      <div class="row">
-        <span class="d-block d-block d-none text-danger" id="requiredJobType">L'objet de votre demande est
-          requis</span>
-      </div>
-      <div class="row align-items-stretch px-0 mt-3 my-3 my-md-auto">
-        <div class="col-12 col-lg-6 align-self-stretch form-group">
-          <label class="control-label requiredField" for="firstName">
-            Nom
-            <span class="text-danger"> * </span>
-          </label>
-          <input id="firstName" title="Nom" class="form-control mb-3 mb-xl-auto" placeholder="Nom" name="firstName"
-            type="text" autocomplete="given-name" />
-        </div>
-        <div class="d-block col-12 col-lg-6 align-self-stretch form-group justify-content-end ms-auto my-3 my-md-auto">
-          <label class="control-label requiredField" for="lastName">
-            Prénom
-            <span class="text-danger"> * </span>
-          </label>
-          <label for="lastName"></label>
-          <input title="Prénom" class="form-control" placeholder="Prénom" id="lastName" name="lastName" type="text"
-            autocomplete="family-name" />
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-12 col-lg-6">
-          <span class="d-block d-none text-danger" id="requiredFirstName">Le champ nom est requis</span>
-        </div>
-        <div class="col-12 col-lg-6">
-          <span class="d-block d-none text-danger" id="requiredLastName">Le champ prénom est requis</span>
-        </div>
-      </div>
-      <div class="row align-items-stretch px-0 mt-3">
-        <div class="col-12 col-lg-6 align-self-stretch form-group">
-          <label class="control-label requiredField" for="phone">
-            Téléphone
-            <span class="text-danger"> * </span>
-          </label>
-          <input class="form-control" placeholder="Téléphone" id="phone" name="phone" type="text"
-            autocomplete="phone" />
-        </div>
-        <div class="col-12 col-lg-6 align-self-stretch form-group justify-content-end ml-auto">
-          <label class="control-label requiredField" for="email">
-            E-mail
-            <span class="text-danger"> * </span>
-          </label>
-          <input id="email" name="email" type="email" d-none class="form-control" placeholder="E-mail"
-            autocomplete="email" />
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12 col-lg-6">
-          <span class="d-block d-none text-danger" id="badPhone">Mauvais format du numéro de téléphone</span>
-          <span class="d-block d-none text-danger" id="requiredPhone">Le champ téléphone est requis</span>
-        </div>
-        <div class="col-12 col-lg-6">
-          <span class="d-block d-none text-danger" id="badEmail">Mauvais format de l'email</span><span
-            class="d-block d-none text-danger" id="requiredEmail">Le champ email est requis
-          </span>
-        </div>
-      </div>
-
-      <div class="d-block my-3">
-        <label for="message">Votre message</label>
-        <textarea class="form-control" id="message" rows="5"></textarea>
-      </div>
-      <div class="row align-items-center">
-        <div class="col-6">
-          <div class="d-block">
-            <button type="submit" class="btn btn-primary btn-green-dark col-auto px-3 py-2 text-white fs-6"
-              onclick="submitForm()">
-              <span>Envoyer ma demande</span>
-            </button>
-          </div>
-        </div>
-        <div class="col-6">
-          <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
-        </div>
-      </div>
-      <div id="spinner" class="d-none">
-        <div class="d-flex col-12 align-items-center justify-content-center my-3 text-primary">
-          <div class="spinner-border" role="status"></div>
-          <span class="ms-2">Envoi en cours...</span>
-        </div>
-      </div>
-    </form>
-    
+    <!-- Formulaire -->
+<form id="myForm" class="col-12 mb-4 mb-lg-0 p-4 justify-content-around mx-auto my-3 my-md-auto" onsubmit="submitForm(event)">
+  <div class="row">
+    <span class="d-none text-danger" id="requiredJobType">L'objet de votre demande est requis</span>
+  </div>
+  <div class="row align-items-stretch px-0 mt-3 my-3 my-md-auto">
+    <div class="col-12 col-lg-6 form-group">
+      <label class="control-label requiredField" for="firstName">
+        Nom <span class="text-danger"> * </span>
+      </label>
+      <input id="firstName" title="Nom" class="form-control" placeholder="Nom" name="firstName" type="text" autocomplete="given-name" />
+      <span class="text-danger d-none" id="errorFirstName">Le champ nom est requis</span>
     </div>
+    <div class="col-12 col-lg-6 form-group">
+      <label class="control-label requiredField" for="lastName">
+        Prénom <span class="text-danger"> * </span>
+      </label>
+      <input id="lastName" title="Prénom" class="form-control" placeholder="Prénom" name="lastName" type="text" autocomplete="family-name" />
+      <span class="text-danger d-none" id="errorLastName">Le champ prénom est requis</span>
+    </div>
+  </div>
+
+  <div class="row align-items-stretch px-0 mt-3">
+    <div class="col-12 col-lg-6 form-group">
+      <label class="control-label requiredField" for="phone">
+        Téléphone <span class="text-danger"> * </span>
+      </label>
+      <input class="form-control" placeholder="Téléphone" id="phone" name="phone" type="text" autocomplete="phone" />
+      <span class="text-danger d-none" id="errorPhone">Le champ téléphone est requis et doit contenir entre 10 et 15 chiffres</span>
+    </div>
+    <div class="col-12 col-lg-6 form-group">
+      <label class="control-label requiredField" for="email">
+        E-mail <span class="text-danger"> * </span>
+      </label>
+      <input id="email" name="email" type="email" class="form-control" placeholder="E-mail" autocomplete="email" />
+      <span class="text-danger d-none" id="errorEmail">Le champ email est requis ou contient un format incorrect</span>
+    </div>
+  </div>
+
+  <div class="d-block my-3">
+    <label for="message">Votre message</label>
+    <textarea class="form-control" id="message" rows="5"></textarea>
+  </div>
+
+  <div class="row align-items-center">
+    <div class="col-6">
+      <button type="submit" class="btn btn-primary btn-green-dark col-auto px-3 py-2 text-white fs-6">
+        <span>Envoyer ma demande</span>
+      </button>
+    </div>
+    <div class="col-6">
+      <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+    </div>
+  </div>
+
+  <div id="spinner" class="d-none mt-3">
+    <div class="d-flex align-items-center justify-content-center">
+      <div class="spinner-border" role="status"></div>
+      <span class="ms-2">Envoi en cours...</span>
+    </div>
+  </div>
+</form>
+
+<!-- Modal -->
+<div class="modal fade" id="modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h4 class="modal-title" id="modalLabel">Notification</h4>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <!-- Contenu du message -->
+      </div>
+      <div class="modal-footer">
+        <button id="btnClose" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Fonction de validation
+  function validateForm() {
+    let isValid = true;
+
+    // Récupération des éléments
+    const firstName = document.getElementById("firstName");
+    const lastName = document.getElementById("lastName");
+    const phone = document.getElementById("phone");
+    const email = document.getElementById("email");
+
+    const errorFirstName = document.getElementById("errorFirstName");
+    const errorLastName = document.getElementById("errorLastName");
+    const errorPhone = document.getElementById("errorPhone");
+    const errorEmail = document.getElementById("errorEmail");
+
+    // Réinitialisation des messages d'erreur
+    [errorFirstName, errorLastName, errorPhone, errorEmail].forEach((error) => error.classList.add("d-none"));
+
+    // Validation des champs
+    if (firstName.value.trim() === "") {
+      errorFirstName.classList.remove("d-none");
+      isValid = false;
+    }
+    if (lastName.value.trim() === "") {
+      errorLastName.classList.remove("d-none");
+      isValid = false;
+    }
+    const phoneRegex = /^[0-9]{10,15}$/;
+    if (!phoneRegex.test(phone.value)) {
+      errorPhone.classList.remove("d-none");
+      isValid = false;
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email.value)) {
+      errorEmail.classList.remove("d-none");
+      isValid = false;
+    }
+    return isValid;
+  }
+
+  // Fonction de soumission
+  function submitForm(event) {
+    event.preventDefault();
+
+    const spinner = document.getElementById("spinner");
+
+    if (!validateForm()) {
+      return;
+    }
+
+    spinner.classList.remove("d-none");
+
+    const formData = {
+      firstName: document.getElementById("firstName").value,
+      lastName: document.getElementById("lastName").value,
+      phone: document.getElementById("phone").value,
+      email: document.getElementById("email").value,
+      message: document.getElementById("message").value,
+    };
+
+    fetch("http://localhost:3000/send-email", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        spinner.classList.add("d-none");
+        const modalBody = document.getElementById("modal-body");
+        if (data.success) {
+          modalBody.innerHTML = "Votre email a été envoyé avec succès.";
+          new bootstrap.Modal(document.getElementById("modal")).show();
+          document.getElementById("myForm").reset();
+        } else {
+          modalBody.innerHTML = `Erreur : ${data.message}`;
+          new bootstrap.Modal(document.getElementById("modal")).show();
+        }
+      })
+      .catch((error) => {
+        spinner.classList.add("d-none");
+        console.error("Erreur :", error);
+        const modalBody = document.getElementById("modal-body");
+        modalBody.innerHTML = "Une erreur est survenue lors de l'envoi.";
+        new bootstrap.Modal(document.getElementById("modal")).show();
+      });
+  }
+</script>
+
     <!--footer-->
     <footer class="row mx-0 p-3">
       <div class="col-12 col-md-3 p-3 brun">
@@ -503,7 +583,7 @@
   </div>
   <!-- js -->
   <script type="text/javascript " src="./js/style.js"></script>
-  <script type="text/javascript " src="./js/sendEmail.js"></script>
+  <!--<script type="text/javascript " src="./js/sendEmail.js"></script>-->
   <script type="text/javascript " src="./js/bootstrap.bundle.min.js"></script>
 
 </body>
