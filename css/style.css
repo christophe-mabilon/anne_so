@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap);
 @import url(../node_modules/bootstrap-icons/font/bootstrap-icons.min.css);
 @import url(https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap);
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import "./fonts/icomoon/style.css";
@@ -10,8 +10,11 @@
 
 /*text*/
 h4.fs-6 brun strong,
-h3.fs-6 brun strong ,h4 .fw-bolder,h3.fw-bolder{
-	font-size: 15.5px;color: #80604a !important;
+h3.fs-6 brun strong,
+h4 .fw-bolder,
+h3.fw-bolder {
+	font-size: 15.5px;
+	color: #80604a !important;
 }
 @font-face {
 	font-family: "icomoon";
@@ -31,7 +34,7 @@ h3.fs-6 brun strong ,h4 .fw-bolder,h3.fw-bolder{
 html,
 body,
 .card {
-	font-family: "Figtree", sans-serif!important;
+	font-family: "Figtree", sans-serif !important;
 	font-weight: 400;
 	font-style: normal;
 	color: rgba(69, 69, 69, 1) !important;
@@ -116,7 +119,7 @@ header {
 	font-size: 6vw;
 	text-shadow: 0 3.5px 3.5px rgba(0, 0, 0, 0.6), 0 4px 3.5px rgba(0, 0, 0, 0.6),
 		0 7px 5px rgba(255, 255, 255, 0.5);
-	color: white!important;
+	color: white !important;
 }
 .footer {
 	height: 400px;
@@ -186,7 +189,7 @@ h6 {
 
 /* btn */
 .month button i {
-  color: white !important;
+	color: white !important;
 }
 .btn-contact {
 	position: fixed;
@@ -207,7 +210,7 @@ h6 {
 	z-index: 1000;
 }
 .btn-contact:hover {
-  background: rgb(38, 147, 74)!important;
+	background: rgb(38, 147, 74) !important;
 	box-shadow: 0 3px 5px rgba(41, 48, 43, 0.7) !important;
 }
 
@@ -247,6 +250,12 @@ h6 {
 	color: white;
 	background-color: #32c061 !important;
 }
+
+.bg-brun {
+	color: white;
+	background-color: #80604a!important;
+}
+
 .bg-secondary {
 	border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
 	border-top: 1px solid rgba(0, 0, 0, 0.2) !important;
@@ -808,6 +817,36 @@ iframe {
 	background-color: rgba(128, 96, 74, 0.3);
 }
 
+
+.auto-close-btn {
+  display: flex; 
+  justify-content: flex-end; /* Aligne l'icône à droite */
+  align-items: center; /* Centre verticalement */
+  position: relative;
+  width: 100%;
+}
+
+.auto-close-btn::after {
+  content: '\00d7'; /* Symbole de la croix "×" */
+  color: white; /* Couleur blanche */
+  font-size: 37px; /* Taille de base */
+  font-weight: 200; /* Poids léger */
+  cursor: pointer; /* Curseur en pointeur pour le clic */
+  margin-right: -5px; /* Espacement à droite */
+  display: inline-block; /* Assure un bon rendu */
+  width: 40px; /* Taille du cercle horizontal */
+  height: 40px; /* Taille du cercle vertical */
+  line-height: 40px; /* Centre le texte dans le cercle */
+  text-align: center; /* Centre horizontalement */
+  border-radius: 50%; /* Forme circulaire par défaut */
+  transition: all 0.3s ease; /* Animation fluide pour le survol */
+  
+}
+
+.auto-close-btn:hover::after {
+  background-color: rgba(255, 255, 255, 0.3); /* Fond semi-transparent au survol */
+}
+
 .green-dark {
 	color: #32c061 !important;
 }
@@ -837,20 +876,37 @@ iframe {
 	padding: 3px; /* Enlève la marge par défaut */
 	height: 100vh; /* Facultatif : remplit toute la hauteur de l'écran */
 }
+
+/* Styles par défaut */
+.modal .modal-header, .modal .modal-title, .modal .btn {
+  color: white;
+  background-color: #6c757d; /* Gris par défaut */
+}
+
+/* Erreur */
+.modal.error .modal-header, .modal.error .modal-title, .modal.error .btn {
+  background-color: #b20606 !important;
+}
+
+/* Succès */
+.modal.success .modal-header, .modal.success .modal-title, .modal.success .btn {
+  background-color: #32c061 !important;
+}
 .alert-success {
 	background-color: #28a745 !important; /* Votre couleur personnalisée */
 	color: #fff; /* Couleur du texte */
 }
 
 .alert-danger {
-	background-color: rgb(219, 21, 21) !important; /* Votre couleur personnalisée */
+	background-color: rgb(
+		219,
+		21,
+		21
+	) !important; /* Votre couleur personnalisée */
 	color: #fff; /* Couleur du texte */
 }
-
 
 .alert .btn-close .fas {
 	font-size: 1.5rem;
 	color: #fff !important; /* Ou une autre couleur selon vos préférences */
 }
-
-
