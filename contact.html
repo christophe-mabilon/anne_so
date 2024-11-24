@@ -128,9 +128,9 @@
 							class="brun"
 						>
 							<span class="fw-bolder d-none d-xl-inline-flex"
-								>L'arbre de Lumiére</span
+								>L'arbre de Lumière</span
 							>
-							<span class="d-inline-flex d-xl-none">L'arbre de Lumiére</span>
+							<span class="d-inline-flex d-xl-none">L'arbre de Lumière</span>
 						</a>
 					</div>
 					<span
@@ -467,7 +467,7 @@
 			<!--btn contact-->
 			<a
 				class="btn btn-primary btn-contact"
-				href="contact.html"
+				href="planing_des_rendez_vous.html"
 				rel="noopener noreferrer"
 				title="Contact L'arbre de Lumiere"
 				alt="Contact"
@@ -652,22 +652,6 @@
 						</div>
 					</div>
 				</form>
-				<div class="text-center mt-4">
-					<button
-						type="button"
-						class="btn btn-secondary"
-						onclick="openTestModal('error')"
-					>
-						Ouvrir la modal (Erreur)
-					</button>
-					<button
-						type="button"
-						class="btn btn-secondary"
-						onclick="openTestModal('success')"
-					>
-						Ouvrir la modal (Succès)
-					</button>
-				</div>
 
 				<!-- Modal -->
 				<div
@@ -731,7 +715,7 @@
 							errorLastName.classList.remove("d-none");
 							isValid = false;
 						}
-						const phoneRegex = /^[0-9]{10,15}$/;
+						const phoneRegex = /^(\d{2}([ .-]?\d{2}){4})$/;
 						if (!phoneRegex.test(phone.value)) {
 							errorPhone.classList.remove("d-none");
 							isValid = false;
@@ -764,7 +748,7 @@
 							message: document.getElementById("message").value,
 						};
 
-						fetch("http://localhost:3000/send-email", {
+						fetch("http://localhost:8082/api/email/send-email", {
 							method: "POST",
 							headers: { "Content-Type": "application/json" },
 							body: JSON.stringify(formData),

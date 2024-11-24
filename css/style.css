@@ -177,7 +177,13 @@ h6 {
 	width: 40px;
 }
 
-.green-dark {
+.green-dark,
+h1.green-dark,
+h2.green-dark,
+h3.green-dark,
+h4.green-dark,
+h5.green-dark,
+h6.green-dark {
 	color: #32c061 !important;
 }
 .brun {
@@ -253,7 +259,7 @@ h6 {
 
 .bg-brun {
 	color: white;
-	background-color: #80604a!important;
+	background-color: #80604a !important;
 }
 
 .bg-secondary {
@@ -817,34 +823,37 @@ iframe {
 	background-color: rgba(128, 96, 74, 0.3);
 }
 
-
 .auto-close-btn {
-  display: flex; 
-  justify-content: flex-end; /* Aligne l'icône à droite */
-  align-items: center; /* Centre verticalement */
-  position: relative;
-  width: 100%;
+	display: flex;
+	justify-content: flex-end; /* Aligne l'icône à droite */
+	align-items: center; /* Centre verticalement */
+	position: relative;
+	width: 100%;
 }
 
 .auto-close-btn::after {
-  content: '\00d7'; /* Symbole de la croix "×" */
-  color: white; /* Couleur blanche */
-  font-size: 37px; /* Taille de base */
-  font-weight: 200; /* Poids léger */
-  cursor: pointer; /* Curseur en pointeur pour le clic */
-  margin-right: -5px; /* Espacement à droite */
-  display: inline-block; /* Assure un bon rendu */
-  width: 40px; /* Taille du cercle horizontal */
-  height: 40px; /* Taille du cercle vertical */
-  line-height: 40px; /* Centre le texte dans le cercle */
-  text-align: center; /* Centre horizontalement */
-  border-radius: 50%; /* Forme circulaire par défaut */
-  transition: all 0.3s ease; /* Animation fluide pour le survol */
-  
+	content: "\00d7"; /* Symbole de la croix "×" */
+	color: white; /* Couleur blanche */
+	font-size: 37px; /* Taille de base */
+	font-weight: 200; /* Poids léger */
+	cursor: pointer; /* Curseur en pointeur pour le clic */
+	margin-right: -5px; /* Espacement à droite */
+	display: inline-block; /* Assure un bon rendu */
+	width: 40px; /* Taille du cercle horizontal */
+	height: 40px; /* Taille du cercle vertical */
+	line-height: 40px; /* Centre le texte dans le cercle */
+	text-align: center; /* Centre horizontalement */
+	border-radius: 50%; /* Forme circulaire par défaut */
+	transition: all 0.3s ease; /* Animation fluide pour le survol */
 }
 
 .auto-close-btn:hover::after {
-  background-color: rgba(255, 255, 255, 0.3); /* Fond semi-transparent au survol */
+	background-color: rgba(
+		255,
+		255,
+		255,
+		0.3
+	); /* Fond semi-transparent au survol */
 }
 
 .green-dark {
@@ -878,19 +887,25 @@ iframe {
 }
 
 /* Styles par défaut */
-.modal .modal-header, .modal .modal-title, .modal .btn {
-  color: white;
-  background-color: #6c757d; /* Gris par défaut */
+.modal .modal-header,
+.modal .modal-title,
+.modal .btn {
+	color: white !important;
+	background-color: #32c061 !important;
 }
 
 /* Erreur */
-.modal.error .modal-header, .modal.error .modal-title, .modal.error .btn {
-  background-color: #b20606 !important;
+.modal.error .modal-header,
+.modal.error .modal-title,
+.modal.error .btn {
+	background-color: #b20606 !important;
 }
 
 /* Succès */
-.modal.success .modal-header, .modal.success .modal-title, .modal.success .btn {
-  background-color: #32c061 !important;
+.modal.success .modal-header,
+.modal.success .modal-title,
+.modal.success .btn {
+	background-color: #32c061 !important;
 }
 .alert-success {
 	background-color: #28a745 !important; /* Votre couleur personnalisée */
