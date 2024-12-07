@@ -232,9 +232,13 @@ h6.green-dark {
 .fs-2,
 .fs-3,
 .fs-4,
-.fs-5,
+.fs-5,.fs-5-5
 .fs--6 {
 	color: rgba(69, 69, 69, 0.7);
+}
+
+.fs-5-5{
+  font-size: 18px!important;
 }
 
 .t-dark {
