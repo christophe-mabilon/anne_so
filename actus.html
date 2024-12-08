@@ -4,7 +4,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>
-			Contact prendre rendez vous en ligne
+			Acceuil - Comprendre Votre Histoire Familiale
 		</title>
 		<meta
 			name="title"
@@ -79,6 +79,7 @@
 			content="https://www.larbredelumiere.fr/android-chrome-512x512.png"
 		/>
 		<meta property="og:url" content="https://www.larbredelumiere.fr" />
+		<meta property="og:type" content="website" />
 		<!-- CDN bootstrap@5.3.2 css -->
 		<link
 			href="././node_modules/bootstrap/dist/css/bootstrap.min.css"
@@ -89,7 +90,7 @@
 			href="././node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
 		/>
 		<link rel="stylesheet" rel="noopener noreferrer" href="./css/style.css" />
-		<meta property="og:type" content="website" />
+
 		<!-- CDN scrollrevealjs -->
 		<script src="./js/scrollreveal.js" defer></script>
 		<!-- CDN Jquery -->
@@ -334,346 +335,9 @@
 				title="Contact L'arbre de Lumiere"
 				alt="Contact"
 				>Rendez vous en ligne</a
-			>
-			<div class="container-fluid p-3">
-				<!--presentation-->
-				<div class="row px-3 mx-0">
-					<div class="col-12 mb-3 px-3 pt-3">
-						<div class="d-flex align-items-center">
-							<i class="green-dark bi bi-envelope-plus fs-3 mt-2 me-2"></i>
-							<h2 class="mt-3 brun fs-5 mb-2">Contact</h2>
-						</div>
-
-						<hr />
-					</div>
-				</div>
-				<div class="row align-items-center justify-content-around mx-0">
-					<div class="col-12 col-xl-4">
-						<div class="col-12 col-xl-8 p-3 mx-auto">
-							<img
-								loading="eager"
-								width="auto"
-								height="auto"
-								src="./img/arbre_de_lumiere.svg"
-								alt="Logo"
-								class="me-2 rounded-circle logo-2"
-								style="width: 250px; height: auto"
-							/>
-
-							<div class="d-flex align-items-center">
-								<p class="fw-bolder mb-2">
-									<i class="green-dark bi bi-person-circle me-2"></i>Anne-Sophie
-									FAVRE-NOVEL
-								</p>
-							</div>
-
-							<div class="d-flex align-items-center">
-								<p class="fw-bolder mb-0">
-									<i class="green-dark bi bi-house-add me-2"></i>802 chemin de
-									la petite forêt
-								</p>
-							</div>
-
-							<div class="d-flex align-items-center">
-								<p class="fw-bolder mb-2 ps-4">38440 ARTAS</p>
-							</div>
-
-							<div class="d-flex align-items-center">
-								<p class="fw-bolder mb-2">
-									<i class="green-dark bi bi-envelope-plus me-2"></i
-									>larbredelumiere38@gmail.com
-								</p>
-							</div>
-							<div class="d-flex align-items-center">
-								<p class="fw-bolder mb-2">
-									<i class="green-dark bi bi-telephone me-2"></i> 06 18 23 42 08
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-12 col-xl-8">
-						<iframe
-							style="width: 100%; height: 400px; border-radius: 30px"
-							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2794.7617122031193!2d5.176126175763821!3d45.53500052871276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478b2b338344d067%3A0xbdb32e3abfca25c!2s800%20Chem.%20de%20la%20Petite%20For%C3%AAt%2C%2038440%20Artas!5e0!3m2!1sfr!2sfr!4v1728226841331!5m2!1sfr!2sfr"
-							width="600"
-							height="450"
-							style="border: 0"
-							allowfullscreen=""
-							loading="lazy"
-							referrerpolicy="no-referrer-when-downgrade"
-						></iframe>
-					</div>
-				</div>
-				<!-- Formulaire -->
-				<form
-					id="myForm"
-					class="col-12 mb-4 mb-lg-0 p-4 justify-content-around mx-auto my-3 my-md-auto"
-					onsubmit="submitForm(event)"
-				>
-					<div class="row">
-						<span class="d-none text-danger" id="requiredJobType"
-							>L'objet de votre demande est requis</span
-						>
-					</div>
-					<div class="row align-items-stretch px-0 mt-3 my-3 my-md-auto">
-						<div class="col-12 col-lg-6 form-group">
-							<label class="control-label requiredField" for="firstName">
-								Nom <span class="text-danger"> * </span>
-							</label>
-							<input
-								id="firstName"
-								title="Nom"
-								class="form-control"
-								placeholder="Nom"
-								name="firstName"
-								type="text"
-								autocomplete="given-name"
-							/>
-							<span class="text-danger d-none" id="errorFirstName"
-								>Le champ nom est requis</span
-							>
-						</div>
-						<div class="col-12 col-lg-6 form-group">
-							<label class="control-label requiredField" for="lastName">
-								Prénom <span class="text-danger"> * </span>
-							</label>
-							<input
-								id="lastName"
-								title="Prénom"
-								class="form-control"
-								placeholder="Prénom"
-								name="lastName"
-								type="text"
-								autocomplete="family-name"
-							/>
-							<span class="text-danger d-none" id="errorLastName"
-								>Le champ prénom est requis</span
-							>
-						</div>
-					</div>
-
-					<div class="row align-items-stretch px-0 mt-3">
-						<div class="col-12 col-lg-6 form-group">
-							<label class="control-label requiredField" for="phone">
-								Téléphone <span class="text-danger"> * </span>
-							</label>
-							<input
-								class="form-control"
-								placeholder="Téléphone"
-								id="phone"
-								name="phone"
-								type="text"
-								autocomplete="phone"
-							/>
-							<span class="text-danger d-none" id="errorPhone"
-								>Le champ téléphone est requis et doit contenir entre 10 et 15
-								chiffres</span
-							>
-						</div>
-						<div class="col-12 col-lg-6 form-group">
-							<label class="control-label requiredField" for="email">
-								E-mail <span class="text-danger"> * </span>
-							</label>
-							<input
-								id="email"
-								name="email"
-								type="email"
-								class="form-control"
-								placeholder="E-mail"
-								autocomplete="email"
-							/>
-							<span class="text-danger d-none" id="errorEmail"
-								>Le champ email est requis ou contient un format incorrect</span
-							>
-						</div>
-					</div>
-
-					<div class="d-block my-3">
-						<label for="message">Votre message</label>
-						<textarea class="form-control" id="message" rows="5"></textarea>
-					</div>
-
-					<div class="row align-items-center">
-						<div class="col-6">
-							<button
-								type="submit"
-								class="btn btn-primary btn-green-dark col-auto px-3 py-2 text-white fs-6"
-							>
-								<span>Envoyer ma demande</span>
-							</button>
-						</div>
-						<div class="col-6">
-							<div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
-						</div>
-					</div>
-
-					<div id="spinner" class="d-none mt-3">
-						<div class="d-flex align-items-center justify-content-center">
-							<div class="spinner-border brun" role="status"></div>
-							<span class="ms-2">Envoi en cours...</span>
-						</div>
-					</div>
-				</form>
-
-				<!-- Modal -->
-				<div
-					id="testModal"
-					class="modal"
-					tabindex="-1"
-					role="dialog"
-					style="display: none"
-				>
-					<div class="modal-dialog" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 id="modalTitle" class="modal-title">Titre de la Modal</h5>
-								<span
-									class="auto-close-btn me-auto me-1"
-									onclick="closeTestModal()"
-								></span>
-							</div>
-							<div id="modalMessage" class="modal-body">
-								<p>Message de la modal</p>
-							</div>
-							<div class="modal-footer">
-								<button
-									type="button"
-									class="btn btn-secondary"
-									onclick="closeTestModal()"
-								>
-									Fermer
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<script>
-					// Fonction de validation
-					function validateForm() {
-						let isValid = true;
-
-						// Récupération des éléments
-						const firstName = document.getElementById("firstName");
-						const lastName = document.getElementById("lastName");
-						const phone = document.getElementById("phone");
-						const email = document.getElementById("email");
-
-						const errorFirstName = document.getElementById("errorFirstName");
-						const errorLastName = document.getElementById("errorLastName");
-						const errorPhone = document.getElementById("errorPhone");
-						const errorEmail = document.getElementById("errorEmail");
-
-						// Réinitialisation des messages d'erreur
-						[errorFirstName, errorLastName, errorPhone, errorEmail].forEach(
-							(error) => error.classList.add("d-none")
-						);
-
-						// Validation des champs
-						if (firstName.value.trim() === "") {
-							errorFirstName.classList.remove("d-none");
-							isValid = false;
-						}
-						if (lastName.value.trim() === "") {
-							errorLastName.classList.remove("d-none");
-							isValid = false;
-						}
-						const phoneRegex = /^(\d{2}([ .-]?\d{2}){4})$/;
-						if (!phoneRegex.test(phone.value)) {
-							errorPhone.classList.remove("d-none");
-							isValid = false;
-						}
-						const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-						if (!emailRegex.test(email.value)) {
-							errorEmail.classList.remove("d-none");
-							isValid = false;
-						}
-						return isValid;
-					}
-
-					// Fonction de soumission
-					function submitForm(event) {
-						event.preventDefault();
-
-						const spinner = document.getElementById("spinner");
-
-						if (!validateForm()) {
-							return;
-						}
-
-						spinner.classList.remove("d-none");
-
-						const formData = {
-							firstName: document.getElementById("firstName").value,
-							lastName: document.getElementById("lastName").value,
-							phone: document.getElementById("phone").value,
-							email: document.getElementById("email").value,
-							message: document.getElementById("message").value,
-						};
-
-						fetch("http://localhost:8082/api/email/send-email", {
-							method: "POST",
-							headers: { "Content-Type": "application/json" },
-							body: JSON.stringify(formData),
-						})
-							.then((response) => response.json())
-							.then((data) => {
-								spinner.classList.add("d-none");
-								const modalBody = document.getElementById("modal-body");
-								if (data.success) {
-									modalBody.innerHTML = "Votre email a été envoyé avec succès.";
-									new bootstrap.Modal(document.getElementById("modal")).show();
-									document.getElementById("myForm").reset();
-								} else {
-									modalBody.innerHTML = `Erreur : ${data.message}`;
-									new bootstrap.Modal(document.getElementById("modal")).show();
-								}
-							})
-							.catch((error) => {
-								spinner.classList.add("d-none");
-								console.error("Erreur :", error);
-								const modalBody = document.getElementById("modal-body");
-								modalBody.innerHTML =
-									"Une erreur est survenue lors de l'envoi.";
-								new bootstrap.Modal(document.getElementById("modal")).show();
-							});
-					}
-				</script>
-				<script>
-					function openTestModal(type) {
-						// Sélectionne la modal
-						const modal = document.getElementById("testModal");
-						const modalTitle = document.getElementById("modalTitle");
-						const modalMessage = document.getElementById("modalMessage");
-
-						// Ajoute ou retire les classes basées sur le type
-						modal.classList.remove("error", "success");
-						if (type === "error") {
-							modal.classList.add("error");
-							modalTitle.textContent = "Erreur";
-							modalMessage.textContent =
-								"Une erreur est survenue. Veuillez réessayer.";
-						} else if (type === "success") {
-							modal.classList.add("success");
-							modalTitle.textContent = "Succès";
-							modalMessage.textContent = "Votre opération a réussi.";
-						}
-
-						// Affiche la modal
-						modal.style.display = "block";
-					}
-
-					function closeTestModal() {
-						// Cache la modal
-						const modal = document.getElementById("testModal");
-						modal.style.display = "none";
-					}
-				</script>
-			</div>
-			<!--footer-->
+			><!--footer-->
 			<footer class="row mx-0 p-3">
-				<div
-					class="row d-lg-block align-items-center col-12 col-lg-3 p-3 brun"
-				>
+				<div class="row d-lg-block align-items-center col-12 col-lg-3 p-3 brun">
 					<img
 						loading="eager"
 						width="auto"
@@ -714,7 +378,8 @@
 						</div>
 					</div>
 
-					<iframe class="col-12"
+					<iframe
+						class="col-12"
 						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2794.7617122031193!2d5.176126175763821!3d45.53500052871276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478b2b338344d067%3A0xbdb32e3abfca25c!2s800%20Chem.%20de%20la%20Petite%20For%C3%AAt%2C%2038440%20Artas!5e0!3m2!1sfr!2sfr!4v1728226841331!5m2!1sfr!2sfr"
 						allowfullscreen=""
 						loading="lazy"
