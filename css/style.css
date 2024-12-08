@@ -1253,4 +1253,32 @@ iframe {
 		background-color: transparent !important;
 		--bs-gutter-x: 0 !important;
 	}
+}/* Style de base des liens dans la navbar */
+.navbar-nav .nav-link {
+  position: relative; /* Nécessaire pour les pseudo-éléments */
+  text-decoration: none; /* Retire le soulignement par défaut */
+  color: #80604a; /* Couleur des liens */
+  font-weight: 500; /* Optionnel : ajustez le poids */
+  transition: color 0.3s ease; /* Transition pour l'effet de survol */
+}
+
+/* Pseudo-élément pour le soulignement */
+.navbar-nav .nav-link::after {
+  content: ""; /* Crée le pseudo-élément */
+  position: absolute;
+  left: 0;
+  bottom: 5px!important; /* Positionne la ligne sous le texte */
+  width: 0; /* La ligne est invisible au départ */
+  height: 0.5px; /* Épaisseur de la ligne */
+  background-color: #32c061; /* Couleur du soulignement */
+  transition: width 0.3s ease; /* Animation fluide */
+}
+
+/* Changement de couleur et soulignement au survol */
+.navbar-nav .nav-link:hover {
+  color: #32c061; /* Change la couleur du texte au survol */
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%; /* La ligne s'étend sur toute la largeur */
 }
