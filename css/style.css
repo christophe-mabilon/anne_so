@@ -1103,6 +1103,7 @@ iframe {
 			var(--bs-bg-opacity)
 		) !important;
 		--bs-gutter-x: 0 !important;
+    margin-top: -18px;
 	}
 }
 /* md */
@@ -1147,6 +1148,7 @@ iframe {
 			var(--bs-bg-opacity)
 		) !important;
 		--bs-gutter-x: 0 !important;
+    margin-top: -18px;
 	}
 }
 
@@ -1188,6 +1190,7 @@ iframe {
 			var(--bs-bg-opacity)
 		) !important;
 		--bs-gutter-x: 0 !important;
+    margin-top: -18px;
 	}
 }
 
@@ -1217,6 +1220,7 @@ iframe {
 			var(--bs-bg-opacity)
 		) !important;
 		--bs-gutter-x: 0 !important;
+    margin-top: -18px;
 	}
 	.subtitle-nav-responsive {
 		position: absolute;
