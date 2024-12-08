@@ -83,20 +83,6 @@ body,
 	);
 	transition: 200ms;
 }
-header {
-	height: 80vh;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-image: linear-gradient(
-			90deg,
-			rgba(255, 255, 255, 1) 0%,
-			rgba(255, 255, 255, 0.2) 40%,
-			rgba(96, 96, 96, 0.6) 60%,
-			rgb(96, 96, 96) 100%
-		),
-		url(../img/genealogie2.webp);
-}
 
 .logo {
 	max-width: auto;
@@ -232,13 +218,13 @@ h6.green-dark {
 .fs-2,
 .fs-3,
 .fs-4,
-.fs-5,.fs-5-5
-.fs--6 {
+.fs-5,
+.fs-5-5 .fs--6 {
 	color: rgba(69, 69, 69, 0.7);
 }
 
-.fs-5-5{
-  font-size: 18px!important;
+.fs-5-5 {
+	font-size: 18px !important;
 }
 
 .t-dark {
@@ -345,19 +331,26 @@ i.bi.bi-layers-fill {
 
 /*img*/
 .genealogie-img,
+.medium {
+	width: 300px;
+	height: 300px;
+	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+}
+
 .aide-Medico-psychologique,
-.formation-en-psychogenealogie,
 .assistante-maternelle,
 .approche-holistique,
+.formation-en-psychogenealogie,
 .formation-analyse-transactionnelle,
 .medium {
-	width: auto;
+	width: 300px;
 	height: 300px;
 }
 
 .hypnose {
 	width: 300px;
 	height: 300px;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.7);
 }
 .inconscient-parental {
 	width: 350px;
@@ -366,11 +359,7 @@ i.bi.bi-layers-fill {
 img.tree {
 	width: 20vw;
 }
-img.photoAnneSo {
-	width: auto;
-	height: 23vw;
-	box-shadow: 0 3px 3px rgba(165, 163, 163, 0.3), 0 3px 5px rgba(0, 0, 0, 0.4);
-}
+
 
 .img-block {
 	width: 40px;
@@ -413,7 +402,7 @@ img.photoAnneSo {
 }
 .psychogenealogie1 {
 	display: flex !important;
-	width: 15vw;
+	width: 20vw;
 	border-radius: 50%;
 	justify-content: center;
 	align-self: center;
@@ -662,51 +651,36 @@ footer a {
 	color: rgba(69, 69, 69, 1) !important;
 }
 
-/* media query*/
-/* sm */
-@media (min-width: 576px) {
-	.container,
-	.container-sm {
-		max-width: 540px;
-	}
-}
-/* md */
-@media (min-width: 768px) {
-	img.photoAnneSo {
-		width: auto;
-		height: 38vw;
-	}
-} /* lg */
-@media (min-width: 992px) {
-	img.photoAnneSo {
-		width: auto;
-		height: 30vw;
-	}
-} /* xl */
-@media (min-width: 1200px) {
-	img.photoAnneSo {
-		width: auto;
-		height: 26vw;
-	}
-}
-/* xxl */
-@media (min-width: 1400px) {
-	img.photoAnneSo {
-		width: auto;
-		height: 23vw;
-	}
-}
-
 /*form */
 .control-label {
 	width: 200px;
 }
+
+.navbar-brand-title {
+	position: relative !important;
+}
+
+.header-responsive {
+	position: relative !important;
+}
+.subtitle-nav-responsive {
+	position: absolute;
+	width: 100% !important;
+	top: 92%;
+	right: 0;
+	color: #ffffff !important;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+	width: 100%;
+	justify-content: center;
+	font-weight: 600 !important;
+	font-size: 18px !important;
+	background-color: rgba(0, 0, 0, 0.2);
+}
 /* Positionnement absolu du slogan pour qu'il ne déplace pas les autres éléments */
 .subtitle-nav {
 	position: absolute;
-	top: 68%;
-	right: 21.5%;
-	/* margin-top: 5px; */
+	top: 52%;
+	right: 24.5%;
 	color: #32c061 !important;
 	width: 100%;
 	text-align: center;
@@ -831,7 +805,7 @@ iframe {
 	display: flex;
 	justify-content: flex-end; /* Aligne l'icône à droite */
 	align-items: center; /* Centre verticalement */
-	position: relative;
+
 	width: 100%;
 }
 
@@ -928,4 +902,353 @@ iframe {
 .alert .btn-close .fas {
 	font-size: 1.5rem;
 	color: #fff !important; /* Ou une autre couleur selon vos préférences */
+}
+.header {
+	color: white !important;
+	height: 60vh;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: linear-gradient(
+			90deg,
+			rgba(255, 255, 255, 1) 0%,
+			rgba(255, 255, 255, 0.3) 40%,
+			rgba(96, 96, 96, 0.6) 60%,
+			rgb(96, 96, 96, 1) 100%
+		),
+		url("../img/genealogie2.webp");
+}
+/* Remove border from toggler */
+.navbar-toggler {
+	border: 0 !important;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+	outline: none !important;
+	box-shadow: none !important;
+	border: 0 !important;
+}
+
+/* Lines of the Toggler */
+.toggler-icon {
+	margin-left: 5px;
+	width: 30px;
+	height: 3px;
+	background-color: #80604a;
+	display: block;
+	transition: 0.4s, transform 0.4s;
+}
+
+/* Adds Space between the lines */
+.middle-bar {
+	margin: 5px auto;
+}
+
+/* State when navbar is opened (START) */
+.navbar-toggler .top-bar {
+	transform: rotate(45deg);
+
+	transform-origin: 10% 10%;
+}
+
+.navbar-toggler .middle-bar {
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+	transform: rotate(-45deg);
+	transform-origin: 10% 90%;
+}
+/* State when navbar is opened (END) */
+
+/* State when navbar is collapsed (START) */
+.navbar-toggler.collapsed .top-bar {
+	transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+	transform: rotate(0);
+}
+/* State when navbar is collapsed (END) */
+
+/* Color of Toggler when collapsed */
+.navbar-toggler.collapsed .toggler-icon {
+	background-color: #80604a;
+}
+.full-height {
+	height: 100vh !important;
+}
+
+.logo-2 {
+	width: 100px;
+}
+@media (min-width: 992px) {
+	.navbar {
+		height: 100px !important;
+		background-color: #f8f9fa;
+	}
+	.header {
+		height: 80vh !important;
+	}
+	.header {
+		height: 60vh !important;
+	}
+
+	.navbar {
+		background-color: #f8f9fa;
+	}
+
+	.logo-nav {
+		width: 130px;
+	}
+}
+
+/* xs */
+@media (min-width: 1px) {
+	.card-logo {
+		height: 155px;
+		width: 210px;
+	}
+	img.photoAnneSo {
+		width: auto !important;
+		height: 46vw;
+	}
+	.logo-nav {
+		width: 130px;
+	}
+	.logo-3 {
+		height: 35vh;
+		#navbarSupportedContent {
+			background-color: rgba(
+				var(--bs-tertiary-bg-rgb),
+				var(--bs-bg-opacity)
+			) !important;
+			--bs-gutter-x: 0 !important;
+		}
+	}
+	.header {
+		height: 50vh !important;
+	}
+	.title-site {
+		position: relative;
+		top: -7%;
+	}
+	.subtitle-nav-responsive {
+		position: absolute;
+		width: 100% !important;
+		top: 83%;
+		right: 0;
+		color: #ffffff !important;
+		text-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+		width: 100%;
+		justify-content: center;
+		font-weight: 600 !important;
+		font-size: 16px !important;
+		background-color: rgba(0, 0, 0, 0.2);
+	}
+}
+/* sm */
+@media (min-width: 576px) {
+	.card-logo {
+		height: 155px;
+		width: 300px;
+	}
+	img.photoAnneSo {
+		width: auto;
+		height: 46vw;
+	}
+	.container,
+	.container-sm {
+		max-width: 540px;
+	}
+	.title-site {
+		position: relative;
+		top: -7%;
+	}
+	.subtitle-nav-responsive {
+		position: absolute;
+		width: 100% !important;
+		top: 83%;
+		right: 0;
+		color: #ffffff !important;
+		text-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+		width: 100%;
+		justify-content: center;
+		font-weight: 600 !important;
+		font-size: 16px !important;
+		background-color: rgba(0, 0, 0, 0.2);
+	}
+	.logo-nav {
+		width: 130px;
+	}
+	.logo-3 {
+		height: 45vh;
+	}
+	.header {
+		height: 60vh !important;
+	}
+	#navbarSupportedContent {
+		background-color: rgba(
+			var(--bs-tertiary-bg-rgb),
+			var(--bs-bg-opacity)
+		) !important;
+		--bs-gutter-x: 0 !important;
+	}
+}
+/* md */
+@media (min-width: 768px) {
+	.card-logo {
+		height: 155px;
+		width: 300px;
+	}
+	img.photoAnneSo {
+		width: auto;
+		height: 38vw;
+	}
+	.title-site {
+		position: relative;
+		top: -5%;
+	}
+	.subtitle-nav-responsive {
+		position: absolute;
+		width: 100% !important;
+		top: 87%;
+		right: 0%;
+		color: #ffffff !important;
+		text-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+		width: 100%;
+		justify-content: center;
+		font-weight: 600 !important;
+		font-size: 18px !important;
+		background-color: rgba(0, 0, 0, 0.2);
+	}
+	.logo-nav {
+		width: 130px;
+	}
+	.logo-3 {
+		height: 50vh;
+	}
+	.header {
+		height: 65vh !important;
+	}
+	#navbarSupportedContent {
+		background-color: rgba(
+			var(--bs-tertiary-bg-rgb),
+			var(--bs-bg-opacity)
+		) !important;
+		--bs-gutter-x: 0 !important;
+	}
+}
+
+/* lg */
+@media (min-width: 992px) {
+	.card-logo {
+		height: 155px;
+		width: 300px;
+	}
+	img.photoAnneSo {
+		width: auto;
+		height: 30vw;
+	}
+	.subtitle-nav-responsive {
+		position: absolute;
+		width: 70% !important;
+		top: 63%;
+		right: 11%;
+		color: #ffffff !important;
+		text-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+		width: 100%;
+		justify-content: center;
+		font-weight: 600 !important;
+		font-size: 18px !important;
+		background-color: rgba(0, 0, 0, 0.2);
+	}
+	.logo-nav {
+		width: 130px;
+	}
+	.logo-3 {
+		height: 60vh;
+	}
+	.header {
+		height: 75vh !important;
+	}
+	#navbarSupportedContent {
+		background-color: rgba(
+			var(--bs-tertiary-bg-rgb),
+			var(--bs-bg-opacity)
+		) !important;
+		--bs-gutter-x: 0 !important;
+	}
+}
+
+/* xl */
+@media (min-width: 1200px) {
+	.card-logo {
+		height: 155px;
+		width: 300px;
+	}
+
+	img.photoAnneSo {
+		width: auto;
+		height: 26vw;
+	}
+	.logo-nav {
+		width: 130px;
+	}
+	.logo-3 {
+		height: 60vh;
+	}
+	.header {
+		height: 75vh !important;
+	}
+	#navbarSupportedContent {
+		background-color: rgba(
+			var(--bs-tertiary-bg-rgb),
+			var(--bs-bg-opacity)
+		) !important;
+		--bs-gutter-x: 0 !important;
+	}
+	.subtitle-nav-responsive {
+		position: absolute;
+		width: 60% !important;
+		top: 63%;
+		right: 15%;
+		color: #ffffff !important;
+		text-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+		width: 100%;
+		justify-content: center;
+		font-weight: 600 !important;
+		font-size: 18px !important;
+		background-color: rgba(0, 0, 0, 0.2);
+	}
+}
+
+/* xxl */
+@media (min-width: 1400px) {
+	img.photoAnneSo {
+		width: auto;
+		height: 23vw;
+	}
+ 
+	.logo-nav {
+		width: 100px;
+	}
+	.logo-3 {
+		height: 65vh;
+	}
+	.header {
+		height: 80vh !important;
+	}
+	#navbarSupportedContent {
+		background-color: transparent !important;
+		--bs-gutter-x: 0 !important;
+	}
 }
