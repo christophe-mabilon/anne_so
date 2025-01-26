@@ -150,7 +150,9 @@ function createRdvMail(email) {
           <p class="mb-1"><strong>Anne-Sophie FAVRE-NOVEL</strong></p>
           <p class="my-0">802 chemin de la Petite Forêt</p>
           <p class="my-0">38440 ARTAS</p>
-          <a href="mailto:larbredelumiere38@gmail.com">larbredelumiere38@gmail.com</a>
+          <a href="mailto:<img class="email-16" src="./img/mail-brun.png" alt="email"
+                />"><img class="email-16" src="./img/mail-brun.png" alt="email"
+                /></a>
           <p>Tel : <strong>06 18 23 42 08</strong></p>
         </div>
       </div>

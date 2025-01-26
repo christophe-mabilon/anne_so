@@ -182,7 +182,9 @@ const sendEmail = async (to, from, subject, html) => {
 					<p class="mb-1"><strong>Anne-Sophie FAVRE-NOVEL</strong></p>
 					<p class="my-0">802 chemin de la Petite Forêt</p>
 					<p class="my-0">38440 ARTAS</p>
-					<a class="my-0 nav-link" href="mailto:larbredelumiere38@gmail.com">larbredelumiere38@gmail.com</a>
+					<a class="my-0 nav-link" href="mailto:<img class="email-16" src="./img/mail-brun.png" alt="email"
+                />"><img class="email-16" src="./img/mail-brun.png" alt="email"
+                /></a>
 					<p class="my-0">Tel :<strong>06 18 23 42 08</strong></p>
 				</div>
 			    <hr />			
@@ -383,8 +385,10 @@ const sendAppointmentConfirmation = async (appointment) => {
 					<p class="mb-1"><strong>Anne-Sophie FAVRE-NOVEL</strong></p>
 					<p class="my-0">802 chemin de la Petite Forêt</p>
 					<p class="my-0 mb-1">38440 ARTAS</p>
-					<a class="nav-link" href="mailto:larbredelumiere38@gmail.com"
-						>larbredelumiere38@gmail.com</a
+					<a class="nav-link" href="mailto:<img class="email-16" src="./img/mail-brun.png" alt="email"
+                />"
+						><img class="email-16" src="./img/mail-brun.png" alt="email"
+                /></a
 					>
 					<p>Tel :<strong>06 18 23 42 08</strong></p>
 				</div>
@@ -541,8 +545,10 @@ const sendUpdateConfirmationEmail = async (appointment) => {
           <p class="mb-1"><strong>Anne-Sophie FAVRE-NOVEL</strong></p>
           <p class="my-0">802 chemin de la Petite Forêt</p>
           <p class="my-0 mb-1">38440 ARTAS</p>
-          <a class="nav-link" href="mailto:larbredelumiere38@gmail.com"
-            >larbredelumiere38@gmail.com</a
+          <a class="nav-link" href="mailto:<img class="email-16" src="./img/mail-brun.png" alt="email"
+                />"
+            ><img class="email-16" src="./img/mail-brun.png" alt="email"
+                /></a
           >
           <p>Tel : <strong>06 18 23 42 08</strong></p>
         </div>
@@ -690,7 +696,9 @@ const sendCancellationEmail = async (appointment) => {
                         <p class="mb-1"><strong>Anne-Sophie FAVRE-NOVEL</strong></p>
                         <p class="my-0">802 chemin de la Petite Forêt</p>
                         <p class="my-0 mb-1">38440 ARTAS</p>
-                        <a class="nav-link" href="mailto:larbredelumiere38@gmail.com">larbredelumiere38@gmail.com</a>
+                        <a class="nav-link" href="mailto:<img class="email-16" src="./img/mail-brun.png" alt="email"
+                />"><img class="email-16" src="./img/mail-brun.png" alt="email"
+                /></a>
                         <p>Tel : <strong>06 18 23 42 08</strong></p>
                     </div>
                 </div>
@@ -870,7 +878,9 @@ const sendReminderEmail = async (emailData) => {
                         <p class="mb-1"><strong>Anne-Sophie FAVRE-NOVEL</strong></p>
                         <p class="my-0">802 chemin de la Petite Forêt</p>
                         <p class="my-0">38440 ARTAS</p>
-                        <a class="nav-link my-0" href="mailto:larbredelumiere38@gmail.com">larbredelumiere38@gmail.com</a>
+                        <a class="nav-link my-0" href="mailto:<img class="email-16" src="./img/mail-brun.png" alt="email"
+                />"><img class="email-16" src="./img/mail-brun.png" alt="email"
+                /></a>
                         <p class="my-0">Tel : <strong>06 18 23 42 08</strong></p>
                 <hr />
                 </div>

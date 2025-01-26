@@ -174,7 +174,6 @@ h6.green-dark {
 	color: #32c061 !important;
 }
 
-
 .calendar {
 	display: flex;
 	flex-direction: column;
@@ -408,6 +407,18 @@ i.bi.bi-layers-fill {
 }
 
 /*img*/
+.email-14 {
+	margin-bottom: 3px;
+	height: 21px;
+	width: auto;
+}
+
+.email-16 {
+	margin-bottom: 3px;
+	height: 26px;
+	width: auto;
+}
+
 .contact-img {
 	border-radius: 50%;
 	width: 40px;
