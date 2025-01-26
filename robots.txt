@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /not-found
+Disallow: /admin/
+Disallow: /phpmyadmin/
+Disallow: /login/
+Sitemap: https://www.larbredelumiere38.fr/sitemap.xml

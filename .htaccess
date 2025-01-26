@@ -1,0 +1,89 @@
+# Activation du module mod_headers
+
+    <IfModule mod_headers.c>
+Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+# Activation du moteur de réécriture
+
+    RewriteEngine On
+
+# add charset UTF-8
+
+    AddDefaultCharset UTF-8
+
+# Redirection to HTTPS
+
+    RewriteCond %{HTTPS} !on
+    RewriteCond %{HTTP_HOST} ^(?:www\.)?(larbredelumiere38\.fr)$ [NC]
+    RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+
+# Enforce www and redirection to HTTPS
+
+    RewriteCond %{HTTP_HOST} !^www\. [NC]
+    RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+   
+
+# Configuration des en-têtes CORS pour autoriser les requêtes provenant de certains domaines spécifiques
+
+# Définition du motif regex pour les origines autorisées
+
+    SetEnvIf Origin "http(s)?://(www\.)?(larbredelumiere38\.fr)$" AccessControlAllowOrigin=$0
+
+# Ajout de l'en-tête Access-Control-Allow-Origin avec la valeur définie par la variable d'environnement
+
+    Header add Access-Control-Allow-Origin %{AccessControlAllowOrigin}e env=AccessControlAllowOrigin
+    Header set Content-Security-Policy "frame-ancestors 'self' https://larbredelumiere38.fr"
+
+# Fusion des en-têtes Vary avec Origin
+
+    Header merge Vary Origin
+
+# Compression des fichiers statiques (JavaScript, CSS, HTML, SVG)
+
+    <FilesMatch "\.(js|css|html)$">
+      # Définition de l'en-tête Content-Encoding pour la compression gzip
+        Header set Content-Encoding gzip
+    </FilesMatch>
+
+    </IfModule>
+
+# Explicitly set Content-Type for HTML files
+
+    <FilesMatch "\.html$">
+        Header set Content-Type "text/html; charset=utf-8"
+    </FilesMatch>
+
+# Directives d'expiration des fichiers statiques
+
+    <IfModule mod_expires.c>
+    ExpiresActive On
+
+# Configuration des délais d'expiration pour différents types de fichiers statiques
+
+# Délai d'expiration pour les fichiers CSS
+
+    ExpiresByType text/css "access plus 1 year"
+
+# Délai d'expiration pour les fichiers JavaScript
+
+    ExpiresByType application/javascript "access plus 1 year"
+
+# Délai d'expiration pour les fichiers JPEG
+
+    ExpiresByType image/jpeg "access plus 1 year"
+
+# Délai d'expiration pour les fichiers PNG
+
+    ExpiresByType image/png "access plus 1 year"
+
+# Délai d'expiration pour les fichiers GIF
+
+    ExpiresByType image/gif "access plus 1 year"
+    
+    # Délai d'expiration pour les fichiers webp
+    ExpiresByType image/webp "access plus 1 year"     # Ajout pour le format WebP
+
+    # Délai d'expiration pour les fichierssvg+xml
+    ExpiresByType image/svg+xml "access plus 1 year"  # Ajout pour les images SVG
+
+    </IfModule>
+

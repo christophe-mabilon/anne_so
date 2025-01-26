@@ -4,8 +4,9 @@ const monthLabel = document.querySelector(".date");
 const prevButton = document.querySelector(".prev");
 const nextButton = document.querySelector(".next");
 const todayButton = document.querySelector(".today-btn");
-let currentDate = new Date(); // Obtenir la date actuelle
-let selectedDay = "";
+const weekdaysContainer = document.querySelector(".weekdays");
+let currentDate = moment(); // Utiliser moment.js pour la date actuelle
+let selectedDate = "";
 const availabilityModal = new bootstrap.Modal(
 	document.getElementById("availabilityModal")
 );
@@ -13,8 +14,48 @@ const availabilityContent = document.getElementById("availabilityContent");
 availabilityContent.innerHTML =
 	'<p class="text-danger">Sélectionnez un type de consultation.</p>'; // Ajout du message d'avertissement
 
-let selectedDate = "";
-let selectedTime = "";
+// Objets pour stocker les horaires par jour
+const horaires = {
+};
+
+fetchAndTransformHoraires();
+
+
+// URL de l'API
+const apiUrl = "https://www.larbredelumiere38.fr:8082/api/rdv/openingHours";
+
+// Fonction pour appeler l'API et transformer les données
+async function fetchAndTransformHoraires() {
+    try {
+        // Appel à l'API
+        const response = await fetch(apiUrl);
+        if (!response.ok) {
+            throw new Error(`Erreur lors de l'appel API : ${response.statusText}`);
+        }
+
+        // Récupération des données JSON
+        const apiResponse = await response.json();
+
+        // Transformation des données
+        const horaires = apiResponse.reduce((acc, day) => {
+            acc[day.jour] = {
+                morningOpen: day.morning_open === "00:00:00" ? null : day.morning_open,
+                morningClose: day.morning_close === "00:00:00" ? null : day.morning_close,
+                afternoonOpen: day.afternoon_open === "00:00:00" ? null : day.afternoon_open,
+                afternoonClose: day.afternoon_close === "00:00:00" ? null : day.afternoon_close,
+            };
+            return acc;
+        }, {});
+
+        console.log("Horaires transformés :", horaires);
+
+        // Retourner l'objet transformé (si nécessaire pour une utilisation ultérieure)
+        return horaires;
+    } catch (error) {
+        console.error("Erreur lors de la récupération ou transformation des horaires :", error);
+    }
+}
+
 
 // Fonction pour afficher les notifications
 function showNotification(message, type = "success") {
@@ -46,99 +87,83 @@ function showNotification(message, type = "success") {
 
 // Fonction pour mettre à jour le mois courant
 function updateCurrentMonth() {
-	const options = { month: "long", year: "numeric", locale: "fr-FR" };
-	const currentMonth = currentDate.toLocaleString("fr-FR", options);
-	document.getElementById("currentMonth").textContent = currentMonth;
+	monthLabel.textContent = currentDate.format("MMMM YYYY");
+	renderWeekdays();
 }
-
-// Fonction pour obtenir le nom du mois
-const getMonthName = (month) => {
-	const monthNames = [
-		"Janvier",
-		"Février",
-		"Mars",
-		"Avril",
-		"Mai",
-		"Juin",
-		"Juillet",
-		"Août",
-		"Septembre",
-		"Octobre",
-		"Novembre",
-		"Décembre",
-	];
-	return monthNames[month];
-};
-
-// Fonction pour formater les dates au format YYYY-MM-DD
-const formatDate = (date) => {
-	const year = date.getFullYear();
-	const month = String(date.getMonth() + 1).padStart(2, "0"); // Mois entre 01 et 12
-	const day = String(date.getDate()).padStart(2, "0"); // Jours entre 01 et 31
-	return `${year}-${month}-${day}`; // Format final
-};
 
 // Fonction pour rendre le calendrier
 const renderCalendar = () => {
 	daysContainer.innerHTML = "";
-	const year = currentDate.getFullYear();
-	const month = currentDate.getMonth();
-	monthLabel.textContent = `${getMonthName(month)} ${year}`;
+	const startOfMonth = currentDate.clone().startOf("month");
+	const endOfMonth = currentDate.clone().endOf("month");
+	const totalDays = endOfMonth.date();
 
-	const firstDay = new Date(year, month, 1);
-	const lastDay = new Date(year, month + 1, 0);
-	const totalDays = lastDay.getDate();
-
-	const firstDayIndex = firstDay.getDay() || 7; // Index du premier jour (1 = Lundi)
-	const emptyDays = firstDayIndex - 1; // Jours vides avant le premier jour
+	const firstDayIndex = startOfMonth.isoWeekday(); // Lundi = 1
 
 	// Ajout de jours vides avant le premier jour
-	for (let i = 0; i < emptyDays; i++) {
+	for (let i = 1; i < firstDayIndex; i++) {
 		const emptyCell = document.createElement("div");
+		emptyCell.classList.add("empty");
 		daysContainer.appendChild(emptyCell);
 	}
 
 	// Affichage des jours du mois
-	for (let i = 1; i <= totalDays; i++) {
+	for (let day = 1; day <= totalDays; day++) {
 		const dayElement = document.createElement("div");
-		dayElement.textContent = i;
-		dayElement.dataset.date = formatDate(new Date(year, month, i)); // Format pour l'API
+		const currentDay = startOfMonth.clone().date(day);
+		const dayOfWeek = currentDay.format("dddd").toLowerCase(); // Obtenir le nom du jour
+
+		dayElement.textContent = day;
+		dayElement.dataset.date = currentDay.format("YYYY-MM-DD"); // Format pour l'API
 		dayElement.classList.add("day");
 
-		const dayOfWeek = new Date(year, month, i).getDay();
-		if (dayOfWeek === 0 || dayOfWeek === 6) {
+		// Vérifier si le jour est un week-end
+		if (currentDay.isoWeekday() === 6 || currentDay.isoWeekday() === 7) {
 			dayElement.classList.add("weekend");
 		}
 
-		const today = new Date();
-		today.setHours(0, 0, 0, 0);
-
-		const currentDaycpy = new Date(year, month, i);
-		currentDaycpy.setHours(0, 0, 0, 0); // Mettre à 0 pour comparer uniquement les dates
-
-		// Ajouter la classe "today" si c'est la date actuelle
-		if (currentDaycpy.getTime() === today.getTime()) {
+		// Vérifier si le jour correspond à aujourd'hui
+		if (currentDay.isSame(moment(), "day")) {
 			dayElement.classList.add("today");
 		}
 
-		// Désactiver les dates passées
-		if (currentDaycpy < today) {
-			dayElement.classList.add("weekend");
+		// Désactiver les jours dans le passé
+		if (currentDay.isBefore(moment(), "day")) {
+			dayElement.classList.add("disable");
 			dayElement.style.pointerEvents = "none"; // Désactiver le clic
 		}
 
-		dayElement.addEventListener("click", () => {
-			if (!dayElement.classList.contains("weekend")) {
-				selectedDay = new Date(year, month, i);
-				selectedDate = formatDate(selectedDay);
+		// Vérifier si le jour est défini dans les horaires
+		if (!horaires[dayOfWeek]) {
+			// Jour non défini dans les horaires
+			dayElement.classList.add("disable");
+			dayElement.style.pointerEvents = "none"; // Désactiver le clic
+		} else {
+			// Ajouter un gestionnaire d'événement pour les jours disponibles
+			dayElement.addEventListener("click", () => {
+				selectedDate = currentDay.format("YYYY-MM-DD");
 				availabilityModal.show();
 				loadAvailability(selectedDate);
-			}
-		});
+			});
+		}
 
 		daysContainer.appendChild(dayElement);
 	}
+
+	updateCurrentMonth();
 };
+
+// Fonction pour afficher les jours de la semaine
+function renderWeekdays() {
+	weekdaysContainer.innerHTML = "";
+	const weekdays = moment.weekdaysShort(true); // Commence par lundi
+	weekdays.forEach((day) => {
+		const dayElement = document.createElement("div");
+		dayElement.textContent = day.charAt(0).toUpperCase() + day.slice(1);
+		dayElement.classList.add("text-uppercase", "fw-bold", "weekdays-item");
+		weekdaysContainer.appendChild(dayElement);
+	});
+}
 
 // Fonction pour charger les disponibilités
 const loadAvailability = (date) => {
@@ -171,7 +196,6 @@ function updateAvailability(consultationType, consultationDate) {
 	if (consultationType.includes(":")) {
 		consultationTypeTime = consultationType.split(":")[1];
 	} else {
-		console.error("Format de consultationType invalide :", consultationType);
 		return;
 	}
 
@@ -179,13 +203,6 @@ function updateAvailability(consultationType, consultationDate) {
 		console.error("consultationTypeTime est invalide :", consultationTypeTime);
 		return;
 	}
-
-	console.log(
-		"Appel de l'API avec date:",
-		consultationDate,
-		"et durée:",
-		consultationTypeTime
-	);
 
 	fetch(
 		`https://www.larbredelumiere38.fr:8082/api/rdv/availabilities?date=${consultationDate}&duration=${consultationTypeTime}`
@@ -352,17 +369,16 @@ todayButton.onclick = () => {
 	updateButtonStates(); // Mettre à jour l'état des boutons
 };
 
-// Fonction pour mettre à jour l'état des boutons
 function updateButtonStates() {
-	const now = new Date();
+	const now = moment(); // Date actuelle avec moment.js
 
 	// Obtenir l'année et le mois actuels
-	const currentYear = now.getFullYear();
-	const currentMonth = now.getMonth();
+	const currentYear = now.year();
+	const currentMonth = now.month();
 
 	// Obtenir le mois et l'année affichés
-	const displayedYear = currentDate.getFullYear();
-	const displayedMonth = currentDate.getMonth();
+	const displayedYear = currentDate.year();
+	const displayedMonth = currentDate.month();
 
 	// Désactiver le bouton précédent si le mois affiché est le mois courant
 	if (displayedYear === currentYear && displayedMonth === currentMonth) {
@@ -370,9 +386,26 @@ function updateButtonStates() {
 	} else {
 		prevButton.disabled = false; // Activer le bouton précédent sinon
 	}
-
-	// Vous pouvez ajouter une logique similaire pour le bouton suivant si nécessaire
 }
+
+// Événements pour la navigation
+prevButton.onclick = () => {
+	currentDate.subtract(1, "month"); // Manipulation de `currentDate` avec moment.js
+	renderCalendar();
+	updateButtonStates(); // Mettre à jour l'état des boutons
+};
+
+nextButton.onclick = () => {
+	currentDate.add(1, "month"); // Manipulation de `currentDate` avec moment.js
+	renderCalendar();
+	updateButtonStates(); // Mettre à jour l'état des boutons
+};
+
+todayButton.onclick = () => {
+	currentDate = moment(); // Retourner à aujourd'hui
+	renderCalendar();
+	updateButtonStates(); // Mettre à jour l'état des boutons
+};
 
 // Événement pour le type de consultation
 document
@@ -419,8 +452,13 @@ reservationForm.addEventListener("submit", function (event) {
 			last_name: data.name,
 			email: data.email,
 			phone: data.phone,
-			start_time: `${data.date} ${data.startTime}`,
-			end_time: `${data.date} ${data.endTime}`,
+			start_time: moment
+				.tz(`${data.date} ${data.startTime}`, "Europe/Paris")
+				.format(),
+			end_time: moment
+				.tz(`${data.date} ${data.endTime}`, "Europe/Paris")
+				.format(),
+
 			duration: getDurationFromConsultationType(data.consultationType),
 			service: getServiceFromConsultationType(data.consultationType),
 			message: data.message,

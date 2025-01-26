@@ -11,10 +11,6 @@ h3.fw-bolder {
 	font-size: 15.5px;
 	color: #80604a !important;
 }
-html {
-	padding: 0 !important;
-	margin: 0 !important;
-}
 
 html,
 body,
@@ -25,9 +21,7 @@ body,
 	color: rgba(69, 69, 69, 1) !important;
 	text-align: justify;
 }
-.text-start {
-	text-align: start !important;
-}
+
 
 body {
 	overflow-x: hidden;
@@ -172,68 +166,6 @@ h6.green-dark {
 }
 .active {
 	color: #32c061 !important;
-}
-
-
-.calendar {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin-top: 20px;
-}
-
-.month {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
-}
-
-.weekdays,
-.days {
-	display: flex;
-	flex-wrap: wrap;
-	width: 100%;
-}
-
-.weekdays div,
-.days div {
-	width: 14.28%; /* 100% divided by 7 days */
-	padding: 10px;
-	text-align: center;
-}
-
-.days div {
-	cursor: pointer;
-}
-
-/* Add styles for days */
-.days div.day {
-	background-color: #ffffff;
-	border: 1px solid #dcdcdc;
-	transition: 0.3s;
-	border-radius: 3px;
-}
-
-.days div.day:hover {
-	color: white !important;
-	background-color: rgba(50, 192, 97, 0.8);
-	border: 1px solid #949494;
-	border-radius: 3px;
-	transition: 0.3s;
-}
-
-/* Styles for weekends */
-.days div.weekend {
-	background-color: rgb(192, 192, 192);
-	cursor: default;
-	border: 1px solid rgba(255, 255, 255, 0.3);
-}
-.days div.weekend:hover {
-	color: rgb(107, 0, 0) !important;
-	background-color: rgb(192, 192, 192);
-	cursor: default;
-	border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /* btn */
@@ -433,8 +365,8 @@ i.bi.bi-layers-fill {
 }
 
 .presta {
-	width: 30vh;
-	height: auto;
+	width: 400px;
+	height: 400px;
 	border-radius: 50%;
 }
 
@@ -820,6 +752,67 @@ iframe {
 	width: "600px";
 	height: "450px";
 	border: 0;
+}
+
+.calendar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.month {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.weekdays,
+.days {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.weekdays div,
+.days div {
+	width: 14.28%; /* 100% divided by 7 days */
+	padding: 10px;
+	text-align: center;
+}
+
+.days div {
+	cursor: pointer;
+}
+
+/* Add styles for days */
+.days div.day {
+	background-color: #ffffff;
+	border: 1px solid #dcdcdc;
+	transition: 0.3s;
+	border-radius: 3px;
+}
+
+.days div.day:hover {
+	color: white !important;
+	background-color: rgba(50, 192, 97, 0.8);
+	border: 1px solid #949494;
+	border-radius: 3px;
+	transition: 0.3s;
+}
+
+/* Styles for weekends */
+.days div.weekend {
+	background-color: rgb(192, 192, 192);
+	cursor: default;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.days div.weekend:hover {
+	color: rgb(107, 0, 0) !important;
+	background-color: rgb(192, 192, 192);
+	cursor: default;
+	border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /* Additional styles */

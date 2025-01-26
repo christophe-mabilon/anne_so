@@ -30,19 +30,33 @@
 			href="https://www.larbredelumiere38.fr/analyse-transactionnelle"
 		/>
 		<meta name="author" content="l'arbre de lumiere" />
-		<link rel="icon" type="image/x-icon" href="./favicon.ico" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			rel="icon"
+			type="image/x-icon"
+			rel="noopener noreferrer"
+			href="./favicon.ico"
+		/>
+		<link
+			rel="preconnect"
+			rel="noopener noreferrer"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			rel="noopener noreferrer"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
 		<meta name="theme-color" content="#FFFFFF" />
 		<link
 			rel="apple-touch-icon"
 			sizes="192x192"
-			href="./android-chrome-192x192.webp"
+			href="./android-chrome-192x192.png"
 		/>
 		<link
 			rel="apple-touch-icon"
 			sizes="512x512"
-			href="./android-chrome-512x512.webp"
+			href="./android-chrome-512x512.png"
 		/>
 		<link
 			rel="icon"
@@ -62,12 +76,9 @@
 		/>
 		<meta
 			property="og:image"
-			content="https://www.larbredelumiere38.fr/images/og-image.webp"
+			content="https://www.larbredelumiere38.fr/android-chrome-512x512.png"
 		/>
-		<meta
-			property="og:url"
-			content="https://www.larbredelumiere38.fr/analyse-transactionnelle"
-		/>
+		<meta property="og:url" content="https://www.larbredelumiere38.fr" />
 		<!-- CDN bootstrap@5.3.2 css -->
 		<link
 			href="././node_modules/bootstrap/dist/css/bootstrap.min.css"
@@ -77,13 +88,79 @@
 			rel="stylesheet"
 			href="././node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
 		/>
-		<link rel="stylesheet" href="./css/style.css" />
-		<link rel="stylesheet" href="./css/menu.css" />
-		<meta property="og:type" content="website" />
+		<link rel="stylesheet" rel="noopener noreferrer" href="./css/style.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.43/moment-timezone-with-data.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/locale/fr.min.js"></script>
+		<link<meta property="og:type" content="website" />
 		<!-- CDN scrollrevealjs -->
 		<script src="./js/scrollreveal.js" defer></script>
 		<!-- CDN Jquery -->
 		<script src="./js/jquery-3.7.1.min.js" defer></script>
+
+		<style>
+			.calendar {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin-top: 20px;
+			}
+
+			.month {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				width: 100%;
+			}
+
+			.weekdays,
+			.days {
+				display: flex;
+				flex-wrap: wrap;
+				width: 100%;
+			}
+
+			.weekdays div,
+			.days div {
+				width: 14.28%; /* 100% divided by 7 days */
+				padding: 10px;
+				text-align: center;
+			}
+
+			.days div {
+				cursor: pointer;
+			}
+
+			/* Add styles for days */
+			.days div.day {
+				background-color: rgba(255, 255, 255, 1);
+				border: 0.5px solid rgba(148, 148, 148,0.5);
+				transition: 0.3s;
+				border-radius: 3px;
+			}
+
+			.days div.day:hover {
+				color: white !important;
+				background-color: rgba(50, 192, 97, 0.8);
+				border: 1px solid #949494;
+				border-radius: 3px;
+				transition: 0.3s;
+			}
+
+			/* Styles for weekends */
+			.day.disable {
+    color: rgb(107, 0, 0) !important;
+    background-color: rgba(192, 192, 192, 0.3) !important;
+    /* border: 1px solid rgba(107, 0, 0, 0.3) !important; */
+    cursor: default;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+			.day.disable:hover {
+				color: rgb(107, 0, 0) !important;
+				background-color: rgb(192, 192, 192) !important;
+				cursor: default;
+			}
+		</style>
 	</head>
 	<!-- body -->
 	<body>
@@ -105,7 +182,7 @@
 					/>
 					<a
 						class="fw-bolder d-inline-flex brun text-decoration-none me-auto title-small mb-lg-3"
-						href="https://www.larbredelumiere38.fr/index.html"
+						href="index.html"
 						>L'arbre de Lumière</a
 					><span
 						class="fw-lighter brun fs-6 subtitle-nav d-none d-xxl-inline-block"
@@ -135,7 +212,7 @@
 						>
 							<li class="nav-item">
 								<a
-									href="https://www.larbredelumiere38.fr/index.html"
+									href="index.html"
 									class="nav-link brun"
 									rel="noopener noreferrer"
 									title="L'arbre de lumiere"
@@ -155,7 +232,7 @@
 									alt="En savoir plus sur nos services de psychogénéalogie"
 									aria-label="En savoir plus sur l'analyse transactionnelle"
 									title="En savoir plus sur nos services de psychogénéalogie"
-									href="https://www.larbredelumiere38.fr/psychogenealogie.html"
+									href="psychogenealogie.html"
 									><div class="d-flex align-items-center">
 										<i
 											class="green-dark d-flex d-xxl-none fs-5 bi bi-arrow-right-circle me-2"
@@ -166,8 +243,8 @@
 							</li>
 							<li class="nav-item">
 								<a
-									class="nav-link active brun"
-									href="https://www.larbredelumiere38.fr/analyse_transactionnelle.html"
+									class="nav-link brun"
+									href="analyse_transactionnelle.html"
 									rel="noopener noreferrer"
 									alt="Analyse transactionnelle"
 									title="Analyse transactionnelle"
@@ -182,7 +259,7 @@
 							<li class="nav-item">
 								<a
 									class="nav-link brun"
-									href="https://www.larbredelumiere38.fr/numerologie.html"
+									href="numerologie.html"
 									rel="noopener noreferrer"
 									alt="Numérologie"
 									title="Numérologie"
@@ -197,7 +274,7 @@
 							<li class="nav-item">
 								<a
 									class="nav-link brun"
-									href="https://www.larbredelumiere38.fr/hypnose.html"
+									href="hypnose.html"
 									rel="noopener noreferrer"
 									alt="Hypnose"
 									title="Seance d'hypnose"
@@ -212,7 +289,7 @@
 							<li class="nav-item">
 								<a
 									class="nav-link brun"
-									href="https://www.larbredelumiere38.fr/inconscient_parental.html"
+									href="inconscient_parental.html"
 									alt="inconscient parental"
 									title="inconscient parental"
 									rel="noopener noreferrer"
@@ -227,7 +304,7 @@
 							<li class="nav-item">
 								<a
 									class="nav-link brun"
-									href="https://www.larbredelumiere38.fr/tarifs.html"
+									href="tarifs.html"
 									rel="noopener noreferrer"
 									alt="Tarifs"
 									title="Tarifs préstations"
@@ -243,7 +320,7 @@
 							<li class="nav-item">
 								<a
 									class="nav-link brun"
-									href="https://www.larbredelumiere38.fr/actus.html"
+									href="actus.html"
 									rel="noopener noreferrer"
 									alt="Actualités"
 									title="Actualités"
@@ -258,7 +335,7 @@
 							<li class="nav-item">
 								<a
 									class="nav-link brun"
-									href="https://www.larbredelumiere38.fr/contact.html"
+									href="contact.html"
 									rel="noopener noreferrer"
 									href="Contact"
 									title="devis préstation"
@@ -365,233 +442,357 @@
 			<!--btn contact-->
 			<a
 				class="btn btn-primary btn-contact"
-				href="https://www.larbredelumiere38.fr/planing_des_rendez_vous.html"
+				href="planing_des_rendez_vous.html"
 				rel="noopener noreferrer"
 				title="Contact L'arbre de Lumiere"
 				alt="Contact"
 				>Rendez vous en ligne</a
 			>
-			<!--presentation-->
-			<article class="row px-3 mx-0">
-				<section class="col-12 mb-3 px-3 pt-3">
-					<div class="d-flex align-items-center">
-						<img
-							loading="lazy"
-							width="auto"
-							height="auto"
-							src="./img/analyse_transactionelle_appliquee_a_la_psychogenealogie.webp"
-							alt="Analyse-transactionnelle"
-							title="Analyse transactionnelle"
-							class="img-block3 fs-3 me-2 rounded-circle mt-2"
-						/>
-						<h2 class="mt-3 brun fs-5 mb-2">
-							Pourquoi Choisir l'Analyse Transactionnelle appliquée à la
-							Psychogénéalogie ?
-						</h2>
-					</div>
-					<hr />
-				</section>
-			</article>
-			<!--content-->
-			<article class="row px-3 mx-0">
-				<section class="col-12 mb-3 px-3 pt-3">
-					<h3 class="fs-6 mb-0">
-						L'analyse transactionnelle appliquée à la psychogénéalogie combine
-						deux approches puissantes pour une compréhension profonde et une
-						transformation efficace de votre histoire familiale.
-					</h3>
-				</section>
-			</article>
-			<article class="row analyse_transactionnelle mx-0 mb-3">
-				<section
-					class="d-flex col-12 justify-content-center align-items-center h-100 my-auto"
-				>
-					<h2 class="slogan-title w-75 left">
-						Voici pourquoi vous pourriez envisager cette méthode
-					</h2>
-				</section>
-			</article>
-			<article id="psychogenealogie" class="mb-3">
-				<section>
-					<ul class="list-group rounded-4">
-						<li class="list-group-item py-3 top">
-							<div class="d-flex align-items-center">
-								<i class="bi bi-1-circle brun fs-3 me-2 top1"></i>
-								<h3 class="green-dark fw-bolder top2 fs-5">
-									Compréhension des Interactions Familiales
-								</h3>
-							</div>
-							<div class="w-75">
-								<p class="ms-3 mb-0 brun left">
-									L'analyse transactionnelle (AT) explore les interactions et
-									transactions entre les individus, en identifiant les rôles
-									joués et les jeux psychologiques présents dans les relations.
-								</p>
-								<p class="ms-3 mb-0 brun left1">
-									Appliquée à la psychogénéalogie, elle permet de décoder les
-									dynamiques familiales complexes et de comprendre comment elles
-									influencent votre comportement actuel.
-								</p>
-							</div>
-						</li>
-						<li class="list-group-item py-3 top">
-							<div class="d-flex align-items-center">
-								<i class="bi bi-2-circle brun fs-3 me-2 top1"></i>
-								<h3 class="green-dark fw-bolder top2 fs-5">
-									Identification des Scripts de Vie
-								</h3>
-							</div>
-							<h4 class="fs-6 ms-3 mb-0 brun left">
-								Les scripts de vie sont des plans inconscients que nous suivons,
-								souvent influencés par notre histoire familiale. Grâce à l'AT,
-								vous pouvez identifier ces scripts et comprendre comment ils se
-								sont formés à partir des expériences transgénérationnelles.
-							</h4>
-							<h4 class="fs-6 ms-3 mb-0 brun left1">
-								Cela vous permet de réécrire votre propre script pour vivre une
-								vie plus libre et authentique.
-							</h4>
-						</li>
-						<li class="list-group-item py-3 top">
-							<div class="d-flex align-items-center">
-								<i class="bi bi-3-circle brun fs-3 me-2 top1"></i>
-								<h3 class="green-dark fw-bolder top2 fs-5">
-									Reconnaissance des Jeux Psychologiques
-								</h3>
-							</div>
-
-							<h4 class="fs-6 ms-3 mb-0 brun left">
-								Les jeux psychologiques sont des schémas répétitifs de
-								comportement que nous jouons avec les autres.
-							</h4>
-							<h4 class="fs-6 ms-3 mb-0 brun left1">
-								En utilisant l'AT, vous pouvez reconnaître ces jeux dans le
-								contexte de votre famille et comprendre leur origine
-								transgénérationnelle. Cela vous aide à sortir de ces jeux et à
-								adopter des comportements plus sains et constructifs.
-							</h4>
-						</li>
-						<li class="list-group-item py-3 top">
-							<div class="d-flex align-items-center">
-								<i class="bi bi-4-circle brun fs-3 me-2 top1"></i>
-								<h3 class="green-dark fw-bolder top2 fs-5">
-									Transformation des États du Moi
-								</h3>
-							</div>
-							<h4 class="fs-6 ms-3 mb-1 brun left">
-								L'AT divise la personnalité en trois États du moi : Parent,
-								Adulte, et Enfant.
-							</h4>
-							<h4 class="fs-6 ms-3 mb-1 brun left1">
-								En appliquant cette théorie à la psychogénéalogie, vous pouvez
-								explorer comment ces États se sont développés à partir de vos
-								relations familiales et les influences de vos ancêtres.
-							</h4>
-							<h4 class="fs-6 ms-3 mb-1 brun left2">
-								Cette prise de conscience permet de rééquilibrer ces États pour
-								mieux gérer vos émotions et vos réactions.
-							</h4>
-						</li>
-						<li class="list-group-item py-3 top">
-							<div class="d-flex align-items-center">
-								<i class="bi bi-5-circle brun fs-3 me-2 top1"></i>
-								<h3 class="green-dark fw-bolder top2 fs-5">
-									Amélioration des Relations Familiales
-								</h3>
-							</div>
-							<h4 class="fs-6 ms-3 mb-0 brun left">
-								En comprenant les transactions et les scripts au sein de votre
-								famille, vous pouvez améliorer vos relations avec vos proches.
-							</h4>
-							<h4 class="fs-6 ms-3 mb-0 brun left1">
-								L'AT offre des outils pour communiquer de manière plus efficace
-								et empathique, réduisant les conflits et favorisant des
-								interactions plus positives et authentiques.
-							</h4>
-						</li>
-						<li class="list-group-item py-3 top">
-							<div class="d-flex align-items-center">
-								<i class="bi bi-6-circle brun fs-3 me-2 top1"></i>
-								<h3 class="green-dark fw-bolder top2 fs-5">
-									Libération des Loyautés Invisibles
-								</h3>
-							</div>
-							<h4 class="fs-6 ms-3 mb-0 brun left">
-								Les loyautés invisibles sont des engagements inconscients que
-								nous prenons envers notre famille, souvent au détriment de notre
-								propre bien-être.
-							</h4>
-							<h4 class="fs-6 ms-3 mb-0 brun left1">
-								L'AT appliquée à la psychogénéalogie permet d'identifier ces
-								loyautés et de les transformer, vous libérant ainsi pour vivre
-								selon vos propres valeurs et aspirations.
-							</h4>
-						</li>
-						<li class="list-group-item py-3 top">
-							<div class="d-flex align-items-center">
-								<i class="bi bi-7-circle brun fs-3 me-2 top1"></i>
-								<h3 class="green-dark fw-bolder top2 fs-5">
-									Croissance Personnelle et Épanouissement
-								</h3>
-							</div>
-							<h4 class="fs-6 ms-3 mb-0 brun left">
-								Cette approche combinée favorise une croissance personnelle
-								profonde en vous aidant à comprendre et à transformer les
-								influences familiales inconscientes.
-							</h4>
-							<h4 class="fs-6 ms-3 mb-0 brun left1">
-								Vous gagnez en clarté et en autonomie, ce qui vous permet de
-								vous épanouir pleinement dans tous les aspects de votre vie.
-							</h4>
-						</li>
-						<li class="list-group-item py-3 top">
-							<div class="d-flex align-items-center">
-								<i class="bi bi-8-circle brun fs-3 me-2 top1"></i>
-								<h3 class="green-dark fw-bolder top2 fs-5">
-									Prévention des Schémas Transgénérationnels
-								</h3>
-							</div>
-							<p class="ms-3 mb-0 brun left">
-								Pour ceux qui souhaitent éviter de transmettre des schémas
-								nuisibles à leurs enfants, cette méthode offre une opportunité
-								précieuse.
-							</p>
-							<p class="ms-3 mb-0 brun left1">
-								En comprenant et en modifiant vos propres scripts et jeux, vous
-								pouvez créer un environnement familial plus sain pour les
-								générations futures.
-							</p>
-						</li>
-					</ul>
-				</section>
-			</article>
-			<article class="my-3">
-				<section>
-					<h3 class="fs-6 fw-bolder ms-3 mb-0 brun left">
-						En choisissant l'analyse transactionnelle appliquée à la
-						psychogénéalogie, vous optez pour une démarche complète et
-						intégrative qui vous permet de mieux comprendre et transformer votre
-						histoire familiale.
-					</h3>
-					<h4 class="fs-6 fw-bolder ms-3 mt-3 mb-0 brun left1">
-						Cette approche vous offre les outils nécessaires pour vivre une vie
-						plus consciente, épanouie et en accord avec votre véritable
-						identité.
-					</h4>
-				</section>
-			</article>
+			<!-- Conteneur de notifications -->
 			<div
-				class="d-flex col-12 col-md-8 col-xxl-6 p-3 justify-content-center mx-auto"
+				id="notification-container"
+				class="position-fixed top-0 end-0 p-3"
+				style="z-index: 10000"
+			></div>
+			<div class="p-3">
+				<h2 class="text-center my-3">Planning des rendez-vous</h2>
+
+				<div
+					class="d-flex justify-content-between align-items-center mb-3 w-100"
+				>
+					<button class="btn btn-green-dark mb-2 prev">
+						<i class="bi bi-chevron-left"></i>
+					</button>
+					<div class="text-capitalize date"></div>
+					<button class="btn btn-green-dark mb-2 next">
+						<i class="bi bi-chevron-right"></i>
+					</button>
+				</div>
+
+				<!-- Conteneur pour les jours de la semaine -->
+				<div class="weekdays"></div>
+
+				<!-- Conteneur pour les jours du calendrier -->
+				<div class="days"></div>
+				<div class="goto-today my-3 text-center">
+					<button class="btn btn-brun today-btn">Aujourd'hui</button>
+				</div>
+
+				<h2 class="text-center fs-6 green-dark">
+					Sélectionnez une date pour voir les disponibilités
+				</h2>
+			</div>
+
+			<!-- Modal pour les disponibilités -->
+			<div
+				class="modal fade"
+				id="availabilityModal"
+				tabindex="-1"
+				aria-labelledby="availabilityModalLabel"
+				aria-hidden="true"
 			>
-				<img
-					loading="lazy"
-					width="auto"
-					height="auto"
-					class="right2 rounded-circle w-50"
-					title="Analyse transactionnelle"
-					src="./img/analyse_transactionelle_appliquee_a_la_psychogenealogie.webp"
-					alt="Analyse-transactionnelle"
-				/>
+				<div class="modal-dialog modal-lg modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title brun" id="availabilityModalLabel">
+								Disponibilités
+							</h5>
+							<button
+								type="button"
+								class="btn-close"
+								data-bs-dismiss="modal"
+								aria-label="Close"
+							></button>
+						</div>
+						<div class="modal-body">
+							<select
+								class="form-select my-3 brun"
+								id="consultationTypeSelect"
+								aria-label="Sélection du type de consultation"
+							>
+								<option selected disabled>Type de consultation</option>
+								<option
+									value="SÉANCE DE PSYCHOGÉNÉALOGIE - la séance de 1h-1h30:90"
+								>
+									SÉANCE DE PSYCHOGÉNÉALOGIE - la séance de 1h-1h30
+								</option>
+								<option value="SÉANCE DE NUMÉROLOGIE - la séance de 1h:60">
+									NUMÉROLOGIE - la séance de 1h
+								</option>
+								<option
+									value="HYPNOSE (changement d'empreinte) - la séance de 1h:60"
+								>
+									HYPNOSE (changement d'empreinte) - la séance de 1h
+								</option>
+
+								<option value="INCONSCIENT PARENTAL - la séance de 1h30:90">
+									INCONSCIENT PARENTAL - la séance de 1h
+								</option>
+								<option
+									value="GUIDANCE PAR LES CARTES - la séance de 1h (rendez vous en présenciel ou en distanciel):60"
+								>
+									GUIDANCE PAR LES CARTES - la séance de 1h (rendez vous en
+									présenciel ou en distanciel)
+								</option>
+
+								<option
+									value="ANALYSE TRANSACTIONNELLE - la séance de 1h(en distanciel):60"
+								>
+									ANALYSE TRANSACTIONNELLE - la séance de 1h(en distanciel)
+								</option>
+								<option
+									value="ÉCRITURE INTUITIVE - la séance de 1h (en distanciel):60"
+								>
+									ÉCRITURE INTUITIVE - la séance de 1h (en distanciel)
+								</option>
+
+								<option
+									value="ANALYSE TRANSACTIONNELLE - la séance de 1h (en distanciel):60"
+								>
+									ANALYSE TRANSACTIONNELLE - la séance de 1h (en distanciel)
+								</option>
+							</select>
+							<div id="availabilityContent"></div>
+						</div>
+						<div class="modal-footer">
+							<button
+								type="button"
+								class="btn btn-brun"
+								data-bs-dismiss="modal"
+							>
+								Fermer
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Modal de réservation -->
+			<div
+				class="modal fade"
+				id="exampleModalToggle"
+				aria-hidden="true"
+				aria-labelledby="exampleModalToggleLabel"
+				tabindex="-1"
+			>
+				<div class="modal-dialog modal-xl modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h1
+								class="modal-title fs-5 green-dark"
+								id="exampleModalToggleLabel"
+							>
+								Programmer un RDV
+							</h1>
+							<button
+								type="button"
+								class="btn-close"
+								data-bs-dismiss="modal"
+								aria-label="Close"
+							></button>
+						</div>
+						<div class="modal-body">
+							<!-- Formulaire de réservation -->
+							<form id="reservation-form" class="p-3" novalidate>
+								<div class="row">
+									<div class="col-12 col-xl-6 mb-3">
+										<label for="name" class="form-label green-dark"
+											>Nom :</label
+										>
+										<div class="input-group">
+											<span class="input-group-text">
+												<i class="green-dark bi bi-person"></i>
+											</span>
+											<input
+												type="text"
+												id="name"
+												name="name"
+												class="form-control"
+												placeholder="Votre nom"
+												required
+											/>
+										</div>
+										<div
+											class="error"
+											id="nameError"
+											style="display: none; color: red"
+										>
+											Veuillez entrer votre nom.
+										</div>
+									</div>
+									<div class="col-12 col-xl-6 mb-3">
+										<label for="firstName" class="form-label green-dark"
+											>Prénom :</label
+										>
+										<div class="input-group">
+											<span class="input-group-text">
+												<i class="green-dark bi bi-person-fill"></i>
+											</span>
+											<input
+												type="text"
+												id="firstName"
+												name="firstName"
+												class="form-control"
+												placeholder="Votre prénom"
+												required
+											/>
+										</div>
+										<div
+											class="error"
+											id="firstNameError"
+											style="display: none; color: red"
+										>
+											Veuillez entrer votre prénom.
+										</div>
+									</div>
+									<div class="col-12 col-xl-6 mb-3">
+										<label for="email" class="form-label green-dark"
+											>Email :</label
+										>
+										<div class="input-group">
+											<span class="input-group-text">
+												<i class="green-dark bi bi-envelope"></i>
+											</span>
+											<input
+												type="email"
+												id="email"
+												name="email"
+												class="form-control"
+												placeholder="name@example.com"
+												required
+											/>
+										</div>
+										<div
+											class="error"
+											id="emailError"
+											style="display: none; color: red"
+										>
+											Veuillez entrer une adresse email valide.
+										</div>
+									</div>
+									<div class="col-12 col-xl-6 mb-3">
+										<label for="phone" class="form-label green-dark"
+											>Téléphone :</label
+										>
+										<div class="input-group">
+											<span class="input-group-text">
+												<i class="green-dark bi bi-telephone"></i>
+											</span>
+											<input
+												type="tel"
+												id="phone"
+												name="phone"
+												class="form-control"
+												placeholder="Votre numéro de téléphone"
+												required
+											/>
+										</div>
+										<div
+											class="error"
+											id="phoneError"
+											style="display: none; color: red"
+										>
+											Veuillez entrer votre numéro de téléphone.
+										</div>
+									</div>
+									<!-- Champ pour la date du rendez-vous -->
+									<div class="col-12 col-xxl-4 mb-3">
+										<label for="modalDate" class="form-label green-dark">
+											Date du rendez-vous :
+										</label>
+										<div class="input-group">
+											<span class="input-group-text">
+												<i class="green-dark bi bi-calendar"></i>
+											</span>
+											<input
+												type="text"
+												id="modalDate"
+												name="date"
+												class="form-control"
+												placeholder="Date du rendez-vous"
+												readonly
+											/>
+										</div>
+									</div>
+									<!-- Champs pour l'heure de début et de fin -->
+									<div class="col-12 col-xxl-4 mb-3">
+										<label for="modalStartTime" class="form-label green-dark">
+											Heure de début :
+										</label>
+										<div class="input-group">
+											<span class="input-group-text">
+												<i class="green-dark bi bi-clock"></i>
+											</span>
+											<input
+												type="text"
+												id="modalStartTime"
+												name="startTime"
+												class="form-control"
+												placeholder="Heure de début"
+												readonly
+											/>
+										</div>
+									</div>
+									<div class="col-12 col-xxl-4 mb-3">
+										<label for="modalEndTime" class="form-label green-dark">
+											Heure de fin :
+										</label>
+										<div class="input-group">
+											<span class="input-group-text">
+												<i class="green-dark bi bi-clock-fill"></i>
+											</span>
+											<input
+												type="text"
+												id="modalEndTime"
+												name="endTime"
+												class="form-control"
+												placeholder="Heure de fin"
+												readonly
+											/>
+										</div>
+									</div>
+									<div class="col-12 mb-3">
+										<label for="message" class="form-label green-dark">
+											Objet du rendez-vous :
+										</label>
+										<div class="input-group">
+											<span class="input-group-text">
+												<i class="green-dark bi bi-pencil-square"></i>
+											</span>
+											<textarea
+												class="form-control"
+												id="message"
+												name="message"
+												rows="5"
+											></textarea>
+										</div>
+										<div
+											class="error"
+											id="messageError"
+											style="display: none; color: red"
+										>
+											Veuillez indiquer l'objet du rendez-vous.
+										</div>
+									</div>
+									<!-- Champ caché pour calendarId -->
+									<input
+										type="hidden"
+										id="calendarId"
+										name="calendarId"
+										value="cal123"
+									/>
+									<div class="col-auto my-3">
+										<input
+											class="btn btn-green-dark p-3 text-white fs-6"
+											type="submit"
+											value="Réserver mon RDV"
+										/>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
 			</div>
 
 			<!--footer-->
@@ -639,7 +840,7 @@
 
 					<iframe
 						class="col-12"
-						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2794.7617122031193!2d5.176126175763821!3d45.53500052871276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478b2b338344d067%3A0xbdb32e3abfca25c!2s800%20Chem.%20de%20la%20Petite%20For%C3%AAt%2C%2038440%20Artas!5e0!3m2!1sfr!2sfr!4v1728226841331!5m2!1sfr!2sfr"
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2794.760817651039!2d5.1761236757638756!3d45.535018528711504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478b2b33834046f3%3A0xbf1b338b36b01116!2s802%20Chem.%20de%20la%20Petite%20For%C3%AAt%2C%2038440%20Artas!5e0!3m2!1sfr!2sfr!4v1734951335658!5m2!1sfr!2sfr"
 						allowfullscreen=""
 						loading="lazy"
 						referrerpolicy="no-referrer-when-downgrade"
@@ -655,19 +856,19 @@
 						<div class="d-flex align-items-center mb-3">
 							<i class="green-dark bi bi-house-check me-2"></i>
 							<a
+								href="index.html"
 								class="brun my-auto"
-								href="https://www.larbredelumiere38.fr/index.html"
 								rel="noopener noreferrer"
 								alt="L'arbre de lumière"
 								title="L'arbre de lumière"
-								>Accueil</a
+								>Acceuil</a
 							>
 						</div>
 						<div class="d-flex align-items-center mb-3">
 							<i class="green-dark bi bi-arrow-right-circle me-2"></i>
 							<a
 								class="brun my-auto"
-								href="https://www.larbredelumiere38.fr/psychogenealogie.html"
+								href="psychogenealogie.html"
 								rel="noopener noreferrer"
 								alt="En savoir plus sur nos services de psychogénéalogie"
 								aria-label="En savoir plus sur l'analyse transactionnelle"
@@ -678,8 +879,8 @@
 						<div class="d-flex align-items-center mb-3">
 							<i class="green-dark bi bi-arrow-right-circle me-2"></i>
 							<a
-								class="brun active my-auto"
-								href="https://www.larbredelumiere38.fr/analyse_transactionnelle.html"
+								class="brun my-auto"
+								href="analyse_transactionnelle.html"
 								rel="noopener noreferrer"
 								alt="Analyse transactionnelle"
 								title="Analyse transactionnelle"
@@ -690,7 +891,7 @@
 							<i class="green-dark bi bi-arrow-right-circle me-2"></i>
 							<a
 								class="brun my-auto"
-								href="https://www.larbredelumiere38.fr/inconscient_parental.html"
+								href="inconscient_parental.html"
 								rel="noopener noreferrer"
 								alt="inconscient parental"
 								title="inconscient parental"
@@ -701,7 +902,7 @@
 							<i class="green-dark bi bi-123 me-2"></i>
 							<a
 								class="brun my-auto"
-								href="https://www.larbredelumiere38.fr/numerologie.html"
+								href="numerologie.html"
 								rel="noopener noreferrer"
 								alt="Numérologie"
 								title="Numérologie"
@@ -712,7 +913,7 @@
 							<i class="green-dark bi bi-bullseye me-2"></i>
 							<a
 								class="brun my-auto"
-								href="https://www.larbredelumiere38.fr/hypnose.html"
+								href="hypnose.html"
 								rel="noopener noreferrer"
 								alt="Hypnose"
 								title="Hypnose"
@@ -723,7 +924,7 @@
 							<i class="green-dark bi bi-currency-exchange me-2"></i>
 							<a
 								class="brun my-auto"
-								href="https://www.larbredelumiere38.fr/tarifs.html"
+								href="tarifs.html"
 								rel="noopener noreferrer"
 								alt="Tarifs"
 								title="Tarifs préstations"
@@ -734,7 +935,7 @@
 							<i class="green-dark bi bi-envelope-plus me-2"></i>
 							<a
 								class="brun my-auto"
-								href="https://www.larbredelumiere38.fr/contact.html"
+								href="contact.html"
 								rel="noopener noreferrer"
 								alt="Contact"
 								title="Contact et rendez vous"
@@ -745,7 +946,7 @@
 							<i class="green-dark bi bi-journal-text me-2"></i>
 							<a
 								class="brun my-auto"
-								href="https://www.larbredelumiere38.fr/actus.html"
+								href="actus.html"
 								rel="noopener noreferrer"
 								alt="Actualités"
 								title="Actualités"
@@ -756,7 +957,7 @@
 							<i class="green-dark bi-blockquote-right me-2"></i>
 							<a
 								class="brun my-auto"
-								href="https://www.larbredelumiere38.fr/mentions-legales.html"
+								href="mentions-legales.html"
 								rel="noopener noreferrer"
 								alt="Mentions-légales"
 								title="Mentions-légales"
@@ -766,8 +967,8 @@
 						<div class="d-flex align-items-center mb-3">
 							<i class="green-dark bi bi-clock-history me-2"></i>
 							<a
-								class="brun my-auto"
-								href="https://www.larbredelumiere38.fr/planing_des_rendez_vous.html"
+								class="brun active my-auto"
+								href="planing_des_rendez_vous.html"
 								rel="noopener noreferrer"
 								alt="rendez vous en ligne"
 								title="rendez vous"
@@ -822,7 +1023,7 @@
 				>
 					<a
 						class="brun mx-2"
-						href="https://www.larbredelumiere38.fr/mentions-legales.html"
+						href="mentions-legales.html"
 						rel="noopener noreferrer"
 						alt="Mentions-légales"
 						title="Mentions-légales"
@@ -832,7 +1033,7 @@
 					<a
 						class="mx-2 brun"
 						rel="noopener noreferrer"
-						href="https://www.larbredelumiere38.fr/partenaires.html"
+						href="partenaires.html"
 						alt="Partenaires"
 						title="Partenaires"
 						>Partenaires</a
@@ -844,12 +1045,13 @@
 				</div>
 			</footer>
 		</div>
-		<!-- js -->
-		<script type="text/javascript " src="./js/style.js" defer></script>
+		<!-- Scripts JS -->
+		<script type="text/javascript" src="./js/style.js" defer></script>
 		<script
 			type="text/javascript "
 			src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
 			defer
 		></script>
+		<script type="text/javascript" src="./js/calendar3.js" defer></script>
 	</body>
 </html>

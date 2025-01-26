@@ -1,0 +1,28 @@
+@font-face {
+	font-family: "Icomoon"; /* Nom de la police */
+	src: url("../fonts/icomoon/fonts/icomoon.woff") format("woff"),
+		/* Format moderne */ url("../fonts/icomoon/fonts/icomoon.ttf")
+			format("truetype"),
+		/* Format traditionnel */ url("../fonts/icomoon/fonts/icomoon.svg#icomoon")
+			format("svg"); /* Format SVG pour les navigateurs sans support */
+	font-display: swap; /* Optimisation pour afficher le texte immédiatement */
+}
+
+@font-face {
+	font-family: "icomoon";
+	src: url("../fonts/icomoon/fonts/");
+	src: url("../fonts/icomoon/icomoon.eot?10si43");
+	src: url("../fonts/icomoon/icomoon.eot?10si43#iefix")
+			format("embedded-opentype"),
+		url("../fonts/icomoon/icomoon.ttf?10si43") format("truetype"),
+		url("../fonts/icomoon/icomoon.woff?10si43") format("woff"),
+		url("../fonts/icomoon/icomoon.svg?10si43#icomoon") format("svg");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Tempting";
+	src: local("Tempting"), url("../fonts/Tempting.otf") format("opentype"); /* Format OTF pour compatibilité étendue */
+	font-display: swap; /* Optimisation pour un rendu rapide du texte */
+}
