@@ -28,7 +28,9 @@ body,
 .text-start {
 	text-align: start !important;
 }
-
+.h-line-menu {
+	max-height: 25px;
+}
 body {
 	overflow-x: hidden;
 }
@@ -239,6 +241,9 @@ h6.green-dark {
 .month button i {
 	color: white !important;
 }
+#notification-container {
+	z-index: 200;
+}
 .btn-contact {
 	position: fixed;
 	bottom: 1%;
@@ -255,7 +260,7 @@ h6.green-dark {
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
-	z-index: 1000;
+	z-index: 100;
 }
 .btn-contact:hover {
 	background: rgb(38, 147, 74) !important;
@@ -407,6 +412,11 @@ i.bi.bi-layers-fill {
 }
 
 /*img*/
+.card-img {
+	max-height: 200px;
+	width: auto;
+}
+
 .email-14 {
 	margin-bottom: 3px;
 	height: 21px;
@@ -490,6 +500,24 @@ img.tree {
 .shadow-5 {
 	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
 }
+
+.tirage_de_cartes-bg {
+	height: 400px;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: top right;
+	background-repeat: no-repeat;
+	background-image: linear-gradient(
+			90deg,
+			rgb(255, 255, 255) 0%,
+			rgba(114, 114, 114, 0.6) 75%,
+			rgba(173, 173, 175, 1) 100%
+		),
+		url("../img/tirage_de_cartes3.webp");
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
+	border-top: 1px solid rgba(0, 0, 0, 0.2) !important;
+}
+
 .genealogie-bg {
 	height: 400px;
 	background-attachment: fixed;
@@ -621,6 +649,22 @@ img.tree {
 			rgba(120, 205, 209, 0.7) 100%
 		),
 		url("../img/ecriture_intuitive.webp");
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
+	border-top: 1px solid rgba(0, 0, 0, 0.2) !important;
+}
+.ecriture-intuitive-bg2 {
+	height: 400px;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: bottom;
+	background-repeat: no-repeat;
+	background-image: linear-gradient(
+			90deg,
+			rgba(255, 255, 255, 0.9) 0%,
+			rgba(156, 186, 193, 0.3) 75%,
+			rgba(120, 205, 209, 0.7) 100%
+		),
+		url("../img/ecriture_intuitive2.webp");
 	border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
 	border-top: 1px solid rgba(0, 0, 0, 0.2) !important;
 }
@@ -823,6 +867,13 @@ footer a {
 	right: 24.5%;
 	color: #32c061 !important;
 	width: 100%;
+	text-align: center;
+}
+.subtitle-nav2 {
+	position: absolute;
+	top: 51%;
+	left: 93%;
+	width: auto;
 	text-align: center;
 }
 
@@ -1062,9 +1113,6 @@ iframe {
 .navbar-toggler.collapsed .toggler-icon {
 	background-color: #80604a;
 }
-.full-height {
-	height: 100vh !important;
-}
 
 .logo-2 {
 	width: 100px;
@@ -1092,6 +1140,15 @@ iframe {
 
 /* xs */
 @media (min-width: 1px) {
+	.sticky-xl-top {
+		position: -webkit-sticky;
+		position: sticky;
+		top: 0;
+		z-index: 1020;
+	}
+	.full-height {
+		height: 100vh !important;
+	}
 	.card-logo {
 		width: 100% !important;
 		h2 {
@@ -1142,6 +1199,15 @@ iframe {
 }
 /* sm */
 @media (min-width: 576px) {
+	.sticky-xl-top {
+		position: -webkit-sticky;
+		position: sticky;
+		top: 0;
+		z-index: 1020;
+	}
+	.full-height {
+		height: 100vh !important;
+	}
 	.card-logo {
 		height: 155px;
 		width: 300px;
@@ -1194,6 +1260,15 @@ iframe {
 }
 /* md */
 @media (min-width: 768px) {
+	.sticky-xl-top {
+		position: -webkit-sticky;
+		position: sticky;
+		top: 0;
+		z-index: 1020;
+	}
+	.full-height {
+		height: 100vh !important;
+	}
 	.card-logo {
 		height: 155px;
 		width: 300px;
@@ -1243,6 +1318,15 @@ iframe {
 
 /* lg */
 @media (min-width: 992px) {
+	.sticky-xl-top {
+		position: -webkit-sticky;
+		position: sticky;
+		top: 0;
+		z-index: 1020;
+	}
+	.full-height {
+		height: 100vh !important;
+	}
 	.card-logo {
 		height: 155px;
 		width: 300px;
@@ -1288,6 +1372,15 @@ iframe {
 
 /* xl */
 @media (min-width: 1200px) {
+	.sticky-xl-top {
+		position: -webkit-sticky;
+		position: sticky;
+		top: 0;
+		z-index: 1020;
+	}
+	.full-height {
+		height: 100vh !important;
+	}
 	.card-logo {
 		height: 155px;
 		width: 300px;
@@ -1334,6 +1427,12 @@ iframe {
 
 /* xxl */
 @media (min-width: 1400px) {
+	.sticky-xl-top {
+		position: -webkit-sticky;
+		position: auto;
+		top: auto;
+		z-index: 1020;
+	}
 	.w-xxl-100 {
 		width: 100% !important;
 	}

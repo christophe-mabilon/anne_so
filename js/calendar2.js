@@ -73,7 +73,12 @@ const renderCalendar = () => {
 		dayElement.dataset.date = currentDay.format("YYYY-MM-DD"); // Format pour l'API
 		dayElement.classList.add("day");
 
-		if (currentDay.isoWeekday() === 6 || currentDay.isoWeekday() === 7) {
+    
+		if ( currentDay.isoWeekday() === 7) {
+			dayElement.classList.add("weekend");
+		}
+
+    if (currentDay.isoWeekday() === 3 ) {
 			dayElement.classList.add("weekend");
 		}
 

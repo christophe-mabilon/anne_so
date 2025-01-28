@@ -66,108 +66,96 @@ const sendEmailIfNotSent = async (appointment, type) => {
 
 // Récupérer les disponibilités
 router.get("/availabilities", async (req, res) => {
-  try {
-      const { date, duration } = req.query;
-      if (!date || !duration) {
-          return res.status(400).send("La date et la durée sont requises");
-      }
+    try {
+        const { date, duration } = req.query;
+        if (!date || !duration) {
+            return res.status(400).send("La date et la durée sont requises");
+        }
 
-      const formattedDate = moment
-          .tz(date, "YYYY-MM-DD", "Europe/Paris")
-          .format("YYYY-MM-DD");
-      const durationMinutes = parseInt(duration, 10);
+        const formattedDate = moment
+            .tz(date, "YYYY-MM-DD", "Europe/Paris")
+            .format("YYYY-MM-DD");
+        const durationMinutes = parseInt(duration, 10);
 
-      const [hours] = await db.query(`SELECT * FROM opening_hours`);
-      if (hours.length === 0) {
-          return res.status(404).send("Horaires d'ouverture non définis");
-      }
+        const [hours] = await db.query(`SELECT * FROM opening_hours`);
+        if (hours.length === 0) {
+            return res.status(404).send("Horaires d'ouverture non définis");
+        }
 
-      const openingHours = hours[0];
-      const { morning_open, morning_close, afternoon_open, afternoon_close } = openingHours;
+        const openingHours = hours[0];
+        const { morning_open, morning_close, afternoon_open, afternoon_close } = openingHours;
 
-      if (!morning_open || !morning_close || !afternoon_open || !afternoon_close) {
-          return res.status(500).send("Horaires d'ouverture incomplets");
-      }
+        if (!morning_open || !morning_close || !afternoon_open || !afternoon_close) {
+            return res.status(500).send("Horaires d'ouverture incomplets");
+        }
 
-      // Vérifier si le jour est un samedi
-      const isSaturday = moment.tz(formattedDate, "Europe/Paris").day() === 6;
+        const [appointments] = await db.query(
+            `SELECT start_time, end_time FROM appointments WHERE DATE(start_time) = ?`,
+            [formattedDate]
+        );
 
-      // Bloquer les créneaux après 12h00 uniquement pour le samedi
-      const slots = isSaturday
-          ? [
-                {
-                    start: moment.tz(`${formattedDate} ${morning_open}`, "Europe/Paris"),
-                    end: moment.tz(`${formattedDate} 12:00`, "Europe/Paris"), // Fin à 12h00
-                },
-            ]
-          : [
-                {
-                    start: moment.tz(`${formattedDate} ${morning_open}`, "Europe/Paris"),
-                    end: moment.tz(`${formattedDate} ${morning_close}`, "Europe/Paris"),
-                },
-                {
-                    start: moment.tz(`${formattedDate} ${afternoon_open}`, "Europe/Paris"),
-                    end: moment.tz(`${formattedDate} ${afternoon_close}`, "Europe/Paris"),
-                },
-            ];
+        const slots = [
+            {
+                start: moment.tz(`${formattedDate} ${morning_open}`, "Europe/Paris"),
+                end: moment.tz(`${formattedDate} ${morning_close}`, "Europe/Paris"),
+            },
+            {
+                start: moment.tz(`${formattedDate} ${afternoon_open}`, "Europe/Paris"),
+                end: moment.tz(`${formattedDate} ${afternoon_close}`, "Europe/Paris"),
+            },
+        ];
 
-      const [appointments] = await db.query(
-          `SELECT start_time, end_time FROM appointments WHERE DATE(start_time) = ?`,
-          [formattedDate]
-      );
+        appointments.forEach((appointment) => {
+            const appointmentStart = moment.tz(appointment.start_time, "Europe/Paris");
+            const appointmentEnd = moment.tz(appointment.end_time, "Europe/Paris");
+            let newSlots = [];
 
-      appointments.forEach((appointment) => {
-          const appointmentStart = moment.tz(appointment.start_time, "Europe/Paris");
-          const appointmentEnd = moment.tz(appointment.end_time, "Europe/Paris");
-          let newSlots = [];
+            slots.forEach((slot) => {
+                if (
+                    appointmentEnd.isSameOrBefore(slot.start) ||
+                    appointmentStart.isSameOrAfter(slot.end)
+                ) {
+                    newSlots.push(slot);
+                } else {
+                    if (appointmentStart.isAfter(slot.start)) {
+                        newSlots.push({ start: slot.start, end: appointmentStart });
+                    }
+                    if (appointmentEnd.isBefore(slot.end)) {
+                        newSlots.push({ start: appointmentEnd, end: slot.end });
+                    }
+                }
+            });
 
-          slots.forEach((slot) => {
-              if (
-                  appointmentEnd.isSameOrBefore(slot.start) ||
-                  appointmentStart.isSameOrAfter(slot.end)
-              ) {
-                  newSlots.push(slot);
-              } else {
-                  if (appointmentStart.isAfter(slot.start)) {
-                      newSlots.push({ start: slot.start, end: appointmentStart });
-                  }
-                  if (appointmentEnd.isBefore(slot.end)) {
-                      newSlots.push({ start: appointmentEnd, end: slot.end });
-                  }
-              }
-          });
+            slots.splice(0, slots.length, ...newSlots);
+        });
 
-          slots.splice(0, slots.length, ...newSlots);
-      });
+        const availabilities = [];
+        slots.forEach((slot) => {
+            let currentTime = slot.start.clone();
 
-      const availabilities = [];
-      slots.forEach((slot) => {
-          let currentTime = slot.start.clone();
+            while (
+                currentTime.clone().add(durationMinutes, "minutes").isSameOrBefore(slot.end)
+            ) {
+                const start = currentTime.format("HH:mm");
+                const end = currentTime.clone().add(durationMinutes, "minutes").format("HH:mm");
+                availabilities.push({ start, end });
+                currentTime.add(durationMinutes, "minutes");
+            }
+        });
 
-          while (
-              currentTime.clone().add(durationMinutes, "minutes").isSameOrBefore(slot.end)
-          ) {
-              const start = currentTime.format("HH:mm");
-              const end = currentTime.clone().add(durationMinutes, "minutes").format("HH:mm");
-              availabilities.push({ start, end });
-              currentTime.add(durationMinutes, "minutes");
-          }
-      });
-
-      if (availabilities.length === 0) {
-          res.status(200).json({
-              message: "Aucune disponibilité trouvée pour la date demandée",
-              availabilities: [],
-          });
-      } else {
-          res.status(200).json({ message: "Disponibilités trouvées", availabilities });
-      }
-  } catch (err) {
-      console.error("Erreur lors de la récupération des disponibilités :", err);
-      res.status(500).send("Erreur serveur");
-  }
+        if (availabilities.length === 0) {
+            res.status(200).json({
+                message: "Aucune disponibilité trouvée pour la date demandée",
+                availabilities: [],
+            });
+        } else {
+            res.status(200).json({ message: "Disponibilités trouvées", availabilities });
+        }
+    } catch (err) {
+        console.error("Erreur lors de la récupération des disponibilités :", err);
+        res.status(500).send("Erreur serveur");
+    }
 });
-
 
 // Créer un rendez-vous
 router.post("/", async (req, res) => {

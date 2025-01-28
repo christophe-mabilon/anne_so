@@ -54,7 +54,6 @@ const loadTokens = async () => {
             const tokens = JSON.parse(fs.readFileSync(TOKEN_PATH, "utf8"));
             oauth2Client.setCredentials(tokens);
             console.log("Tokens chargés avec succès.");
-            scheduleTokenRefresh();
         } else {
             console.log("Aucun token trouvé. Vérification pour alerte...");
             if (shouldSendAlert()) {
@@ -83,59 +82,26 @@ const saveTokens = (tokens) => {
 };
 
 const refreshTokensIfNeeded = async () => {
-  try {
-      if (
-          !oauth2Client.credentials ||
-          oauth2Client.credentials.expiry_date <= Date.now()
-      ) {
-          console.log("Rafraîchissement des tokens...");
-          const { credentials } = await oauth2Client.refreshAccessToken();
-          oauth2Client.setCredentials(credentials);
-          saveTokens(credentials);
-          scheduleTokenRefresh(); // Planifier le prochain rafraîchissement
-          console.log("Rafraîchissement effectué avec succès.");
-      } else {
-          console.log("Tokens encore valides, pas de rafraîchissement nécessaire.");
-      }
-  } catch (err) {
-      console.error("Erreur lors du rafraîchissement des tokens :", err.message || err);
-
-      if (err.response?.data?.error === "invalid_grant") {
-          console.error("Le refresh_token est invalide ou expiré. Une nouvelle authentification est requise.");
-          const authUrl = oauth2Client.generateAuthUrl({
-              access_type: "offline",
-              scope: ["https://www.googleapis.com/auth/calendar"],
-          });
-          console.log(`Veuillez réauthentifier l'application en visitant ce lien : ${authUrl}`);
-      } else {
-          console.error("Erreur inconnue lors du rafraîchissement :", err.message || err);
-          if (shouldSendAlert()) {
-              await notifyAdmin(process.env.BACKUP_SMTP_USER);
-              saveLastAlertSent();
-          }
-      }
-  }
+    try {
+        if (
+            !oauth2Client.credentials ||
+            oauth2Client.credentials.expiry_date <= Date.now()
+        ) {
+            console.log("Rafraîchissement des tokens...");
+            const { credentials } = await oauth2Client.refreshAccessToken();
+            oauth2Client.setCredentials(credentials);
+            saveTokens(credentials);
+        } else {
+            console.log("Tokens encore valides, pas de rafraîchissement nécessaire.");
+        }
+    } catch (err) {
+        console.error("Erreur lors du rafraîchissement des tokens :", err.message || err);
+        if (shouldSendAlert()) {
+            await notifyAdmin(process.env.BACKUP_SMTP_USER);
+            saveLastAlertSent(); // Enregistrer uniquement si l'alerte est envoyée
+        }
+    }
 };
-
-const scheduleTokenRefresh = () => {
-  const credentials = oauth2Client.credentials;
-  if (credentials && credentials.expiry_date) {
-      const refreshTime = credentials.expiry_date - Date.now() - 5 * 60 * 1000; // 5 minutes avant expiration
-      if (refreshTime > 0) {
-          console.log(`Planification du rafraîchissement dans ${refreshTime / 1000} secondes.`);
-          setTimeout(async () => {
-              try {
-                  console.log("Rafraîchissement programmé du token...");
-                  await refreshTokensIfNeeded();
-              } catch (err) {
-                  console.error("Erreur lors du rafraîchissement programmé :", err.message || err);
-              }
-          }, refreshTime);
-      }
-  }
-};
-
-
 
 // Charger les tokens au démarrage
 (async () => {
