@@ -119,3 +119,41 @@ $(".Effect-effectFadeIn").click(function () {
 		viewFactor: 0.8,
 	});
 
+/// Fonction globale pour ouvrir la modale
+    function openWhatsAppModal() {
+        const modalElement = document.getElementById("whatsappModal");
+        const myModal = new bootstrap.Modal(modalElement);
+        myModal.show();
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const modalElement = document.getElementById("whatsappModal");
+        const whatsappButtons = document.querySelectorAll(".whatsapp"); // Sélectionne TOUS les boutons WhatsApp
+        const closeButton = modalElement.querySelector(".btn-close");
+
+        let myModal = new bootstrap.Modal(modalElement);
+
+        // Ouvrir la modale pour chaque bouton WhatsApp
+        whatsappButtons.forEach(button => {
+            button.addEventListener("click", function (event) {
+                event.preventDefault(); // Empêche la navigation si c'est un lien
+                myModal.show();
+            });
+        });
+
+        // Fermer la modale en cliquant sur le bouton de fermeture
+        if (closeButton) {
+            closeButton.addEventListener("click", function () {
+                myModal.hide();
+            });
+        }
+
+        // Fermer la modale en cliquant en dehors du contenu
+        modalElement.addEventListener("click", function (event) {
+            if (!event.target.closest(".modal-content")) {
+                myModal.hide();
+            }
+        });
+
+       
+    });

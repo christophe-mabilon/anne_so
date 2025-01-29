@@ -3,9 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>
-			Analyse Transactionnelle - Comprendre Votre Histoire Familiale
-		</title>
+		<title>Accueil - Comprendre Votre Histoire Familiale</title>
 		<meta
 			name="title"
 			content="Analyse Transactionnelle comprendre Votre Histoire Familiale"
@@ -79,6 +77,7 @@
 			content="https://www.larbredelumiere38.fr/android-chrome-512x512.png"
 		/>
 		<meta property="og:url" content="https://www.larbredelumiere38.fr" />
+		<meta property="og:type" content="website" />
 		<!-- CDN bootstrap@5.3.2 css -->
 		<link
 			href="././node_modules/bootstrap/dist/css/bootstrap.min.css"
@@ -89,80 +88,11 @@
 			href="././node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
 		/>
 		<link rel="stylesheet" rel="noopener noreferrer" href="./css/style.css" />
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.43/moment-timezone-with-data.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/locale/fr.min.js"></script>
-		<meta property="og:type" content="website" />
 		<!-- CDN scrollrevealjs -->
 		<script src="./js/scrollreveal.js" defer></script>
 		<!-- CDN Jquery -->
 		<script src="./js/jquery-3.7.1.min.js" defer></script>
-
-		<style>
-			.calendar {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				margin-top: 20px;
-			}
-
-			.month {
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				width: 100%;
-			}
-
-			.weekdays,
-			.days {
-				display: flex;
-				flex-wrap: wrap;
-				width: 100%;
-			}
-
-			.weekdays div,
-			.days div {
-				width: 14.28%; /* 100% divided by 7 days */
-				padding: 10px;
-				text-align: center;
-			}
-
-			.days div {
-				cursor: pointer;
-			}
-
-			/* Add styles for days */
-			.days div.day {
-				background-color: rgba(255, 255, 255, 1);
-				border: 0.5px solid rgba(148, 148, 148, 0.5);
-				transition: 0.3s;
-				border-radius: 3px;
-			}
-
-			.days div.day:hover {
-				color: white !important;
-				background-color: rgba(50, 192, 97, 0.8);
-				border: 1px solid #949494;
-				border-radius: 3px;
-				transition: 0.3s;
-			}
-
-			/* Styles for weekends */
-			.day.disable {
-				color: rgb(107, 0, 0) !important;
-				background-color: rgba(192, 192, 192, 0.3) !important;
-				/* border: 1px solid rgba(107, 0, 0, 0.3) !important; */
-				cursor: default;
-				border: 1px solid rgba(255, 255, 255, 0.3);
-			}
-			.day.disable:hover {
-				color: rgb(107, 0, 0) !important;
-				background-color: rgb(192, 192, 192) !important;
-				cursor: default;
-			}
-		</style>
 	</head>
-	<!-- body -->
 	<body>
 		<div class="container-fluid mx-0 px-0">
 			<!-- Navigation -->
@@ -188,7 +118,48 @@
 						class="fw-lighter brun fs-6 subtitle-nav d-none d-xxl-inline-block"
 					>
 						“Illuminez votre histoire familiale pour révéler la lumière cachée
-						dans vos racines”
+						dans vos racines” </span
+					><span class="subtitle-nav2 d-none d-xxl-inline-block">
+						<!-- Social Media Icons -->
+						<div class="d-flex">
+							<div class="col-auto">
+								<a
+									class="nav-link brun"
+									target="_blank"
+									href="https://www.facebook.com/profile.php?id=61564220849532"
+									alt="Page Facebook"
+								>
+									<div class="d-flex align-items-center">
+										<span class="bi bi-facebook fs-3 me-2"></span
+										><span class="brun d-flex d-xxl-none">Facebook</span>
+									</div></a
+								>
+							</div>
+							<div class="col-auto">
+								<a
+									class="nav-link brun"
+									target="_blank"
+									alt="Page Instagram"
+									rel="noopener noreferrer"
+									href="https://www.instagram.com/larbre_de_lumiere?igsh=YWphd3RjdzZjejJv"
+									><div class="d-flex align-items-center">
+										<span class="bi bi-instagram fs-3 me-2"></span
+										><span class="brun d-flex d-xxl-none">Instagram</span>
+									</div></a
+								>
+							</div>
+							<div class="col-auto">
+								<a
+									class="nav-link brun"
+									alt="Page Whatsapp"
+									rel="noopener noreferrer"
+									><div class="d-flex align-items-center">
+										<span class="bi bi-whatsapp fs-3 me-2"></span
+										><span class="brun d-flex d-xxl-none">Whatsapp</span>
+									</div></a
+								>
+							</div>
+						</div>
 					</span>
 					<button
 						class="navbar-toggler collapsed"
@@ -202,14 +173,53 @@
 						<span class="toggler-icon top-bar"></span>
 						<span class="toggler-icon middle-bar"></span>
 						<span class="toggler-icon bottom-bar"></span></button
-					><!--menu-->
+					><!--menu responsive-->
 					<div
 						class="collapse navbar-collapse full-height"
 						id="navbarSupportedContent"
 					>
+						<div class="d-flex d-xxl-none row align-items-center"></div>
 						<ul
 							class="navbar-nav ms-auto p-5 p-xxl-0 mb-2 mb-xxl-0 align-items-xxl-center brun"
 						>
+							<li
+								class="d-flex d-xxl-none row align-items-center justify-content-start nav-item"
+							>
+								<div class="col-auto">
+									<a
+										class="nav-link brun"
+										target="_blank"
+										href="https://www.facebook.com/profile.php?id=61564220849532"
+										alt="Page Facebook"
+									>
+										<span class="bi bi-facebook fs-3 me-2"></span>
+									</a>
+								</div>
+								<div class="col-auto">
+									<a
+										class="nav-link brun"
+										target="_blank"
+										href="https://www.instagram.com/larbre_de_lumiere?igsh=YWphd3RjdzZjejJv"
+										alt="Page Instagram"
+										rel="noopener noreferrer"
+										href="#"
+									>
+										<span class="bi bi-instagram fs-3 me-2"></span>
+									</a>
+								</div>
+								<div class="col-auto">
+									<a
+										class="nav-link brun"
+										target="_blank"
+										href=""
+										alt="Page Whatsapp"
+										rel="noopener noreferrer"
+										href="#"
+									>
+										<span class="bi bi-whatsapp fs-3 me-2"></span
+									></a>
+								</div>
+							</li>
 							<li class="nav-item">
 								<a
 									href="https://www.larbredelumiere38.fr/index.html"
@@ -304,6 +314,36 @@
 							<li class="nav-item">
 								<a
 									class="nav-link brun"
+									href="https://www.larbredelumiere38.fr/tirage_de_cartes.html"
+									alt="Tirage de cartes"
+									title="Tirage de cartes"
+									rel="noopener noreferrer"
+									><div class="d-flex align-items-center">
+										<i
+											class="green-dark d-flex d-xxl-none fs-5 bi bi-arrow-right-circle me-2"
+										></i
+										>Tirage de cartes
+									</div></a
+								>
+							</li>
+							<li class="nav-item">
+								<a
+									class="nav-link brun"
+									href="https://www.larbredelumiere38.fr/ecriture_intuitive.html"
+									alt="Écriture intuitive"
+									title="Écriture intuitive"
+									rel="noopener noreferrer"
+									><div class="d-flex align-items-center">
+										<i
+											class="green-dark d-flex d-xxl-none fs-5 bi bi-arrow-right-circle me-2"
+										></i
+										>Écriture intuitive
+									</div></a
+								>
+							</li>
+							<li class="nav-item">
+								<a
+									class="nav-link brun"
 									href="https://www.larbredelumiere38.fr/tarifs.html"
 									rel="noopener noreferrer"
 									alt="Tarifs"
@@ -319,7 +359,7 @@
 
 							<li class="nav-item">
 								<a
-									class="nav-link brun"
+									class="nav-link active brun"
 									href="https://www.larbredelumiere38.fr/actus.html"
 									rel="noopener noreferrer"
 									alt="Actualités"
@@ -344,50 +384,6 @@
 											class="green-dark fs-5 d-flex d-xxl-none bi bi-envelope-plus me-2"
 										></i
 										>Contact
-									</div></a
-								>
-							</li>
-							<!-- Social Media Icons -->
-							<li class="nav-item">
-								<a
-									class="nav-link brun"
-									target="_blank"
-									href="https://www.facebook.com/profile.php?id=61564220849532"
-									alt="Page Facebook"
-								>
-									<div class="d-flex align-items-center">
-										<span class="bi bi-facebook fs-3 me-2"></span
-										><span class="brun d-flex d-xxl-none">Facebook</span>
-									</div></a
-								>
-							</li>
-
-							<li class="nav-item brun">
-								<a
-									class="nav-link brun"
-									target="_blank"
-									href=""
-									alt="Page Instagram"
-									rel="noopener noreferrer"
-									href="#"
-									><div class="d-flex align-items-center">
-										<span class="bi bi-instagram fs-3 me-2"></span
-										><span class="brun d-flex d-xxl-none">Instagram</span>
-									</div></a
-								>
-							</li>
-
-							<li class="nav-item brun">
-								<a
-									class="nav-link brun"
-									target="_blank"
-									href=""
-									alt="Page Whatsapp"
-									rel="noopener noreferrer"
-									href="#"
-									><div class="d-flex align-items-center">
-										<span class="bi bi-whatsapp fs-3 me-2"></span
-										><span class="brun d-flex d-xxl-none">Whatsapp</span>
 									</div></a
 								>
 							</li>
@@ -448,352 +444,179 @@
 				alt="Contact"
 				>Rendez vous en ligne</a
 			>
-			<!-- Conteneur de notifications -->
-			<div
-				id="notification-container"
-				class="position-fixed top-0 end-0 p-3"
-				style="z-index: 10000"
-			></div>
-			<div class="p-3">
-				<h2 class="text-center my-3">Planning des rendez-vous</h2>
-
-				<div
-					class="d-flex justify-content-between align-items-center mb-3 w-100"
-				>
-					<button class="btn btn-green-dark mb-2 prev">
-						<i class="bi bi-chevron-left"></i>
-					</button>
-					<div class="text-capitalize date"></div>
-					<button class="btn btn-green-dark mb-2 next">
-						<i class="bi bi-chevron-right"></i>
-					</button>
-				</div>
-
-				<!-- Conteneur pour les jours de la semaine -->
-				<div class="weekdays"></div>
-
-				<!-- Conteneur pour les jours du calendrier -->
-				<div class="days"></div>
-				<div class="goto-today my-3 text-center">
-					<button class="btn btn-brun today-btn">Aujourd'hui</button>
-				</div>
-
-				<h2 class="text-center fs-6 green-dark">
-					Sélectionnez une date pour voir les disponibilités
-				</h2>
-			</div>
-
-			<!-- Modal pour les disponibilités -->
-			<div
-				class="modal fade"
-				id="availabilityModal"
-				tabindex="-1"
-				aria-labelledby="availabilityModalLabel"
-				aria-hidden="true"
-			>
-				<div class="modal-dialog modal-lg modal-dialog-centered">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title brun" id="availabilityModalLabel">
-								Disponibilités
-							</h5>
-							<button
-								type="button"
-								class="btn-close"
-								data-bs-dismiss="modal"
-								aria-label="Close"
-							></button>
+			<main>
+				<!--presentation-->
+				<div class="row px-xxl-3 mx-0">
+					<div class="col-12 mb-3 px-xxl-3 pt-3">
+						<div class="d-flex align-items-center">
+							<img
+								loading="eager"
+								width="auto"
+								height="auto"
+								src="./img/actus.webp"
+								alt="Psychogénéalogie"
+								title="miex comprendre la Psychogénéalogie"
+								class="img-block fs-3 me-2"
+							/>
+							<h2 class="mt-2 brun fs-5">Actualités</h2>
 						</div>
-						<div class="modal-body">
-							<select
-								class="form-select my-3 brun"
-								id="consultationTypeSelect"
-								aria-label="Sélection du type de consultation"
-							>
-								<option selected disabled>Type de consultation</option>
-								<option
-									value="SÉANCE DE PSYCHOGÉNÉALOGIE - la séance de 1h-1h30:90"
-								>
-									SÉANCE DE PSYCHOGÉNÉALOGIE - la séance de 1h-1h30
-								</option>
-								<option value="SÉANCE DE NUMÉROLOGIE - la séance de 1h:60">
-									NUMÉROLOGIE - la séance de 1h
-								</option>
-								<option
-									value="HYPNOSE (changement d'empreinte) - la séance de 1h:60"
-								>
-									HYPNOSE (changement d'empreinte) - la séance de 1h
-								</option>
 
-								<option value="INCONSCIENT PARENTAL - la séance de 1h30:90">
-									INCONSCIENT PARENTAL - la séance de 1h
-								</option>
-								<option
-									value="GUIDANCE PAR LES CARTES - la séance de 1h (rendez vous en présenciel ou en distanciel):60"
-								>
-									GUIDANCE PAR LES CARTES - la séance de 1h (rendez vous en
-									présenciel ou en distanciel)
-								</option>
-
-								<option
-									value="ANALYSE TRANSACTIONNELLE - la séance de 1h(en distanciel):60"
-								>
-									ANALYSE TRANSACTIONNELLE - la séance de 1h(en distanciel)
-								</option>
-								<option
-									value="ÉCRITURE INTUITIVE - la séance de 1h (en distanciel):60"
-								>
-									ÉCRITURE INTUITIVE - la séance de 1h (en distanciel)
-								</option>
-
-								<option
-									value="ANALYSE TRANSACTIONNELLE - la séance de 1h (en distanciel):60"
-								>
-									ANALYSE TRANSACTIONNELLE - la séance de 1h (en distanciel)
-								</option>
-							</select>
-							<div id="availabilityContent"></div>
-						</div>
-						<div class="modal-footer">
-							<button
-								type="button"
-								class="btn btn-brun"
-								data-bs-dismiss="modal"
-							>
-								Fermer
-							</button>
-						</div>
+						<hr />
 					</div>
 				</div>
-			</div>
+				<section>
+					<!--content-->
+					<div class="row px-xxl-3 mx-0 mb-2">
+						<h3 class="fs-5 brun">
+							Découvrez nos Services Exclusifs pour votre Épanouissement
+							Personnel
+						</h3>
+						<hr />
+						<p class="mb-0">
+							Êtes-vous prêt(e) à transformer votre vie, à explorer de nouvelles
+							dimensions de vous-même et à développer votre potentiel personnel
+							?
+						</p>
+						<p class="mb-0">
+							Nos services uniques sont conçus pour vous accompagner sur ce
+							chemin de découverte et de réalisation personnelle.
+						</p>
 
-			<!-- Modal de réservation -->
-			<div
-				class="modal fade"
-				id="exampleModalToggle"
-				aria-hidden="true"
-				aria-labelledby="exampleModalToggleLabel"
-				tabindex="-1"
-			>
-				<div class="modal-dialog modal-xl modal-dialog-centered">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h1
-								class="modal-title fs-5 green-dark"
-								id="exampleModalToggleLabel"
+						<p class="fw-bolder brun mt-3">Nos Services en Détail :</p>
+						<div class="row align-items-center">
+							<ul class="col-12 col-xxl-6 list-group">
+								<li class="list-group-item p-3">
+									<h4 class="fs-5 green-dark">1. Séance de Psychogénéalogie</h4>
+									<p class="mb-0">
+										Plongez dans l’histoire de votre famille et comprenez les
+										influences transgénérationnelles qui façonnent votre vie
+										aujourd’hui.
+									</p>
+
+									<p class="mb-0">Tarif : 60€ par séance (1h - 1h30)</p>
+								</li>
+								<li class="list-group-item p-3">
+									<h4 class="fs-5 green-dark">
+										2. Numérologie avec Bilan Découvrez les mystères des nombres
+										et leur impact sur votre vie...
+									</h4>
+									<p class="mb-0">
+										Tarif : 100€ par séance, comprenant un bilan complet
+										(tableau + interprétations, durée 1h)
+									</p>
+									<p class="mb-0"></p>
+								</li>
+								<li class="list-group-item p-3">
+									<h4 class="fs-5 green-dark">
+										3. Hypnose (Changement d’Empreinte)
+									</h4>
+									<p class="mb-0">
+										Réalisez un profond travail de transformation à travers
+										l’hypnose.
+									</p>
+									<p class="mb-0">
+										Tarif : 200€ pour 4 séances (pré-séance + 2 séances +
+										bilan).
+									</p>
+								</li>
+								<li class="list-group-item p-3">
+									<h4 class="fs-5 green-dark">4. Inconscient Parental</h4>
+									<p class="mb-0">
+										Explorez et libérez-vous des schémas inconscients transmis
+										par vos parents.
+									</p>
+									<p class="mb-0">Tarif : 90€ pour 3 séances de 1h30.</p>
+								</li>
+								<li class="list-group-item p-3">
+									<h4 class="fs-5 green-dark">5. Guidance par les Cartes</h4>
+									<p class="mb-0">
+										Recevez des réponses claires et inspirantes grâce à une
+										guidance personnalisée.
+									</p>
+									<p class="mb-0">
+										Tarif : 40€ par séance (en présentiel ou distanciel).
+									</p>
+								</li>
+								<li class="list-group-item p-3">
+									<h4 class="fs-5 green-dark">6. Analyse Transactionnelle</h4>
+									<p class="mb-0">
+										Découvrez et transformez vos comportements dans vos
+										relations interpersonnelles.
+									</p>
+									<p class="mb-0">
+										Tarif : 60€ par séance (1h, en distanciel).
+									</p>
+								</li>
+								<li class="list-group-item p-3">
+									<h4 class="fs-5 green-dark">7. Écriture Intuitive</h4>
+									<p class="mb-0">
+										Libérez votre créativité et connectez-vous à votre intuition
+										profonde.
+									</p>
+									<p class="mb-0">
+										Tarif : 50€ par séance (1h, en distanciel).
+									</p>
+								</li>
+							</ul>
+							<div class="col-12 col-xxl-6 text-center">
+								<img
+									class="img-fluid p-3 rounded w-75 rounded-5"
+									src="./img/actus2.webp"
+								/>
+							</div>
+							<div class="col-12 my-3">
+								<h4 class="fs-5 green-dark fw-bolder">
+									Pourquoi Choisir Nos Services ?
+								</h4>
+								<p class="fw-bolder brun mb-0">
+									Un accompagnement personnalisé :
+								</p>
+								<p class="mb-0">
+									Chaque service est adapté à vos besoins uniques.
+								</p>
+								<p class="mb-0">Des méthodes efficaces et innovantes :</p>
+								<p class="mb-0">
+									Mes approches combinent science, écoute, et spiritualité.
+								</p>
+								<p class="mb-0">Un chemin vers l’épanouissement personnel :</p>
+								<p class="mb-0">
+									Nos services vous offrent les outils pour devenir la meilleure
+									version de vous-même.
+								</p>
+							</div>
+							<div
+								class="row d-flex align-items-center p-3 btn btn-brun shadow shadow-3 mx-2"
 							>
-								Programmer un RDV
-							</h1>
-							<button
-								type="button"
-								class="btn-close"
-								data-bs-dismiss="modal"
-								aria-label="Close"
-							></button>
-						</div>
-						<div class="modal-body">
-							<!-- Formulaire de réservation -->
-							<form id="reservation-form" class="p-3" novalidate>
-								<div class="row">
-									<div class="col-12 col-xl-6 mb-3">
-										<label for="name" class="form-label green-dark"
-											>Nom :</label
-										>
-										<div class="input-group">
-											<span class="input-group-text">
-												<i class="green-dark bi bi-person"></i>
-											</span>
-											<input
-												type="text"
-												id="name"
-												name="name"
-												class="form-control"
-												placeholder="Votre nom"
-												required
-											/>
-										</div>
-										<div
-											class="error"
-											id="nameError"
-											style="display: none; color: red"
-										>
-											Veuillez entrer votre nom.
-										</div>
-									</div>
-									<div class="col-12 col-xl-6 mb-3">
-										<label for="firstName" class="form-label green-dark"
-											>Prénom :</label
-										>
-										<div class="input-group">
-											<span class="input-group-text">
-												<i class="green-dark bi bi-person-fill"></i>
-											</span>
-											<input
-												type="text"
-												id="firstName"
-												name="firstName"
-												class="form-control"
-												placeholder="Votre prénom"
-												required
-											/>
-										</div>
-										<div
-											class="error"
-											id="firstNameError"
-											style="display: none; color: red"
-										>
-											Veuillez entrer votre prénom.
-										</div>
-									</div>
-									<div class="col-12 col-xl-6 mb-3">
-										<label for="email" class="form-label green-dark"
-											>Email :</label
-										>
-										<div class="input-group">
-											<span class="input-group-text">
-												<i class="green-dark bi bi-envelope"></i>
-											</span>
-											<input
-												type="email"
-												id="email"
-												name="email"
-												class="form-control"
-												placeholder="name@example.com"
-												required
-											/>
-										</div>
-										<div
-											class="error"
-											id="emailError"
-											style="display: none; color: red"
-										>
-											Veuillez entrer une adresse email valide.
-										</div>
-									</div>
-									<div class="col-12 col-xl-6 mb-3">
-										<label for="phone" class="form-label green-dark"
-											>Téléphone :</label
-										>
-										<div class="input-group">
-											<span class="input-group-text">
-												<i class="green-dark bi bi-telephone"></i>
-											</span>
-											<input
-												type="tel"
-												id="phone"
-												name="phone"
-												class="form-control"
-												placeholder="Votre numéro de téléphone"
-												required
-											/>
-										</div>
-										<div
-											class="error"
-											id="phoneError"
-											style="display: none; color: red"
-										>
-											Veuillez entrer votre numéro de téléphone.
-										</div>
-									</div>
-									<!-- Champ pour la date du rendez-vous -->
-									<div class="col-12 col-xxl-4 mb-3">
-										<label for="modalDate" class="form-label green-dark">
-											Date du rendez-vous :
-										</label>
-										<div class="input-group">
-											<span class="input-group-text">
-												<i class="green-dark bi bi-calendar"></i>
-											</span>
-											<input
-												type="text"
-												id="modalDate"
-												name="date"
-												class="form-control"
-												placeholder="Date du rendez-vous"
-												readonly
-											/>
-										</div>
-									</div>
-									<!-- Champs pour l'heure de début et de fin -->
-									<div class="col-12 col-xxl-4 mb-3">
-										<label for="modalStartTime" class="form-label green-dark">
-											Heure de début :
-										</label>
-										<div class="input-group">
-											<span class="input-group-text">
-												<i class="green-dark bi bi-clock"></i>
-											</span>
-											<input
-												type="text"
-												id="modalStartTime"
-												name="startTime"
-												class="form-control"
-												placeholder="Heure de début"
-												readonly
-											/>
-										</div>
-									</div>
-									<div class="col-12 col-xxl-4 mb-3">
-										<label for="modalEndTime" class="form-label green-dark">
-											Heure de fin :
-										</label>
-										<div class="input-group">
-											<span class="input-group-text">
-												<i class="green-dark bi bi-clock-fill"></i>
-											</span>
-											<input
-												type="text"
-												id="modalEndTime"
-												name="endTime"
-												class="form-control"
-												placeholder="Heure de fin"
-												readonly
-											/>
-										</div>
-									</div>
-									<div class="col-12 mb-3">
-										<label for="message" class="form-label green-dark">
-											Objet du rendez-vous :
-										</label>
-										<div class="input-group">
-											<span class="input-group-text">
-												<i class="green-dark bi bi-pencil-square"></i>
-											</span>
-											<textarea
-												class="form-control"
-												id="message"
-												name="message"
-												rows="5"
-											></textarea>
-										</div>
-										<div
-											class="error"
-											id="messageError"
-											style="display: none; color: red"
-										>
-											Veuillez indiquer l'objet du rendez-vous.
-										</div>
-									</div>
-									<!-- Champ caché pour calendarId -->
-									<input
-										type="hidden"
-										id="calendarId"
-										name="calendarId"
-										value="cal123"
+								<div class="col-12 col-xxl-2 mb-3 mb-xxl-0">
+									<img
+										class="img-fluid w-50 w-xxl-100"
+										alt="offre spéciale"
+										src="./img/special_offert.webp"
 									/>
-									<div class="col-auto my-3">
-										<input
-											class="btn btn-green-dark p-3 text-white fs-6"
-											type="submit"
-											value="Réserver mon RDV"
-										/>
-									</div>
 								</div>
-							</form>
+								<div class="col-12 col-xxl-8">
+									<h3 class="fs-4 text-white mx-auto mb-3">
+										<i class="bi bi-star-fill stars me-3"></i>Offre Spéciale de
+										Lancement !<i class="ms-3 stars bi bi-star-fill"></i>
+									</h3>
+									<p class="mb-0">
+										Bénéficiez d'une remise sur la / les séance(s) de votre
+										choix.
+									</p>
+									<p class="mb-0 small mt-2">Valable jusqu'au 31 mars 2025.</p>
+								</div>
+								<div class="d-none d-xxl-flex col-xxl-2">
+									<img
+										alt="offre spéciale"
+										class="img-fluid"
+										src="./img/special_offert.webp"
+									/>
+								</div>
+							</div>
 						</div>
 					</div>
-				</div>
-			</div>
+				</section>
+			</main>
 
 			<!--footer-->
 			<footer class="row mx-0 p-3">
@@ -888,17 +711,6 @@
 							>
 						</div>
 						<div class="d-flex align-items-center mb-3">
-							<i class="green-dark bi bi-arrow-right-circle me-2"></i>
-							<a
-								class="brun my-auto"
-								href="https://www.larbredelumiere38.fr/inconscient_parental.html"
-								rel="noopener noreferrer"
-								alt="inconscient parental"
-								title="inconscient parental"
-								>L’inconscient parental</a
-							>
-						</div>
-						<div class="d-flex align-items-center mb-3">
 							<i class="green-dark bi bi-123 me-2"></i>
 							<a
 								class="brun my-auto"
@@ -909,6 +721,7 @@
 								>Numérologie</a
 							>
 						</div>
+
 						<div class="d-flex align-items-center mb-3">
 							<i class="green-dark bi bi-bullseye me-2"></i>
 							<a
@@ -920,6 +733,40 @@
 								>Hypnose</a
 							>
 						</div>
+						<div class="d-flex align-items-center mb-3">
+							<i class="green-dark bi bi-arrow-right-circle me-2"></i>
+							<a
+								class="brun my-auto"
+								href="https://www.larbredelumiere38.fr/inconscient_parental.html"
+								rel="noopener noreferrer"
+								alt="inconscient parental"
+								title="inconscient parental"
+								>L’inconscient parental</a
+							>
+						</div>
+						<div class="d-flex align-items-center mb-3">
+							<i class="green-dark bi bi-arrow-right-circle me-2"></i>
+							<a
+								class="brun my-auto"
+								href="https://www.larbredelumiere38.fr/tirage_de_cartes.html"
+								rel="noopener noreferrer"
+								alt="Tirage de cartes"
+								title="Tirage de cartes"
+								>Tirage de cartes</a
+							>
+						</div>
+						<div class="d-flex align-items-center mb-3">
+							<i class="green-dark bi bi-arrow-right-circle me-2"></i>
+							<a
+								class="brun my-auto"
+								href="https://www.larbredelumiere38.fr/ecriture_intuitive.html"
+								rel="noopener noreferrer"
+								alt="Écriture intuitive"
+								title="Écriture intuitive"
+								>L’Écriture intuitive</a
+							>
+						</div>
+
 						<div class="d-flex align-items-center mb-3">
 							<i class="green-dark bi bi-currency-exchange me-2"></i>
 							<a
@@ -945,7 +792,7 @@
 						<div class="d-flex align-items-center mb-3">
 							<i class="green-dark bi bi-journal-text me-2"></i>
 							<a
-								class="brun my-auto"
+								class="brun my-auto active"
 								href="https://www.larbredelumiere38.fr/actus.html"
 								rel="noopener noreferrer"
 								alt="Actualités"
@@ -957,7 +804,7 @@
 							<i class="green-dark bi-blockquote-right me-2"></i>
 							<a
 								class="brun my-auto"
-								href="https://www.larbredelumiere38.fr/mentions-legales.html"
+								href="https://www.larbredelumiere38.fr/mentions_legales.html"
 								rel="noopener noreferrer"
 								alt="Mentions-légales"
 								title="Mentions-légales"
@@ -965,9 +812,20 @@
 							>
 						</div>
 						<div class="d-flex align-items-center mb-3">
+							<i class="green-dark bi-person-hearts me-2"></i>
+							<a
+								class="brun my-auto"
+								href="https://www.larbredelumiere38.fr/partenaires.html"
+								rel="noopener noreferrer"
+								alt="Partenaires"
+								title="Partenaires"
+								>Partenaires</a
+							>
+						</div>
+						<div class="d-flex align-items-center mb-3">
 							<i class="green-dark bi bi-clock-history me-2"></i>
 							<a
-								class="brun active my-auto"
+								class="brun my-auto"
 								href="https://www.larbredelumiere38.fr/planing_des_rendez_vous.html"
 								rel="noopener noreferrer"
 								alt="rendez vous en ligne"
@@ -1002,56 +860,75 @@
 							class="brun my-auto"
 							alt="Instagram"
 							title="Instagram"
+							href="https://www.instagram.com/larbre_de_lumiere?igsh=YWphd3RjdzZjejJv"
 							rel="noopener noreferrer"
 							>Instagram</a
 						>
 					</div>
 					<div class="d-flex align-items-center mb-3">
 						<i class="bi bi-whatsapp me-2"></i>
+						<!-- Lien vers la modale WhatsApp -->
 						<a
-							class="brun my-auto"
-							alt="Whatsapp"
-							title="Whatsapp"
+							class="nav-link brun"
+							alt="Page Whatsapp"
 							rel="noopener noreferrer"
-							>Whatsapp</a
 						>
+							<div class="d-flex align-items-center">
+								<span class="bi bi-whatsapp fs-3 me-2"></span>
+								<span class="brun d-flex d-xxl-none">WhatsApp</span>
+							</div>
+						</a>
 					</div>
 				</div>
 
 				<div
 					class="d-block d-md-flex col-12 justify-content-center text-center mt-2"
 				>
-					<a
-						class="brun mx-2"
-						href="https://www.larbredelumiere38.fr/mentions-legales.html"
-						rel="noopener noreferrer"
-						alt="Mentions-légales"
-						title="Mentions-légales"
-						>Mentions légales</a
-					>
-					<p class="d-none d-md-flex mx-md-2">-</p>
-					<a
-						class="mx-2 brun"
-						rel="noopener noreferrer"
-						href="https://www.larbredelumiere38.fr/partenaires.html"
-						alt="Partenaires"
-						title="Partenaires"
-						>Partenaires</a
-					>
-					<p class="brun d-none d-md-flex mx-md-2 fs-6">-</p>
 					<p class="brun mx-2 fs-6">Copyright @ 2024 larbredelumiere.fr</p>
 					<p class="brun d-none d-md-flex mx-md-2 fs-6">-</p>
 					<p class="brun fs-6">Tous droits réservés</p>
 				</div>
 			</footer>
 		</div>
-		<!-- Scripts JS -->
-		<script type="text/javascript" src="./js/style.js" defer></script>
+
+		<!-- Modale WhatsApp -->
+		<div
+			class="modal fade"
+			id="whatsappModal"
+			tabindex="-1"
+			aria-labelledby="whatsappModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="whatsappModalLabel">
+							Scannez le QR Code pour me contacter
+						</h5>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Fermer"
+						></button>
+					</div>
+					<div class="modal-body text-center">
+						<img
+							id="qrCodeImage"
+							src="./img/whatsapp.webp"
+							alt="QR Code WhatsApp"
+							class="img-fluid"
+						/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- js -->
+		<script type="text/javascript " src="./js/style.js" defer></script>
 		<script
 			type="text/javascript "
 			src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
 			defer
 		></script>
-		<script type="text/javascript" src="./js/calendar3.js" defer></script>
 	</body>
 </html>

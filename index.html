@@ -140,10 +140,9 @@
 							<a
 								class="nav-link brun"
 								target="_blank"
-								href=""
 								alt="Page Instagram"
 								rel="noopener noreferrer"
-								href="#"
+								href="https://www.instagram.com/larbre_de_lumiere?igsh=YWphd3RjdzZjejJv"
 								><div class="d-flex align-items-center">
 									<span class="bi bi-instagram fs-3 me-2"></span
 									><span class="brun d-flex d-xxl-none">Instagram</span>
@@ -151,18 +150,16 @@
 							>
 						</div>
 						<div class="col-auto">
-							<a
-								class="nav-link brun"
-								target="_blank"
-								href=""
-								alt="Page Whatsapp"
-								rel="noopener noreferrer"
-								href="#"
+							<span
+								class="nav-link brun whatsapp"
+								data-toggle="tooltip"
+								data-placement="bottom"
+								title="Page Whatsapp"
 								><div class="d-flex align-items-center">
-									<span class="bi bi-whatsapp fs-3 me-2"></span
+									<span class="bi bi-whatsapp fs-3 me-2 cursor-pointer"></span
 									><span class="brun d-flex d-xxl-none">Whatsapp</span>
-								</div></a
-							>
+								</div>
+							</span>
 						</div>
 					</div>
 				</span>
@@ -204,25 +201,21 @@
 								<a
 									class="nav-link brun"
 									target="_blank"
-									href=""
 									alt="Page Instagram"
 									rel="noopener noreferrer"
-									href="#"
+									href="https://www.instagram.com/larbre_de_lumiere?igsh=YWphd3RjdzZjejJv"
 								>
 									<span class="bi bi-instagram fs-3 me-2"></span>
 								</a>
 							</div>
 							<div class="col-auto">
-								<a
-									class="nav-link brun"
-									target="_blank"
-									href=""
-									alt="Page Whatsapp"
-									rel="noopener noreferrer"
-									href="#"
-								>
-									<span class="bi bi-whatsapp fs-3 me-2"></span
-								></a>
+								<span
+									class="nav-link brun whatsapp"
+									data-toggle="tooltip"
+									data-placement="bottom"
+									title="Page Whatsapp"
+									><span class="bi bi-whatsapp fs-3 me-2"></span
+								></span>
 							</div>
 						</li>
 						<li class="nav-item">
@@ -1646,7 +1639,7 @@ Psychogénéalogie"
 						<i class="green-dark bi-blockquote-right me-2"></i>
 						<a
 							class="brun my-auto"
-							href="https://www.larbredelumiere38.fr/mentions-legales.html"
+							href="https://www.larbredelumiere38.fr/mentions_legales.html"
 							rel="noopener noreferrer"
 							alt="Mentions-légales"
 							title="Mentions-légales"
@@ -1703,17 +1696,20 @@ Psychogénéalogie"
 						alt="Instagram"
 						title="Instagram"
 						rel="noopener noreferrer"
+						href="https://www.instagram.com/larbre_de_lumiere?igsh=YWphd3RjdzZjejJv"
 						>Instagram</a
 					>
 				</div>
 				<div class="d-flex align-items-center mb-3">
+					<!--footer-->
 					<i class="bi bi-whatsapp me-2"></i>
-					<a
-						class="brun my-auto"
-						alt="Whatsapp"
-						title="Whatsapp"
-						rel="noopener noreferrer"
-						>Whatsapp</a
+					<span
+						class="brun my-auto whatsapp cursor-pointer"
+						data-toggle="tooltip"
+						data-placement="bottom"
+						title="Page Whatsapp"
+					>
+						Whatsapp</span
 					>
 				</div>
 			</div>
@@ -1726,7 +1722,38 @@ Psychogénéalogie"
 				<p class="brun fs-6">Tous droits réservés</p>
 			</div>
 		</footer>
-
+		<!-- Modale WhatsApp -->
+		<div
+			class="modal fade"
+			id="whatsappModal"
+			tabindex="-1"
+			aria-labelledby="whatsappModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="whatsappModalLabel">
+							Scannez le QR Code pour me contacter
+						</h5>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Fermer"
+						></button>
+					</div>
+					<div class="modal-body text-center">
+						<img
+							id="qrCodeImage"
+							src="./img/whatsapp.webp"
+							alt="QR Code WhatsApp"
+							class="img-fluid"
+						/>
+					</div>
+				</div>
+			</div>
+		</div>
 		<!-- js -->
 		<script type="text/javascript " src="./js/style.js" defer></script>
 		<script

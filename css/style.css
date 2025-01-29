@@ -364,6 +364,11 @@ textarea.form-control:focus {
 	border-top: none !important;
 }
 /* modal */
+.modal {
+ 
+  --bs-modal-width: 450px;
+  
+}
 .modal-md {
 	max-width: 80%;
 }
@@ -373,6 +378,9 @@ textarea.form-control:focus {
 }
 
 /*Icons*/
+.cursor-pointer{
+  cursor:pointer!important;
+}
 .stars {
 	color: #ede028 !important;
 }
