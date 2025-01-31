@@ -4,7 +4,6 @@ const { createRdvMail } = require("./templateMailAdmin");
 const db = require("../config/db"); // Assurez-vous que la configuration DB est correcte
 const logger = require("../utils/logger");
 
-
 // Fonction pour convertir une date au format YYYY-MM-DD en format lisible
 function formatDate(dateString) {
 	const moisNoms = [
@@ -71,7 +70,7 @@ const sendEmail = async (to, from, subject, html) => {
 
 		// Envoi de l'email principal
 		const result = await transporter.sendMail(mailOptions);
-		console.log(
+		logger.info(
 			"Email envoyé avec succès :",
 			result.envelope,
 			result.messageId
@@ -202,12 +201,12 @@ const sendEmail = async (to, from, subject, html) => {
 			};
 
 			await transporter.sendMail(confirmationOptions);
-			console.log("Confirmation d'envoi envoyée avec succès.");
+			logger.info("Confirmation d'envoi envoyée avec succès.");
 		}
 
 		return result;
 	} catch (err) {
-		console.error("Erreur lors de l'envoi de l'email :", err.message || err);
+		logger.error("Erreur lors de l'envoi de l'email :", err.message || err);
 		throw err;
 	}
 };
@@ -406,9 +405,9 @@ const sendAppointmentConfirmation = async (appointment) => {
 			clientHtml
 		);
 
-		console.log("Confirmation de rendez-vous envoyée avec succès.");
+		logger.info("Confirmation de rendez-vous envoyée avec succès.");
 	} catch (err) {
-		console.error(
+		logger.error(
 			"Erreur lors de l'envoi de la confirmation de rendez-vous :",
 			err.message || err
 		);
@@ -562,9 +561,9 @@ const sendUpdateConfirmationEmail = async (appointment) => {
 
 		await sendEmail(clientEmail, process.env.USER_EMAIL, subject, html);
 
-		console.log("Email de mise à jour envoyé avec succès.");
+		logger.info("Email de mise à jour envoyé avec succès.");
 	} catch (err) {
-		console.error(
+		logger.error(
 			"Erreur lors de l'envoi de l'email de mise à jour :",
 			err.message || err
 		);
@@ -710,9 +709,9 @@ const sendCancellationEmail = async (appointment) => {
 
 		await sendEmail(clientEmail, process.env.USER_EMAIL, subject, html);
 
-		console.log("Email d'annulation envoyé avec succès.");
+		logger.info("Email d'annulation envoyé avec succès.");
 	} catch (err) {
-		console.error(
+		logger.error(
 			"Erreur lors de l'envoi de l'email d'annulation :",
 			err.message || err
 		);
@@ -736,7 +735,7 @@ const sendEmailIfNotSent = async (appointment, toClient = true) => {
 		}
 
 		if (result[0][column]) {
-			console.log(`Email déjà envoyé pour ${toClient ? "client" : "admin"}`);
+			logger.info(`Email déjà envoyé pour ${toClient ? "client" : "admin"}`);
 			return;
 		}
 
@@ -756,19 +755,17 @@ const sendEmailIfNotSent = async (appointment, toClient = true) => {
 			appointment.id,
 		]);
 	} catch (err) {
-		console.error("Erreur lors de l'envoi de l'email :", err.message || err);
+		logger.error("Erreur lors de l'envoi de l'email :", err.message || err);
 		throw err;
 	}
 };
 
 const sendReminderEmail = async (emailData) => {
 	try {
-		console.log(emailData);
+		logger.info(emailData);
 
 		if (!emailData.clientEmail) {
-			console.error(
-				"Erreur : Adresse e-mail manquante pour l'envoi du rappel."
-			);
+			logger.error("Erreur : Adresse e-mail manquante pour l'envoi du rappel.");
 			throw new Error("Adresse e-mail du client non définie.");
 		}
 		const subject = "Rappel de votre rendez-vous";
@@ -910,7 +907,7 @@ const sendReminderEmail = async (emailData) => {
 			html
 		);
 	} catch (error) {
-		console.error(
+		logger.error(
 			"Erreur lors de l'envoi de l'email de rappel :",
 			error.message
 		);

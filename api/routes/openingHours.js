@@ -17,7 +17,7 @@ WHERE morning_open != '00:00:00'
 
 		res.json(results);
 	} catch (error) {
-		console.error(
+		logger.error(
 			"Erreur lors de la récupération des horaires :",
 			error.message
 		);

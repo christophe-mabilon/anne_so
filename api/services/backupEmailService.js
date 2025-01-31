@@ -39,9 +39,9 @@ const sendBackupEmail = async ({ to, subject, text, html }) => {
 		};
 
 		const result = await transporter.sendMail(mailOptions);
-		console.log("Email de secours envoyé avec succès :", result);
+		logger.info("Email de secours envoyé avec succès :", result);
 	} catch (err) {
-		console.error(
+		logger.error(
 			"Erreur lors de l'envoi de l'email de secours :",
 			err.message || err
 		);
@@ -50,13 +50,12 @@ const sendBackupEmail = async ({ to, subject, text, html }) => {
 
 const notifyAdmin = async (adminEmail) => {
 	if (!adminEmail) {
-		console.error("Erreur : L'email de l'administrateur est manquant !");
+		logger.error("Erreur : L'email de l'administrateur est manquant !");
 		return;
 	}
 
 	let redirectUrl = process.env.ADMIN_ACCOUNT_URL;
 	try {
-		
 		await sendBackupEmail({
 			to: adminEmail,
 			subject:
@@ -156,9 +155,11 @@ const notifyAdmin = async (adminEmail) => {
 	</body>
 </html>`,
 		});
-		console.log(`Notification de secours envoyéea l'admin ${adminEmail} avec succès.`);
+		logger.info(
+			`Notification de secours envoyéea l'admin ${adminEmail} avec succès.`
+		);
 	} catch (err) {
-		console.error(
+		logger.error(
 			"Erreur lors de l'envoi de l'email de secours :",
 			err.message || err
 		);

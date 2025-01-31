@@ -34,7 +34,7 @@ setInterval(async () => {
 
 // Planification de la synchronisation toutes les 10 minutes
 cron.schedule("*/1 * * * *", async () => {
-	console.log("Début de la tâche de synchronisation avec Google Agenda...");
+	logger.info("Début de la tâche de synchronisation avec Google Agenda...");
 	await syncWithGoogleCalendar();
 });
 
@@ -42,11 +42,11 @@ cron.schedule("*/1 * * * *", async () => {
 app.use("/google", googleRoutes);
 app.use("/api/rdv", appointmentsRoutes);
 app.use("/api/email", emailRoutes);
-app.use("/api/openingHours",openingHours);
+app.use("/api/openingHours", openingHours);
 
 // Gestion des erreurs globales
 app.use((err, req, res, next) => {
-	console.error("Erreur non gérée :", err);
+	logger.error("Erreur non gérée :", err);
 	res.status(500).send("Erreur serveur");
 });
 
@@ -63,5 +63,5 @@ const sslOptions = {
 
 // Créer un serveur HTTPS avec ton certificat
 https.createServer(sslOptions, app).listen(port, () => {
-	console.log(`Serveur démarré sur https://www.larbredelumiere38.fr:${port}`);
+	logger.info(`Serveur démarré sur https://www.larbredelumiere38.fr:${port}`);
 });

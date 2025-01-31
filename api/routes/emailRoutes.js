@@ -136,7 +136,7 @@ router.post("/send-email", async (req, res) => {
 
 		res.status(200).json({ message: "Email envoyé avec succès", result });
 	} catch (error) {
-		console.error("Erreur lors de l'envoi de l'email :", error.message);
+		logger.error("Erreur lors de l'envoi de l'email :", error.message);
 		res.status(500).json({ error: "Erreur lors de l'envoi de l'email" });
 	}
 });

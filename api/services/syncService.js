@@ -13,13 +13,13 @@ const logger = require("../utils/logger");
 
 const syncWithGoogleCalendar = async () => {
 	try {
-		console.log("Début de la synchronisation avec Google Agenda...");
+		logger.info("Début de la synchronisation avec Google Agenda...");
 
 		const calendar = google.calendar({ version: "v3", auth: oauth2Client });
 
 		// Obtenir l'heure actuelle avec le fuseau horaire Paris
 		const now = moment().tz("Europe/Paris").toISOString();
-    console.log(now);
+		logger.info(now);
 
 		const response = await calendar.events.list({
 			calendarId: "primary",
@@ -49,7 +49,7 @@ const syncWithGoogleCalendar = async () => {
 					);
 
 					if (existingAppointment.length === 0) {
-						console.error(
+						logger.error(
 							`Rendez-vous introuvable pour l'ID Google : ${appointment.googleEventId}`
 						);
 						return;
@@ -73,7 +73,7 @@ const syncWithGoogleCalendar = async () => {
 
 					// Si aucun changement, ne pas mettre à jour ni envoyer d'email
 					if (!hasStartTimeChanged && !hasEndTimeChanged) {
-						console.error(`RDV NON MODIFIE : ${appointment.googleEventId}`);
+						logger.error(`RDV NON MODIFIE : ${appointment.googleEventId}`);
 						return;
 					}
 
@@ -115,7 +115,7 @@ const syncWithGoogleCalendar = async () => {
 
 					// Envoyer les emails uniquement si les dates/horaires ont changé
 					if (hasStartTimeChanged || hasEndTimeChanged) {
-						console.log(
+						logger.info(
 							`Changements détectés dans les horaires pour l'événement : ${appointment.googleEventId}`
 						);
 
@@ -154,12 +154,12 @@ const syncWithGoogleCalendar = async () => {
 							]
 						);
 					} else {
-						console.log(
+						logger.info(
 							`Aucun changement détecté dans les dates/heures. Aucun email envoyé pour l'événement : ${appointment.googleEventId}`
 						);
 					}
 				} catch (err) {
-					console.error("Erreur lors de la mise à jour locale :", err.message);
+					logger.error("Erreur lors de la mise à jour locale :", err.message);
 				}
 			})
 		);
@@ -196,7 +196,7 @@ const syncWithGoogleCalendar = async () => {
 						});
 
 						if (result.data.id) {
-							console.log(
+							logger.info(
 								`Événement ajouté à Google Agenda : ${result.data.id}`
 							);
 							await db.query(
@@ -205,7 +205,7 @@ const syncWithGoogleCalendar = async () => {
 							);
 						}
 					} catch (err) {
-						console.error(
+						logger.error(
 							"Erreur lors de l'ajout dans Google Agenda :",
 							err.message
 						);
@@ -226,7 +226,7 @@ const syncWithGoogleCalendar = async () => {
 					);
 
 					if (existingAppointment.length === 0) {
-						console.error(
+						logger.error(
 							`Rendez-vous introuvable dans la base locale : ${appointment.id}`
 						);
 						return;
@@ -268,12 +268,12 @@ const syncWithGoogleCalendar = async () => {
 							[appointment.id]
 						);
 					} else {
-						console.log(
+						logger.info(
 							`Emails de suppression déjà envoyés pour le rendez-vous : ${appointment.id}`
 						);
 					}
 				} catch (err) {
-					console.error(
+					logger.error(
 						"Erreur lors de la suppression locale ou de l'envoi des emails :",
 						err.message
 					);
@@ -281,15 +281,15 @@ const syncWithGoogleCalendar = async () => {
 			})
 		);
 
-		console.log("Synchronisation terminée avec succès !");
+		logger.info("Synchronisation terminée avec succès !");
 	} catch (error) {
-		console.error("Erreur lors de la synchronisation :", error.message);
+		logger.error("Erreur lors de la synchronisation :", error.message);
 
 		if (
 			error.message.includes("invalid_grant") ||
 			error.message.includes("No access, refresh token")
 		) {
-			console.log(
+			logger.info(
 				`Les tokens OAuth sont invalides. Notification à l'administrateur à ${adminEmail}...`
 			);
 
@@ -317,7 +317,7 @@ const syncWithGoogleCalendar = async () => {
 cron.schedule("0 * * * *", async () => {
 	// Exécuté toutes les heures
 	try {
-		console.log(
+		logger.info(
 			`[${moment().format(
 				"YYYY-MM-DD HH:mm:ss"
 			)}] Démarrage de la tâche de rappel automatique...`
@@ -327,7 +327,7 @@ cron.schedule("0 * * * *", async () => {
 		const reminderStart = now.format("YYYY-MM-DD HH:mm:ss");
 		const reminderEnd = now.add(48, "hours").format("YYYY-MM-DD HH:mm:ss");
 
-		console.log(
+		logger.info(
 			`Recherche des RDV entre : ${reminderStart} et ${reminderEnd}...`
 		);
 
@@ -340,11 +340,11 @@ cron.schedule("0 * * * *", async () => {
 		);
 
 		if (appointments.length === 0) {
-			console.log("Aucun rendez-vous à rappeler pour cette période.");
+			logger.info("Aucun rendez-vous à rappeler pour cette période.");
 			return;
 		}
 
-		console.log(`Rappels à envoyer pour ${appointments.length} rendez-vous.`);
+		logger.info(`Rappels à envoyer pour ${appointments.length} rendez-vous.`);
 
 		for (const appointment of appointments) {
 			try {
@@ -357,7 +357,7 @@ cron.schedule("0 * * * *", async () => {
 				};
 
 				if (!emailData.clientEmail) {
-					console.error(
+					logger.error(
 						`Adresse e-mail manquante pour le rendez-vous ID: ${appointment.id}`
 					);
 					continue;
@@ -372,18 +372,18 @@ cron.schedule("0 * * * *", async () => {
 					[appointment.id]
 				);
 
-				console.log(
+				logger.info(
 					`Rappel envoyé avec succès pour le rendez-vous ID: ${appointment.id}`
 				);
 			} catch (error) {
-				console.error(
+				logger.error(
 					`Erreur lors de l'envoi du rappel pour le rendez-vous ID: ${appointment.id}:`,
 					error.message
 				);
 			}
 		}
 	} catch (error) {
-		console.error(
+		logger.error(
 			"Erreur lors de l'exécution des rappels automatiques :",
 			error.message
 		);

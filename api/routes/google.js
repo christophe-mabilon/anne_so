@@ -7,7 +7,7 @@ const logger = require("../utils/logger");
 router.get("/auth", (req, res) => {
 	try {
 		if (!oauth2Client) {
-			console.error("oauth2Client non initialisé.");
+			logger.error("oauth2Client non initialisé.");
 			return res
 				.status(500)
 				.send(
@@ -15,8 +15,10 @@ router.get("/auth", (req, res) => {
 				);
 		}
 
-		const scopes = ["https://www.googleapis.com/auth/calendar",
-    "https://mail.google.com"];
+		const scopes = [
+			"https://www.googleapis.com/auth/calendar",
+			"https://mail.google.com",
+		];
 		const authUrl = oauth2Client.generateAuthUrl({
 			access_type: "offline",
 			prompt: "consent",
@@ -25,7 +27,7 @@ router.get("/auth", (req, res) => {
 
 		res.redirect(authUrl); // Redirection automatique
 	} catch (err) {
-		console.error(
+		logger.error(
 			"Erreur lors de la génération de l'URL d'authentification :",
 			err.message || err
 		);
