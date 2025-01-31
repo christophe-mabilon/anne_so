@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const fs = require("fs");
 const { oauth2Client, saveTokens } = require("../googleAuth");
+const logger = require("../utils/logger");
 
 router.get("/auth", (req, res) => {
 	try {

@@ -9,6 +9,7 @@ const {
 } = require("../services/emailService");
 const cron = require("node-cron");
 const moment = require("moment");
+const logger = require("../utils/logger");
 
 const syncWithGoogleCalendar = async () => {
 	try {

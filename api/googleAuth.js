@@ -3,6 +3,7 @@ const { google } = require("googleapis");
 require("dotenv").config();
 const path = require("path");
 const { notifyAdmin } = require("./services/backupEmailService");
+const logger = require("./utils/logger");
 
 const TOKEN_PATH = path.resolve(__dirname, "tokens.json");
 const ALERT_LOG_PATH = path.resolve(__dirname, "lastAlertSent.json");

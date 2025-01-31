@@ -1,5 +1,7 @@
 const nodemailer = require("nodemailer");
 const { logo } = require("./logotoB64");
+const logger = require("../utils/logger");
+
 const sendBackupEmail = async ({ to, subject, text, html }) => {
 	try {
 		if (

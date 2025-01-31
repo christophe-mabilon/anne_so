@@ -2,6 +2,8 @@ const nodemailer = require("nodemailer");
 const { oauth2Client } = require("../googleAuth"); // Assurez-vous que ce fichier exporte correctement `oauth2Client`
 const { createRdvMail } = require("./templateMailAdmin");
 const db = require("../config/db"); // Assurez-vous que la configuration DB est correcte
+const logger = require("../utils/logger");
+
 
 // Fonction pour convertir une date au format YYYY-MM-DD en format lisible
 function formatDate(dateString) {

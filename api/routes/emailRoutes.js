@@ -5,6 +5,7 @@ const {
 	sendMessageToAdminWithConfirmation,
 	sendAppointmentConfirmation,
 } = require("../services/emailService");
+const logger = require("../utils/logger");
 
 // Route pour gérer l'envoi d'un email avec une adresse fixe
 router.post("/send-email", async (req, res) => {

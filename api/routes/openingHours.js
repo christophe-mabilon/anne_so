@@ -2,6 +2,8 @@ require("dotenv").config();
 const express = require("express");
 const router = express.Router();
 const db = require("../config/db");
+const logger = require("../utils/logger");
+
 // Exemple avec un endpoint pour récupérer les horaires
 router.get("/getall", async (req, res) => {
 	try {

@@ -18,6 +18,7 @@ const googleRoutes = require("./routes/google");
 const emailRoutes = require("./routes/emailRoutes");
 const openingHours = require("./routes/openingHours");
 const { syncWithGoogleCalendar } = require("./services/syncService");
+const logger = require("./utils/logger");
 
 const app = express();
 const port = 8082; // Le port sur lequel ton serveur HTTPS va écouter

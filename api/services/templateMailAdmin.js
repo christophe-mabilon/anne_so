@@ -1,4 +1,6 @@
 const { logo } = require("./logotoB64");
+const logger = require("../utils/logger");
+
 // Fonction pour convertir une date au format YYYY-MM-DD en format lisible
 function formatDate(dateString) {
 	const moisNoms = [

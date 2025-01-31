@@ -10,6 +10,7 @@ const {
     sendUpdateConfirmationEmail,
     sendReminderEmail,
 } = require("../services/emailService");
+const logger = require("../utils/logger");
 
 // Fonction utilitaire pour envoyer un email si non envoyé
 const sendEmailIfNotSent = async (appointment, type) => {
