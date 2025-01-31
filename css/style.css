@@ -340,7 +340,7 @@ h6.green-dark {
 .nav-link:hover {
 	color: #32c061 !important;
 }
-a.brun:hover {
+a.brun:hover ,.whatsapp:hover{
 	color: #32c061 !important;
 }
 
@@ -1435,6 +1435,10 @@ iframe {
 
 /* xxl */
 @media (min-width: 1400px) {
+  .full-height {
+		height: auto !important;
+	}
+
 	.sticky-xl-top {
 		position: -webkit-sticky;
 		position: auto;
